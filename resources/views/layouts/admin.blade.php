@@ -18,15 +18,17 @@
     
     
     
-        <link href="sistema/css/style.css" rel="stylesheet"> 
 
-    {!!Html::style('sistema/css/lib/calendar2/semantic.ui.min.css')!!}
-    {!!Html::style('sistema/css/lib/calendar2/pignose.calendar.min.css')!!}
-    {!!Html::style('sistema/css/lib/owl.carousel.min.css')!!}
-    {!!Html::style('sistema/css/lib/bootstrap/bootstrap.min.css')!!}
-    {!!Html::style('sistema/css/lib/owl.theme.default.min.css')!!}
-    {!!Html::style('sistema/css/helper.css')!!}
 
+    {!!Html::style('/sistema/css/lib/calendar2/semantic.ui.min.css')!!}
+    {!!Html::style('/sistema/css/lib/calendar2/pignose.calendar.min.css')!!}
+    {!!Html::style('/sistema/css/lib/owl.carousel.min.css')!!}
+    {!!Html::style('/sistema/css/lib/bootstrap/bootstrap.min.css')!!}
+    {!!Html::style('/sistema/css/lib/owl.theme.default.min.css')!!}
+    {!!Html::style('/sistema/css/helper.css')!!}
+    {!!Html::style('/sistema/css/style.css')!!}
+ 
+ 
 
 
     
@@ -426,25 +428,22 @@
      
      {!!Html::script('sistema/js/lib/morris-chart/morris.js')!!}
      {!!Html::script('sistema/js/lib/morris-chart/raphael-min.js')!!}
-     {!!Html::script('sistema/js/lib/morris-chart/dashboard1-init.js')!!
+     {!!Html::script('sistema/js/lib/morris-chart/dashboard1-init.js')!!}
+     {!!Html::script('sistema/js/lib/calendar-2/moment.latest.min.js')!!}
+    <!-- scripit init-->
+    {!!Html::script('sistema/js/lib/calendar-2/semantic.ui.min.js')!!}
+    <!-- scripit init-->
+    {!!Html::script('sistema/js/lib/calendar-2/prism.min.js')!!}
+    <!-- scripit init-->
+    {!!Html::script('sistema/js/lib/calendar-2/pignose.calendar.min.js')!!}
+    <!-- scripit init-->
+    {!!Html::script('sistema/js/lib/calendar-2/pignose.init.js')!!}
 
-
-	<script src="sistema/js/lib/calendar-2/moment.latest.min.js"></script>
+     {!!Html::script('sistema/js/lib/owl-carousel/owl.carousel.min.js')!!}
+    {!!Html::script('sistema/js/lib/owl-carousel/owl.carousel-init.js')!!}
+     {!!Html::script('sistema/js/scripts.js')!!}
     <!-- scripit init-->
-    <script src="sistema/js/lib/calendar-2/semantic.ui.min.js"></script>
-    <!-- scripit init-->
-    <script src="sistema/js/lib/calendar-2/prism.min.js"></script>
-    <!-- scripit init-->
-    <script src="sistema/js/lib/calendar-2/pignose.calendar.min.js"></script>
-    <!-- scripit init-->
-    <script src="sistema/js/lib/calendar-2/pignose.init.js"></script>
-
-    <script src="sistema/js/lib/owl-carousel/owl.carousel.min.js"></script>
-    <script src="sistema/js/lib/owl-carousel/owl.carousel-init.js"></script>
-    <script src="sistema/js/scripts.js"></script>
-    <!-- scripit init-->
-
-    <script src="sistema/js/custom.min.js"></script>
+    {!!Html::script('sistema/js/custom.min.js')!!}
 
 </body>
 
