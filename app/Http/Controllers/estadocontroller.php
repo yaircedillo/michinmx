@@ -15,12 +15,12 @@ class estadocontroller extends Controller
     
     public function create()
     {
-    return view('admin.index');
+        return view('admin.index');
     }
     
     public function store()
     {
-      //  
+        return "Aqui estoy";
     }
     
     public function show($id)

@@ -1,51 +1,34 @@
 @extends('layouts.admin')
 @section('content')
+{!!Form::open(['route'=>'admin.store', 'method'=>'POST'])!!}
 <div class="row">
-                        <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">ESTADOS</h4>
-                                <form class="form p-t-20">
+     <div class="col-lg-6">
+        <div class="card">
+        <div class="card-body">
+        <h4 class="card-title">ESTADOS</h4>
+        <form class="form p-t-20">
                                     
-                                    <div class="form-group">
-                                        <label for="exampleInputuname">User Name</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon"><i class="ti-user"></i></div>
-                                            <input type="text" class="form-control" id="exampleInputuname" placeholder="Username">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon"><i class="ti-email"></i></div>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd1">Password</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon"><i class="ti-lock"></i></div>
-                                            <input type="password" class="form-control" id="pwd1" placeholder="Enter email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd2">Confirm Password</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon"><i class="ti-lock"></i></div>
-                                            <input type="password" class="form-control" id="pwd2" placeholder="Enter email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="checkbox checkbox-success">
-                                            <input id="checkbox1" type="checkbox">
-                                            <label for="checkbox1"> Remember me </label>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-@stop
+            <div class="form-group">
+                {!!Form::label('Id del Estado.')!!}
+                <div class="input-group">
+                <div class="input-group-addon"><i class="ti-key"></i></div>
+                {!!Form::text('id_estado',null,['class'=>'form-control'])!!}
+                 </div>
+            </div>
+            <div class="form-group">
+                {!!Form::label('Estado.')!!}
+                <div class="input-group">
+                <div class="input-group-addon"><i class="ti-location-pin"></i></div>
+                {!!Form::text('estado',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
+            </div>
+     </div> 
+             {!!Form::submit('Guardar',[' class'=>'btn btn-success waves-effect waves-light m-r-10'])!!}
+             {!!Form::submit('Cancelar',[' class'=>'btn btn-inverse waves-effect waves-light'])!!}
+            
+        </form>
+    </div>
+    </div>
+    </div>
+</div>  
+{!!Form::close()!!}
+@endsection
