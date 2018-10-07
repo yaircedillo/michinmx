@@ -17,8 +17,6 @@
 
     
     
-    
-
 
     {!!Html::style('/sistema/css/lib/calendar2/semantic.ui.min.css')!!}
     {!!Html::style('/sistema/css/lib/calendar2/pignose.calendar.min.css')!!}
@@ -28,10 +26,6 @@
     {!!Html::style('/sistema/css/helper.css')!!}
     {!!Html::style('/sistema/css/style.css')!!}
  
- 
-
-
-    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
     <!--[if lt IE 9]>
@@ -204,21 +198,21 @@
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="sistema/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                                <div class="user-img"> <img src="{{asset('sistema/images/users/2.jpg')}}"  alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>John Doe</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span>
                                                 </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="sistema/images/users/3.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
+                                                <div class="user-img"> <img src="{{asset('sistema/images/users/3.jpg')}}"  alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Mr. John</h5> <span class="mail-desc">I am a singer!</span> <span class="time">9:08 AM</span>
                                                 </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="sistema/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                                <div class="user-img"> <img src="{{asset('sistema/images/users/4.jpg')}}"  alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Michael Qin</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span>
                                                 </div>
@@ -234,7 +228,7 @@
                         <!-- End Messages -->
                         <!-- Profile -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="sistema/images/users/5.jpg" alt="user" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img  src="{{asset('sistema/images/users/5.jpg')}}" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
                                     <li><a href="#"><i class="ti-user"></i> Profile</a></li>
@@ -410,8 +404,7 @@
     
     
     <!-- All Jquery -->
-    {!!Html::script('sistema/js/lib/jquery/jquery.min.js')!!}
-    
+    {!!Html::script('sistema/js/lib/jquery/jquery.min.js')!!}  
     <!-- Bootstrap tether Core JavaScript -->
     {!!Html::script('sistema/js/lib/bootstrap/js/popper.min.js')!!}
     {!!Html::script('sistema/js/lib/bootstrap/js/bootstrap.min.js')!!}
@@ -422,14 +415,11 @@
     <!--stickey kit -->
     {!!Html::script('sistema/js/lib/sticky-kit-master/dist/sticky-kit.min.js')!!}
     <!--Custom JavaScript -->
-
-
     <!-- Amchart -->
-     
-     {!!Html::script('sistema/js/lib/morris-chart/morris.js')!!}
-     {!!Html::script('sistema/js/lib/morris-chart/raphael-min.js')!!}
-     {!!Html::script('sistema/js/lib/morris-chart/dashboard1-init.js')!!}
-     {!!Html::script('sistema/js/lib/calendar-2/moment.latest.min.js')!!}
+    {!!Html::script('sistema/js/lib/morris-chart/morris.js')!!}
+    {!!Html::script('sistema/js/lib/morris-chart/raphael-min.js')!!}
+    {!!Html::script('sistema/js/lib/morris-chart/dashboard1-init.js')!!}
+    {!!Html::script('sistema/js/lib/calendar-2/moment.latest.min.js')!!}
     <!-- scripit init-->
     {!!Html::script('sistema/js/lib/calendar-2/semantic.ui.min.js')!!}
     <!-- scripit init-->
@@ -438,10 +428,9 @@
     {!!Html::script('sistema/js/lib/calendar-2/pignose.calendar.min.js')!!}
     <!-- scripit init-->
     {!!Html::script('sistema/js/lib/calendar-2/pignose.init.js')!!}
-
-     {!!Html::script('sistema/js/lib/owl-carousel/owl.carousel.min.js')!!}
+    {!!Html::script('sistema/js/lib/owl-carousel/owl.carousel.min.js')!!}
     {!!Html::script('sistema/js/lib/owl-carousel/owl.carousel-init.js')!!}
-     {!!Html::script('sistema/js/scripts.js')!!}
+    {!!Html::script('sistema/js/scripts.js')!!}
     <!-- scripit init-->
     {!!Html::script('sistema/js/custom.min.js')!!}
 
