@@ -18,9 +18,13 @@ class estadocontroller extends Controller
         return view('admin.index');
     }
     
-    public function store()
+    public function store(Request $request)
     {
-        return "Aqui estoy";
+       \michinmx\estados::create([
+        'id_estado' => $request['id_estado'],
+        'estado'  => $request['estado'],
+       ]);
+       return "Estado Registrado";
     }
     
     public function show($id)

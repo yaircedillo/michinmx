@@ -8,4 +8,5 @@ class estados extends Model
 {
     protected $table = 'estado';
     protected $fillable=['id_estado','estado'];
+    protected $hidden = ['remember_token'];
 }
