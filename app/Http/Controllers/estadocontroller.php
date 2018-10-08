@@ -5,17 +5,26 @@ namespace michinmx\Http\Controllers;
 use Illuminate\Http\Request;
 
 use michinmx\Http\Requests;
-
+use michinmx\estados;
 class estadocontroller extends Controller
 {
+  
+
     public function index()
     {
-        //
+        $estados = \michinmx\estados::All();
+        return view('estado.index',compact('estados'));
     }
     
     public function create()
     {
-        return view('admin.index');
+       // $incrementing = estados::orderBy('id_estado','desc')
+       // ->take(1)
+        //->get();
+       // $idest = $incrementing[0]->id_estado+1;
+
+        return view("estado.create");
+        //->with(['idest',$idest]);
     }
     
     public function store(Request $request)
@@ -24,7 +33,8 @@ class estadocontroller extends Controller
         'id_estado' => $request['id_estado'],
         'estado'  => $request['estado'],
        ]);
-       return "Estado Registrado";
+    
+       return redirect('/estado')->with('message','store');
     }
     
     public function show($id)

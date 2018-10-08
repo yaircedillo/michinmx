@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -431,8 +431,19 @@
     {!!Html::script('sistema/js/lib/owl-carousel/owl.carousel.min.js')!!}
     {!!Html::script('sistema/js/lib/owl-carousel/owl.carousel-init.js')!!}
     {!!Html::script('sistema/js/scripts.js')!!}
-    <!-- scripit init-->
-    {!!Html::script('sistema/js/custom.min.js')!!}
+    <!-- scripit de leer tabla-->
+
+
+    {!!Html::script('sistema/js/lib/datatables/datatables.min.js')!!}
+    {!!Html::script('sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js')!!}
+    {!!Html::script('sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js')!!}
+    {!!Html::script('sistema/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js')!!}
+    {!!Html::script('sistema/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js')!!}
+    {!!Html::script('sistema/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js')!!}
+
+    {!!Html::script('sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js')!!}
+    {!!Html::script('sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js')!!}
+    {!!Html::script('sistema/js/lib/datatables/datatables-init.js')!!}
 
 </body>
 

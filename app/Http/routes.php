@@ -19,4 +19,5 @@ Route::get('menu','MichinmxController@menu');
 Route::get('reservacion','MichinmxController@reservation');
 Route::get('especialidad','MichinmxController@specialties');
 //Route::get('admin','MichinmxController@admin');
-Route::resource('admin','estadocontroller');
+Route::resource('estado','estadocontroller');
+
