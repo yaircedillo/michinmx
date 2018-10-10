@@ -10,13 +10,12 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16"  href="{{asset('sistema/images/favicon.png')}}">
-    <title>Ela - Bootstrap Admin Dashboard Template</title>
+    <title>MichinMx</title>
     <!-- Bootstrap Core CSS -->
     
     <!-- Custom CSS -->
 
-    
-    
+
 
     {!!Html::style('/sistema/css/lib/calendar2/semantic.ui.min.css')!!}
     {!!Html::style('/sistema/css/lib/calendar2/pignose.calendar.min.css')!!}
@@ -25,7 +24,6 @@
     {!!Html::style('/sistema/css/lib/owl.theme.default.min.css')!!}
     {!!Html::style('/sistema/css/helper.css')!!}
     {!!Html::style('/sistema/css/style.css')!!}
- 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
     <!--[if lt IE 9]>
@@ -379,10 +377,10 @@
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">Dashboard</h3> </div>
+                    <h3 class="text-primary">MichinMx/Panel de Administraciòn.</h3> </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">inicio</a></li>
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                 </div>
@@ -404,47 +402,48 @@
     
     
     <!-- All Jquery -->
-    {!!Html::script('sistema/js/lib/jquery/jquery.min.js')!!}  
+    {!!Html::script('/sistema/js/lib/jquery/jquery.min.js')!!}  
     <!-- Bootstrap tether Core JavaScript -->
-    {!!Html::script('sistema/js/lib/bootstrap/js/popper.min.js')!!}
-    {!!Html::script('sistema/js/lib/bootstrap/js/bootstrap.min.js')!!}
+    {!!Html::script('/sistema/js/lib/bootstrap/js/popper.min.js')!!}
+    {!!Html::script('/sistema/js/lib/bootstrap/js/bootstrap.min.js')!!}
     <!-- slimscrollbar scrollbar JavaScript -->
-    {!!Html::script('sistema/js/jquery.slimscroll.js')!!}
+    {!!Html::script('/sistema/js/jquery.slimscroll.js')!!}
     <!--Menu sidebar -->
-    {!!Html::script('sistema/js/sidebarmenu.js')!!}
+    {!!Html::script('/sistema/js/sidebarmenu.js')!!}
     <!--stickey kit -->
-    {!!Html::script('sistema/js/lib/sticky-kit-master/dist/sticky-kit.min.js')!!}
+    {!!Html::script('/sistema/js/lib/sticky-kit-master/dist/sticky-kit.min.js')!!}
     <!--Custom JavaScript -->
     <!-- Amchart -->
-    {!!Html::script('sistema/js/lib/morris-chart/morris.js')!!}
-    {!!Html::script('sistema/js/lib/morris-chart/raphael-min.js')!!}
-    {!!Html::script('sistema/js/lib/morris-chart/dashboard1-init.js')!!}
-    {!!Html::script('sistema/js/lib/calendar-2/moment.latest.min.js')!!}
+    {!!Html::script('/sistema/js/lib/morris-chart/morris.js')!!}
+    {!!Html::script('/sistema/js/lib/morris-chart/raphael-min.js')!!}
+    {!!Html::script('/sistema/js/lib/morris-chart/dashboard1-init.js')!!}
+    {!!Html::script('/sistema/js/lib/calendar-2/moment.latest.min.js')!!}
     <!-- scripit init-->
-    {!!Html::script('sistema/js/lib/calendar-2/semantic.ui.min.js')!!}
+    {!!Html::script('/sistema/js/lib/calendar-2/semantic.ui.min.js')!!}
     <!-- scripit init-->
-    {!!Html::script('sistema/js/lib/calendar-2/prism.min.js')!!}
+    {!!Html::script('/sistema/js/lib/calendar-2/prism.min.js')!!}
     <!-- scripit init-->
-    {!!Html::script('sistema/js/lib/calendar-2/pignose.calendar.min.js')!!}
+    {!!Html::script('/sistema/js/lib/calendar-2/pignose.calendar.min.js')!!}
     <!-- scripit init-->
-    {!!Html::script('sistema/js/lib/calendar-2/pignose.init.js')!!}
-    {!!Html::script('sistema/js/lib/owl-carousel/owl.carousel.min.js')!!}
-    {!!Html::script('sistema/js/lib/owl-carousel/owl.carousel-init.js')!!}
-    {!!Html::script('sistema/js/scripts.js')!!}
+    {!!Html::script('/sistema/js/lib/calendar-2/pignose.init.js')!!}
+    {!!Html::script('/sistema/js/lib/owl-carousel/owl.carousel.min.js')!!}
+    {!!Html::script('/sistema/js/lib/owl-carousel/owl.carousel-init.js')!!}
+    {!!Html::script('/sistema/js/scripts.js')!!}
     <!-- scripit de leer tabla-->
 
 
-    {!!Html::script('sistema/js/lib/datatables/datatables.min.js')!!}
-    {!!Html::script('sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js')!!}
-    {!!Html::script('sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js')!!}
-    {!!Html::script('sistema/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js')!!}
-    {!!Html::script('sistema/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js')!!}
-    {!!Html::script('sistema/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js')!!}
+    {!!Html::script('/sistema/js/lib/datatables/datatables.min.js')!!}
+    {!!Html::script('/sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js')!!}
+    {!!Html::script('/sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js')!!}
+    {!!Html::script('/sistema/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js')!!}
+    {!!Html::script('/sistema/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js')!!}
+    {!!Html::script('/sistema/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js')!!}
 
-    {!!Html::script('sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js')!!}
-    {!!Html::script('sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js')!!}
-    {!!Html::script('sistema/js/lib/datatables/datatables-init.js')!!}
-
+    {!!Html::script('/sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js')!!}
+    {!!Html::script('/sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js')!!}
+    {!!Html::script('/sistema/js/lib/datatables/datatables-init.js')!!}
+   <!--Custom JavaScript -->
+    {!!Html::script('/sistema/js/custom.min.js')!!
 </body>
 
 </html>

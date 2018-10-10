@@ -72,13 +72,13 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<ul>
-							<li class="active"><a href="index.html">INICIO</a></li>
-							<li><a href="menu.html">MENU</a></li>
-							<li><a href="specialties.html">ESPECIALIDADES</a></li>
+							<li class="active"><a href="index.php">INICIO</a></li>
+							<li><a href="menu.php">MENU</a></li>
+							<li><a href="specialties.php">ESPECIALIDADES</a></li>
 							<li><a href="reservation.html">RESERVACIÓN</a></li>
-							<li><a href="blog.html">BLOG</a></li>
-							<li><a href="about.html">SOBRE NOSOTROS</a></li>
-							<li><a href="contact.html">CANTACTANOS</a></li>
+							<li><a href="blog.php">BLOG</a></li>
+							<li><a href="about.php">SOBRE NOSOTROS</a></li>
+							<li><a href="contact.php">CANTACTANOS</a></li>
 						</ul>
 					</div>
 				</div>

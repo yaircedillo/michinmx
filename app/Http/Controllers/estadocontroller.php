@@ -6,53 +6,47 @@ use Illuminate\Http\Request;
 
 use michinmx\Http\Requests;
 use michinmx\estados;
+use Session;
+use Redirect;
+
 class estadocontroller extends Controller
 {
   
 
     public function index()
     {
-        $estados = \michinmx\estados::All();
+        $estados = estados::all();
         return view('estado.index',compact('estados'));
     }
     
     public function create()
     {
-       // $incrementing = estados::orderBy('id_estado','desc')
-       // ->take(1)
-        //->get();
-       // $idest = $incrementing[0]->id_estado+1;
-
         return view("estado.create");
-        //->with(['idest',$idest]);
     }
     
     public function store(Request $request)
     {
-       \michinmx\estados::create([
+      estados::create([
         'id_estado' => $request['id_estado'],
-        'estado'  => $request['estado'],
+        'estado'    => $request['estado'],
        ]);
-    
        return redirect('/estado')->with('message','store');
     }
-    
-    public function show($id)
+   // public function show($id)
+    //
+        //
+   // }
+    public function edit($id_estado)
+    {
+      $estado = estados::where($id_estado);
+      return view('estado.edit', ['estado'=>$estado]);
+    }
+    public function update(Request $request, $id_estado)
     {
         //
     }
-    
-    public function edit($id)
-    {
+   // public function destroy($id)
+   // {
         //
-    }
-    
-    public function update(Request $request, $id)
-    {
-        //
-    }
-    public function destroy($id)
-    {
-        //
-    }
+  //  }
 }
