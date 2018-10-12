@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-{!!Form::open(['route'=>'estado.store', 'method'=>'POST','enctype'=>'multipart/form-data','style'=>'margin: 0 auto;'])!!}
+{!!Form::open(['route'=>'estado.store', 'method'=>'POST'])!!}
 
 
 
@@ -19,13 +19,13 @@
                 {!!Form::text('estado',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
             </div>
      </div> 
-             {!!Form::submit('Guardar',[' class'=>'btn btn-success waves-effect waves-light m-r-10'])!!}
-             {!!Form::submit('Cancelar',[' class'=>'btn btn-inverse waves-effect waves-light'])!!}
-            
-        </form>
+     </form>
+     {!!Form::submit('Guardar',[' class'=>'btn btn-success waves-effect waves-light m-r-10'])!!}
+     {!!Form::submit('Cancelar',[' class'=>'btn btn-inverse waves-effect waves-light'])!!}
     </div>
     </div>
     </div>
 </div>  
+ 
 {!!Form::close()!!}
 @endsection

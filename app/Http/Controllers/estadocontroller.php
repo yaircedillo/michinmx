@@ -9,6 +9,7 @@ use michinmx\estados;
 use Session;
 use Redirect;
 
+
 class estadocontroller extends Controller
 {
   
@@ -28,7 +29,7 @@ class estadocontroller extends Controller
     {
       estados::create([
         'id_estado' => $request['id_estado'],
-        'estado'    => $request['estado'],
+        'estado' => $request['estado'],
        ]);
        return redirect('/estado')->with('message','store');
     }
@@ -38,12 +39,19 @@ class estadocontroller extends Controller
    // }
     public function edit($id_estado)
     {
-      $estado = estados::where($id_estado);
+      $estado = estados::find($id_estado);
+      //return \View::make('update',compact('estado'));
       return view('estado.edit', ['estado'=>$estado]);
     }
-    public function update(Request $request, $id_estado)
+    public function update($id_estado, Request $request )
     {
-        //
+        $estado = estados::find($id_estado);
+        $estado->fill($request->all());
+        $estado->save();
+
+
+        Session::flash('message','Estado editado correctamente');
+        return  Redirect::to('/estado');
     }
    // public function destroy($id)
    // {

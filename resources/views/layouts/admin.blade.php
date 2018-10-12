@@ -443,7 +443,7 @@
     {!!Html::script('/sistema/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js')!!}
     {!!Html::script('/sistema/js/lib/datatables/datatables-init.js')!!}
    <!--Custom JavaScript -->
-    {!!Html::script('/sistema/js/custom.min.js')!!
+    {!!Html::script('/sistema/js/custom.min.js')!!}
 </body>
 
 </html>
