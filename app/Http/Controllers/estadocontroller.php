@@ -23,6 +23,8 @@ class estadocontroller extends Controller
     public function create()
     {
         return view("estado.create");
+        
+        
     }
     
     public function store(Request $request)
@@ -31,16 +33,16 @@ class estadocontroller extends Controller
         'id_estado' => $request['id_estado'],
         'estado' => $request['estado'],
        ]);
-       return redirect('/estado')->with('message','store');
+       Session::flash('message','Estado creado exitosamente');
+       return  Redirect::to('/estado');
     }
-   // public function show($id)
-    //
-        //
+   //public function show($id_estado)
+    //{
+       //
    // }
     public function edit($id_estado)
     {
       $estado = estados::find($id_estado);
-      //return \View::make('update',compact('estado'));
       return view('estado.edit', ['estado'=>$estado]);
     }
     public function update($id_estado, Request $request )
@@ -53,8 +55,11 @@ class estadocontroller extends Controller
         Session::flash('message','Estado editado correctamente');
         return  Redirect::to('/estado');
     }
-   // public function destroy($id)
-   // {
-        //
-  //  }
+   public function destroy($id_estado)
+    {
+      estados::destroy($id_estado);
+      
+      Session::flash('message','Estado eliminado correctamente');
+      return Redirect::to('/estado');
+    }
 }
