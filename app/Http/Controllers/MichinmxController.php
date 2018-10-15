@@ -29,6 +29,9 @@ class MichinmxController extends Controller
     public function specialties(){
     return view ('specialties');
     }
+    public function login(){
+        return view ('layouts.login');
+        }
    //public function admin(){
    //return view ('admin.index');
    // }

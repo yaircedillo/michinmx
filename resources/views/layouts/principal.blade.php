@@ -26,29 +26,28 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<!-- Date Picker -->
-	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	
 
-	<link rel="stylesheet" href="css/style.css">
+	
+	{!!Html::style('/css/style.css')!!}
+	{!!Html::style('/css/bootstrap-datepicker.css')!!}
+	{!!Html::style('/fonts/flaticon/font/flaticon.css')!!}
+	{!!Html::style('/css/flexslider.css')!!}
+	{!!Html::style('/css/magnific-popup.css')!!}
+	{!!Html::style('/css/owl.theme.default.min.css')!!}
+	{!!Html::style('/css/owl.carousel.min.css')!!}
+	{!!Html::style('/css/bootstrap.css')!!}
+		
+	{!!Html::style('/css/icomoon.css')!!}
+		
+	{!!Html::style('/css/animate.css')!!}
+	{!!Html::script('/js/modernizr-2.6.2.min.js')!!}	
+
+
 
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -72,13 +71,14 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<ul>
-							<li class="active"><a href="index.php">INICIO</a></li>
-							<li><a href="menu.php">MENU</a></li>
-							<li><a href="specialties.php">ESPECIALIDADES</a></li>
-							<li><a href="reservation.html">RESERVACIÓN</a></li>
-							<li><a href="blog.php">BLOG</a></li>
-							<li><a href="about.php">SOBRE NOSOTROS</a></li>
-							<li><a href="contact.php">CANTACTANOS</a></li>
+							<li class="active"><a href="{!!URL::to('/index')!!}">INICIO</a></li>
+							<li><a href="{!!URL::to('menu')!!}">MENU</a></li>
+							<li><a href="{!!URL::to('especialidad')!!}">ESPECIALIDADES</a></li>
+							<li><a href="{!!URL::to('reservacion')!!}">RESERVACIÓN</a></li>
+							<li><a href="{!!URL::to('blog')!!}">BLOG</a></li>
+							<li><a href="{!!URL::to('nosotros')!!}">SOBRE NOSOTROS</a></li>
+							<li><a href="{!!URL::to('contactanos')!!}">CANTACTANOS</a></li>
+							<li><a href="{!!URL::to('iniciar_sesión')!!}">LOGIN</a></li>
 						</ul>
 					</div>
 				</div>
@@ -163,29 +163,35 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</div>
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	
+	{!!Html::script('/js/jquery.min.js')!!}
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	
+	{!!Html::script('/js/jquery.easing.1.3.js')!!}
+	
+	{!!Html::script('/js/bootstrap.min.js')!!}
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+		
+	{!!Html::script('/js/jquery.waypoints.min.js')!!}
 	<!-- Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
+	
+	{!!Html::script('/js/jquery.stellar.min.js')!!}
 	<!-- Owl Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
+	{!!Html::script('/js/owl.carousel.min.js')!!}
 	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+	{!!Html::script('/js/jquery.magnific-popup.min.js')!!}
+	{!!Html::script('/js/magnific-popup-options.js')!!}
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	{!!Html::script('/js/jquery.flexslider-min.js')!!}
 	<!-- Date Picker -->
-    <script src="js/bootstrap-datepicker.js"></script>
+	
+	{!!Html::script('/js/bootstrap-datepicker.js')!!}
     <!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
+	{!!Html::script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false')!!}
+	{!!Html::script('/js/google_map.js')!!}
 	<!-- Main JS (Do not remove) -->
-	<script src="js/main.js"></script>
+
+	{!!Html::script('/js/main.js')!!}
 
 	</body>
 </html>

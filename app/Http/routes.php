@@ -18,6 +18,7 @@ Route::get('contactanos','MichinmxController@contact');
 Route::get('menu','MichinmxController@menu');
 Route::get('reservacion','MichinmxController@reservation');
 Route::get('especialidad','MichinmxController@specialties');
+Route::get('iniciar_sesión','MichinmxController@login');
 Route::resource('estado','estadocontroller');
 
 // Route::get('estado/{id_estado}/destroy', [
