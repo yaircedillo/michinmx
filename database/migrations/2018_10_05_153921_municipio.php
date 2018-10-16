@@ -12,10 +12,12 @@ class Municipio extends Migration
             $table->increments('id_municipio');
 		    $table->string('municipio',40);
 			$table->integer('id_estado')->unsigned();
-		    $table->foreign('id_estado')->references('id_estado')->on('estado');
-					
-			$table->rememberToken();
+            $table->integer('id_puesto')->unsigned();
+            $table->rememberToken();
 		    $table->timestamps();
+            $table->foreign('id_estado')->references('id_estado')->on('estado');
+		    $table->foreign('id_puesto')->references('id_puesto')->on('puesto');		
+			
         });
     }
 

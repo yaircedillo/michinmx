@@ -14,10 +14,11 @@
     <!-- Bootstrap Core CSS -->
     
    
+      
+    {!!Html::style('/sistema/css/helper.css')!!}    
+    {!!Html::style('/sistema/css/lib/bootstrap/bootstrap.min.css')!!}
     
-    {!!Html::style('css/style.css')!!}
-    {!!Html::style('css/helper.css')!!}    
-	{!!Html::style('css/lib/bootstrap/bootstrap.min.css')!!}
+    {!!Html::style('/sistema/css/style.css')!!}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
     <!--[if lt IE 9]>
@@ -73,20 +74,14 @@
         </div>
 
     </div>
-    <!-- End Wrapper -->
-    <!-- All Jquery -->
-    <script src="js/lib/jquery/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="js/lib/bootstrap/js/popper.min.js"></script>
-    <script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
-    <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
-    <!--stickey kit -->
-    <script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <!--Custom JavaScript -->
-    <script src="js/custom.min.js"></script>
+  
+    {!!Html::script('/sistemajs/custom.min.js')!!}  
+    {!!Html::script('/sistemajs/lib/sticky-kit-master/dist/sticky-kit.min.js')!!} 
+    {!!Html::script('/sistemajs/sidebarmenu.js')!!} 
+    {!!Html::script('/sistemajs/jquery.slimscroll.js')!!} 
+    {!!Html::script('/sistemajs/lib/bootstrap/js/bootstrap.min.js')!!} 
+    {!!Html::script('/sistemajs/lib/bootstrap/js/popper.min.js')!!} 
+    {!!Html::script('/sistemajs/lib/jquery/jquery.min.js')!!} 
 
 </body>
 

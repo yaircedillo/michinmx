@@ -2,12 +2,14 @@
 
 namespace michinmx\Http\Controllers;
 
-use Illuminate\Http\Request;
+
 
 use michinmx\Http\Requests;
+use michinmx\Http\Requests\EstadoRequestCreate;
 use michinmx\estados;
 use Session;
 use Redirect;
+use Illuminate\Http\Request;
 
 
 class estadocontroller extends Controller
@@ -27,7 +29,7 @@ class estadocontroller extends Controller
         
     }
     
-    public function store(Request $request)
+    public function store(EstadoRequestCreate $request)
     {
       estados::create([
         'id_estado' => $request['id_estado'],

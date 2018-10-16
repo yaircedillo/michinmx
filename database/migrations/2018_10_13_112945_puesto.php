@@ -12,7 +12,13 @@ class Puesto extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('puesto', function (Blueprint $table) {
+            $table->increments('id_puesto');
+		    $table->string('puesto',40);
+			
+			$table->rememberToken();
+		    $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +28,6 @@ class Puesto extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('puesto');
     }
 }
