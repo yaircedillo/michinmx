@@ -439,6 +439,9 @@
     {!!Html::script('/sistema/js/lib/datatables/datatables-init.js')!!}
    <!--Custom JavaScript -->
     {!!Html::script('/sistema/js/custom.min.js')!!}
+
+    {!!Html::script('/sistema/js/sweetalert/sweetalert.init')!!}
+    {!!Html::script('/sistema/js/sweetalert/sweetalert.min')!!}
 </body>
 
 </html>

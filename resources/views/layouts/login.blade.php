@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('sistema/images/favicon.png')}}">
     <title>Ela - Bootstrap Admin Dashboard Template</title>
     <!-- Bootstrap Core CSS -->
     
@@ -17,14 +17,7 @@
       
     {!!Html::style('/sistema/css/helper.css')!!}    
     {!!Html::style('/sistema/css/lib/bootstrap/bootstrap.min.css')!!}
-    
     {!!Html::style('/sistema/css/style.css')!!}
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
-    <!--[if lt IE 9]>
-    <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
 </head>
 
 <body class="fix-header fix-sidebar">
@@ -75,13 +68,13 @@
 
     </div>
   
-    {!!Html::script('/sistemajs/custom.min.js')!!}  
-    {!!Html::script('/sistemajs/lib/sticky-kit-master/dist/sticky-kit.min.js')!!} 
-    {!!Html::script('/sistemajs/sidebarmenu.js')!!} 
-    {!!Html::script('/sistemajs/jquery.slimscroll.js')!!} 
-    {!!Html::script('/sistemajs/lib/bootstrap/js/bootstrap.min.js')!!} 
-    {!!Html::script('/sistemajs/lib/bootstrap/js/popper.min.js')!!} 
-    {!!Html::script('/sistemajs/lib/jquery/jquery.min.js')!!} 
+    {!!Html::script('/sistema/js/custom.min.js')!!}  
+    {!!Html::script('/sistema/js/lib/sticky-kit-master/dist/sticky-kit.min.js')!!} 
+    {!!Html::script('/sistema/js/sidebarmenu.js')!!} 
+    {!!Html::script('/sistema/js/jquery.slimscroll.js')!!} 
+    {!!Html::script('/sistema/js/lib/bootstrap/js/bootstrap.min.js')!!} 
+    {!!Html::script('/sistema/js/lib/bootstrap/js/popper.min.js')!!} 
+    {!!Html::script('/sistema/js/lib/jquery/jquery.min.js')!!} 
 
 </body>
 

@@ -105,21 +105,21 @@
 						<div class="col-md-3 col-pb-sm">
 							<h2>Latest Blog</h2>
 							<div class="f-entry">
-								<a href="#" class="featured-img" style="background-image: url(images/dish-5.jpg);"></a>
+								<a href="#" class="featured-img" style="background-image: url{{asset('images/dish-5.jpg')}}"></a>
 								<div class="desc">
 									<span>May 5, 2018</span>
 									<h3><a href="#">How to cook beef Grilled with potato</a></h3>
 								</div>
 							</div>
 							<div class="f-entry">
-								<a href="#" class="featured-img" style="background-image: url(images/dish-7.jpg);"></a>
+								<a href="#" class="featured-img" style="background-image: url{{asset('images/dish-7.jpg')}}"></a>
 								<div class="desc">
 									<span>May 5, 2018</span>
 									<h3><a href="#">A Japanese Master Chef</a></h3>
 								</div>
 							</div>
 							<div class="f-entry">
-								<a href="#" class="featured-img" style="background-image: url(images/dessert-3.jpg);"></a>
+								<a href="#" class="featured-img" style="background-image: url{{asset('images/dessert-3.jpg')}}"></a>
 								<div class="desc">
 									<span>May 5, 2018</span>
 									<h3><a href="#">Special Recipe for this month</a></h3>

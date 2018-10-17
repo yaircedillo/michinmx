@@ -1,10 +1,16 @@
 @extends('layouts.admin')
 @section('content')
+
 @if(Session::has('message'))
-<div class="alert alert-success alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  {{Session::get('message')}}
-</div>
+<script>
+swal(
+    ' {{session('message')}}',
+    'Clic al boton para cerrar'
+    'success'
+)
+
+</script>
+
 @endif
 
 <div class="col-lg-6">                 
@@ -49,6 +55,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- {!!link_to_route('estado.destroy', $title = 'Eliminar', $parameters = $estado->id_estado, $attributes = ['class'=>'btn btn-danger btn-outline btn-rounded m-b-10 m-l-5'])!!}  -->
+                       
                     </div>
 @endsection

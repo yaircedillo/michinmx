@@ -19,8 +19,8 @@
 
 <div class="row">
      <div class="col-lg-6">
-        <div class="card">
-        <div class="card-body">
+        <div class="card  ">
+        <div class="card-body ">
         <h4 class="card-title">Ingresar un nuevo Estado.</h4>
         <form class="form p-t-20">
        
