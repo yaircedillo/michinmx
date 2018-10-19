@@ -32,6 +32,6 @@ class Proveedores extends Migration
 }
     public function down()
     {
-        Schema::drop('proveedores');
+    Schema::drop('proveedor');
     }
 }

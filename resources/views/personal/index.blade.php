@@ -7,9 +7,9 @@
   {{Session::get('message')}}
 </div>
 @endif
-<div class="row justify-content-center">
+
 <div class="col-lg-6">                 
-<div class="card ">
+<div class="card">
                             <div class="card-title">
                                 <h4 aling-text='center'>Estados Registrados.. </h4>
                                 <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('estado.create')}}"   role="button"> + Agregar un nuevo estado</a></td>
@@ -19,7 +19,7 @@
                             <div class="card-body">
                                 <div class="table-responsive">
                                     
-                                    <table class="table table-hover ">
+                                    <table   class="table table-hover " >
                                     <thead>
                                         <tr>
                                                 <th>#</th>
@@ -31,7 +31,7 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Estado</th>
-                                              
+                                                <th>operaciones</th> 
                                             </tr>
                                     </tfoot>
                                         @foreach($estados as $estado)
@@ -48,11 +48,36 @@
                                        </td>
                                         </tbody>
                                        @endforeach
+                                       
                                    </table>
+                                 
                                 </div>
-                               </div>
-                             </div>   
-                           </div>
-</div>
-      
+                               
+                            </div>
+                   
+                            <div class="pagination">
+                                    <a><span> {!!$estados->render()!!}</span></a>
+                                    
+                              
+                            </div>
+                  </div>
+                 
+                           
+                        </div>
+                        
+                    </div>
+                    <style>
+                          
+                            .pagination a {
+                                color: black;
+                                float: left;
+                                padding: 8px 16px;
+                                text-decoration: none;
+                            }
+                            
+                    </style>
+
+
+
+ 
 @endsection

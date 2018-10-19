@@ -22,6 +22,6 @@ class Tickets extends Migration
    
     public function down()
     {
-        SChema::drop('tickets');
+        Schema::drop('tickets');
     }
 }

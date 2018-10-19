@@ -33,15 +33,20 @@ class estadocontroller extends Controller
     {
       estados::create([
         'id_estado' => $request['id_estado'],
-        'estado' => $request['estado'],
-       ]);
-       Session::flash('message','Estado creado exitosamente');
-       return  Redirect::to('/estado');
+        'estado' => $request['estado'],  ]);
+       	
+		$this->validate($request,[
+            'estado'=>'required',
+           
+            ]);
+
+     Session::flash('message','Estado creado exitosamente');
+     return  Redirect::to('/estado');
     }
-   //public function show($id_estado)
-    //{
-       //
-   // }
+   public function show($id_estado)
+   {
+       
+   }
     public function edit($id_estado)
     {
       $estado = estados::find($id_estado);
@@ -64,4 +69,5 @@ class estadocontroller extends Controller
       Session::flash('message','Estado eliminado correctamente');
       return Redirect::to('/estado');
     }
+    
 }
