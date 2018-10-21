@@ -17,7 +17,7 @@
       
     {!!Html::style('/sistema/css/helper.css')!!}    
     {!!Html::style('/sistema/css/lib/bootstrap/bootstrap.min.css')!!}
-    {!!Html::style('/sistema/css/style.css')!!}
+    {!!Html::style('sistema/css/style.css')!!}
 </head>
 
 <body class="fix-header fix-sidebar">

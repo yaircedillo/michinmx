@@ -24,7 +24,8 @@ class Cartas extends Migration
             $table->foreign('id_personal')->references('id_personal')->on('personales');
 					
 			$table->rememberToken();
-		    $table->timestamps();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

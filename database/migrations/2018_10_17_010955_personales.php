@@ -26,6 +26,7 @@ class Personales extends Migration
             $table->foreign('id_puesto')->references ('id_puesto')->on('puestos');
             $table ->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

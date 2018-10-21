@@ -34,11 +34,7 @@ class estadocontroller extends Controller
       estados::create([
         'id_estado' => $request['id_estado'],
         'estado' => $request['estado'],  ]);
-       	
-		$this->validate($request,[
-            'estado'=>'required',
-           
-            ]);
+       
 
      Session::flash('message','Estado creado exitosamente');
      return  Redirect::to('/estado');

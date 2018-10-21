@@ -13,7 +13,8 @@ class Municipio extends Migration
             $table->string('municipio',40);
             $table->integer('id_estado')->unsigned();
             $table->rememberToken();
-		    $table->timestamps();
+            $table->timestamps();
+            $table->softDeletes();
             $table->foreign('id_estado')->references('id_estado')->on('estado');
 		   		
 			

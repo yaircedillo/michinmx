@@ -13,6 +13,7 @@ class Unidades extends Migration
         $table->string('medida',40);
         $table ->rememberToken();
         $table ->timestamps();
+        $table->softDeletes();
     });
 
     }

@@ -19,6 +19,7 @@ class Reservaciones extends Migration
         $table->foreign('id_cliente')->references ('id_cliente')->on ('clientes');
         $table->rememberToken();
         $table->timestamps();
+        $table->softDeletes();
         
     });
     }

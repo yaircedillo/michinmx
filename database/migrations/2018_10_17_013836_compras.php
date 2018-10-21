@@ -22,6 +22,9 @@ class Compras extends Migration
         $table->float('iva');
         $table->integer('id_insumo')->unsigned();
         $table->foreign('id_insumo')->references('id_insumo')->on('insumos');
+        $table->rememberToken();
+        $table->timestamps();
+        $table->softDeletes();
         });
 
     }

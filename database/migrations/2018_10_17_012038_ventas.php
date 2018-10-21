@@ -22,6 +22,9 @@ class Ventas extends Migration
         $table->integer('id_promocion')->unsigned();
         $table->foreign('id_orden')->references('id_orden')->on('ordenes');
         $table->foreign('id_promocion')->references('id_promocion')->on('promociones');
+        $table->rememberToken();
+        $table->timestamps();
+        $table->softDeletes();
         });
     }
 

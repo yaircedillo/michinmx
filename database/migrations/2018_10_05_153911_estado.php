@@ -13,7 +13,8 @@ class Estado extends Migration
 		    $table->string('estado',40);
 	
 			$table->rememberToken();
-		    $table->timestamps();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

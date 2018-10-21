@@ -16,7 +16,8 @@ class Promociones extends Migration
         $table->date('fecha_final');
         $table->time('horario');
         $table->rememberToken();
-		$table->timestamps(); 
+        $table->timestamps(); 
+        $table->softDeletes();
         });
     }
 

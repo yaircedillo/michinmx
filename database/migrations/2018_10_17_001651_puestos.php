@@ -13,6 +13,7 @@ class Puestos extends Migration
             $table->string('puesto',50);
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
     

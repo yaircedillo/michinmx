@@ -14,6 +14,7 @@ class TipoCartas extends Migration
             $table->string('nombre',40);
             $table->rememberToken();
             $table->timestamps();   
+            $table->softDeletes();
     });
     }
 

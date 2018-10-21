@@ -20,6 +20,7 @@ Route::get('reservacion','MichinmxController@reservation');
 Route::get('especialidad','MichinmxController@specialties');
 Route::get('iniciar_sesión','MichinmxController@login');
 Route::resource('estado','estadocontroller');
+Route::resource('personal','personalcontroller');
 
 // Route::get('estado/{id_estado}/destroy', [
 //'estadoss'=>'estadocontroller@destroy',

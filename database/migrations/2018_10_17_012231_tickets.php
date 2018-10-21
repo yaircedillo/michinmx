@@ -16,6 +16,7 @@ class Tickets extends Migration
         $table->foreign('id_venta')->references('id_venta')->on('ventas');
         $table->rememberToken();
         $table->timestamps();
+        
         });
     }
 

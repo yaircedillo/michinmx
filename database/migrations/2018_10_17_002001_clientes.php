@@ -24,6 +24,7 @@ class Clientes extends Migration
         $table->foreign('id_municipios')->references ('id_municipios')->on('municipio');
         $table->rememberToken();
         $table->timestamps();
+        $table->softDeletes();
     });
 }
 
