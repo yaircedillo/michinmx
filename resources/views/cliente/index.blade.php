@@ -10,8 +10,8 @@
                 
 <div class="card ">
                             <div class="card-title">
-                                <h4 aling-text='center'>Registros del Personal... </h4>
-                                <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('personal.create')}}"   role="button"> + Agregar un nuevo Resgistro</a></td>
+                                <h4 aling-text='center'>Registros de los Clientes... </h4>
+                                <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('cliente.create')}}"   role="button"> + Agregar un nuevo Resgistro</a></td>
                                
                                
                             </div>
@@ -32,7 +32,6 @@
                                                 <th>Correo</th>
                                                 <th>Telefono</th>
                                                 <th>Municipio</th>
-                                                <th>Puesto</th>
                                                 <th>operaciones</th>  
                                         </tr>    
                                     </thead>
@@ -49,29 +48,28 @@
                                               <th>Correo</th>
                                               <th>Telefono</th>
                                               <th>Municipio</th>
-                                              <th>Puesto</th>
+                                          
                                               <th>operaciones</th>
                                               
                                             </tr>
                                     </tfoot>
-                                        @foreach($personales as $personal)
-                                        <tbody>
-                                      <td>{{$personal->id_personal}}</td>
-                                       <td>{{$personal->nombre}}</td>
-                                       <td>{{$personal->ap_pat}}</td>
-                                       <td>{{$personal->ap_mat}}</td>
-                                       <td>{{$personal->genero}}</td>
-                                       <td>{{$personal->calle}}</td>
-                                       <td>{{$personal->colonia}}</td>
-                                       <td>{{$personal->cp}}</td>
-                                       <td>{{$personal->correo}}</td>
-                                       <td>{{$personal->telefono}}</td>
-                                       <td>{{$personal->id_municipios}}</td>
-                                       <td>{{$personal->id_puesto}}</td>
+                                      @foreach($clientess as $cliente)
+                                      <tbody>
+                                      <td>{{$cliente->id_cliente}}</td>
+                                       <td>{{$cliente->nombre}}</td>
+                                       <td>{{$cliente->ap_pat}}</td>
+                                       <td>{{$cliente->ap_mat}}</td>
+                                       <td>{{$cliente->genero}}</td>
+                                       <td>{{$cliente->calle}}</td>
+                                       <td>{{$cliente->colonia}}</td>
+                                       <td>{{$cliente->cp}}</td>
+                                       <td>{{$cliente->correo}}</td>
+                                       <td>{{$cliente->telefono}}</td>
+                                       <td>{{$cliente->id_municipios}}</td>
                                        <td>
-                                        {!!link_to_route('personal.edit', $title = 'Editar', $parameters = $personal->id_personal, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
+                                        {!!link_to_route('cliente.edit', $title = 'Editar', $parameters = $cliente->id_cliente, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     
-                                        {!!Form::open(['route' => ['personal.destroy',$personal->id_personal],'method'=>'DELETE'])!!} 
+                                        {!!Form::open(['route' => ['cliente.destroy',$cliente->id_cliente],'method'=>'DELETE'])!!} 
                                         {!!Form::submit('Eliminar',['class'=>'btn btn-inverse waves-effect waves-light'  ])!!}
                                         {!!Form::close()!!}
 

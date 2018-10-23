@@ -12,6 +12,7 @@ use michinmx\municipios;
 use Redirect;
 
 
+
 class personalcontroller extends Controller
 {
     public function index()
@@ -57,15 +58,22 @@ class personalcontroller extends Controller
    }
     public function edit($id_personal)
     {
-     
+        $personal = personales::find($id_personal);
+        return view('personal.edit', ['personal'=>$personal]);
     }
     public function update($id_personal, Request $request )
     {
-       
+        $personal = personales::find($id_personal);
+        $personal->fill($request->all());
+        $personal->save();
+
+
+        Session::flash('message','Estado editado correctamente');
+        return  Redirect::to('/personal');
     }
-   public function destroy($id_personales)
+   public function destroy($id_personal)
     {
-        personales::destroy($id_personales);
+        personales::destroy($id_personal);
       
         Session::flash('message','Personal eliminado correctamente');
         return Redirect::to('/personal');

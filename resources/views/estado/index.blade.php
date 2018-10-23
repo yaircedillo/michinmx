@@ -31,6 +31,7 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Estado</th>
+                                                
                                               
                                             </tr>
                                     </tfoot>

@@ -3,7 +3,7 @@
 
 {{csrf_field()}}
 
-{!!Form::open(['route'=>'personal.store', 'method'=>'POST'])!!}
+{!!Form::open(['route'=>'proveedor.store', 'method'=>'POST'])!!}
 
 
 
@@ -11,7 +11,7 @@
      <div class="col-lg-6">
         <div class="card  ">
         <div class="card-body ">
-        <h4 class="card-title">Ingresar un nuevo Personal.</h4>
+        <h4 class="card-title">Ingresar un nuevo Proveedor.</h4>
         <form class="table-responsive m-t-40">
 
             <div class="form-group row ">
@@ -147,25 +147,7 @@
                                         <i> {{ $errors->first('ap_mat') }} </i> 
                                         @endif	<br>
                                     </div>
-                                    <div class="form-group row ">
-                                        <label class="col-lg-4 col-form-label" >Puesto. <span class="text-danger">*</span></label>
-                                        <div class="col-md-9">
-                                                <div class="input-group-addon"><i class="icon-key"></i></div>
-                                           <select class="form-control custom-select" name="id_puesto">
-                                                @foreach($puestos as $puesto)
-                                                <option value="{{$puesto['id_puesto']}}"> {{$puesto['puesto']}}
-                                                </option>
-                                               @endforeach
-                                            </select>
-                                            </div>
-                                            <div class="input-group">
-                                             
-                                    </div>
-                                        @if($errors->first('ap_mat')) 
-                                        <i> {{ $errors->first('ap_mat') }} </i> 
-                                        @endif	<br>
-                                    </div>
-                                
+                                 
                                 
 
 

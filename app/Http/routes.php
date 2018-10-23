@@ -21,6 +21,8 @@ Route::get('especialidad','MichinmxController@specialties');
 Route::get('iniciar_sesión','MichinmxController@login');
 Route::resource('estado','estadocontroller');
 Route::resource('personal','personalcontroller');
+Route::resource('proveedor','proveedorcontroller');
+Route::resource('cliente','clientecontroller');
 
 // Route::get('estado/{id_estado}/destroy', [
 //'estadoss'=>'estadocontroller@destroy',

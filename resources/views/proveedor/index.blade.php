@@ -10,8 +10,8 @@
                 
 <div class="card ">
                             <div class="card-title">
-                                <h4 aling-text='center'>Registros del Personal... </h4>
-                                <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('personal.create')}}"   role="button"> + Agregar un nuevo Resgistro</a></td>
+                                <h4 aling-text='center'>Registros de los Proveedores... </h4>
+                                <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('proveedor.create')}}"   role="button"> + Agregar un nuevo Resgistro</a></td>
                                
                                
                             </div>
@@ -32,7 +32,7 @@
                                                 <th>Correo</th>
                                                 <th>Telefono</th>
                                                 <th>Municipio</th>
-                                                <th>Puesto</th>
+                                            
                                                 <th>operaciones</th>  
                                         </tr>    
                                     </thead>
@@ -49,29 +49,28 @@
                                               <th>Correo</th>
                                               <th>Telefono</th>
                                               <th>Municipio</th>
-                                              <th>Puesto</th>
+                                          
                                               <th>operaciones</th>
                                               
                                             </tr>
                                     </tfoot>
-                                        @foreach($personales as $personal)
+                                        @foreach($proveedores as $proveedor)
                                         <tbody>
-                                      <td>{{$personal->id_personal}}</td>
-                                       <td>{{$personal->nombre}}</td>
-                                       <td>{{$personal->ap_pat}}</td>
-                                       <td>{{$personal->ap_mat}}</td>
-                                       <td>{{$personal->genero}}</td>
-                                       <td>{{$personal->calle}}</td>
-                                       <td>{{$personal->colonia}}</td>
-                                       <td>{{$personal->cp}}</td>
-                                       <td>{{$personal->correo}}</td>
-                                       <td>{{$personal->telefono}}</td>
-                                       <td>{{$personal->id_municipios}}</td>
-                                       <td>{{$personal->id_puesto}}</td>
+                                      <td>{{$proveedor->id_proveedores}}</td>
+                                       <td>{{$proveedor->nombre}}</td>
+                                       <td>{{$proveedor->ap_pat}}</td>
+                                       <td>{{$proveedor->ap_mat}}</td>
+                                       <td>{{$proveedor->genero}}</td>
+                                       <td>{{$proveedor->calle}}</td>
+                                       <td>{{$proveedor->colonia}}</td>
+                                       <td>{{$proveedor->cp}}</td>
+                                       <td>{{$proveedor->correo}}</td>
+                                       <td>{{$proveedor->telefono}}</td>
+                                       <td>{{$proveedor->id_municipios}}</td>
                                        <td>
-                                        {!!link_to_route('personal.edit', $title = 'Editar', $parameters = $personal->id_personal, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
+                                        {!!link_to_route('proveedor.edit', $title = 'Editar', $parameters = $proveedor->id_proveedores, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     
-                                        {!!Form::open(['route' => ['personal.destroy',$personal->id_personal],'method'=>'DELETE'])!!} 
+                                        {!!Form::open(['route' => ['proveedor.destroy',$proveedor->id_proveedores],'method'=>'DELETE'])!!} 
                                         {!!Form::submit('Eliminar',['class'=>'btn btn-inverse waves-effect waves-light'  ])!!}
                                         {!!Form::close()!!}
 
