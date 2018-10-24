@@ -3,7 +3,7 @@
 
 {{csrf_field()}}
 
-{!!Form::open(['route'=>'cliente.store', 'method'=>'POST'])!!}
+{!!Form::open(['route'=>'cliente.store', 'method'=>'POST' ,'enctype'=>'multipart/form-data' ])!!}
 
 
 
@@ -13,6 +13,7 @@
         <div class="card-body ">
         <h4 class="card-title">Ingresar un nuevo Cliente.</h4>
         <form class="table-responsive m-t-40">
+            
 
             <div class="form-group row ">
                 <label class="col-lg-4 col-form-label" >Nombre. <span class="text-danger">*</span></label>
@@ -127,6 +128,7 @@
                                     @endif	<br>
                                 </div>
                                 
+                                
                                 <div class="form-group row ">
                                         <label class="col-lg-4 col-form-label" >Municipio. <span class="text-danger">*</span></label>
                                         <div class="col-md-9">
@@ -143,23 +145,24 @@
                                         
                                         
                                     </div>
-                                        @if($errors->first('ap_mat')) 
-                                        <i> {{ $errors->first('ap_mat') }} </i> 
+                                        @if($errors->first('id_municipios')) 
+                                        <i> {{ $errors->first('id_municipios') }} </i> 
                                         @endif	<br>
-                                    </div>
-                                 
-                                
-
-
-
-    
+                                    </div> 
+                                    
+                                        
+                                   
+                                    
      </form>
-     {!!Form::submit('Guardar',[' class'=>'btn btn-success waves-effect waves-light m-r-10'])!!}
+   
+        {!!Form::submit('Guardar',[' class'=>'btn btn-success waves-effect waves-light m-r-10'])!!}
      {!!Form::reset('Limpiar',[' class'=>'btn btn-inverse waves-effect waves-light'])!!}
     </div>
     </div>
     </div>
 </div>  
+
+
  
 {!!Form::close()!!}
 @endsection

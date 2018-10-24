@@ -3,7 +3,7 @@
 
 {{csrf_field()}}
 
-{!!Form::open(['route'=>'personal.store', 'method'=>'POST'])!!}
+{!!Form::open(['route'=>'personal.store', 'method'=>'POST', 'enctype'=>'multipart/form-data' ])!!}
 
 
 
@@ -165,7 +165,8 @@
                                         <i> {{ $errors->first('ap_mat') }} </i> 
                                         @endif	<br>
                                     </div>
-                                
+                                   
+                                        
                                 
 
 

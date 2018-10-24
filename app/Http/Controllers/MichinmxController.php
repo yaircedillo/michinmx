@@ -32,6 +32,9 @@ class MichinmxController extends Controller
     public function login(){
         return view ('layouts.login');
         }
+    public function inicio(){
+    return view ('principal.inicio');
+    }
    //public function admin(){
    //return view ('admin.index');
    // }

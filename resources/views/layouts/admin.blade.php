@@ -25,7 +25,11 @@
 {!!Html::style('/sistema/css/lib/bootstrap/bootstrap.min.css')!!}
 {!!Html::style('/sistema/css/lib/owl.theme.default.min.css')!!}
 {!!Html::style('/sistema/css/helper.css')!!}
+
+{!!Html::style('/sistema/css/lib/dropzone/dropzone.css')!!}
 {!!Html::style('/sistema/css/style.css')!!}
+
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
 <!--[if lt IE 9]>
@@ -256,7 +260,7 @@
                     <li> <a href="#" ><i class="fa fa-tachometer"></i>INICIO</a></li>
                         
                     </li>
-                    <li class="nav-label">Formularios</li>
+                    <li class="#">Formularios</li>
                     
                     <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Formularios</span></a>
                         <ul aria-expanded="false" class="collapse">
@@ -264,6 +268,7 @@
                             <li><a href="{{route('cliente.index')}}">Clientes</a></li>
                             <li><a href="{{route('proveedor.index')}}">Proveedores</a></li>
                             <li><a href="{{route('personal.index')}}">Personal </a></li>
+                            <li><a href="{{route('usuarios.index')}}">Usuario </a></li>
                             
                         </ul>
                     </li>
@@ -287,8 +292,8 @@
                 <h3 class="text-primary">MichinMx/Panel de Administraciòn.</h3> </div>
             <div class="col-md-7 align-self-center">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">inicio</a></li>
-                    <li class="breadcrumb-item active">Dashboard</li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">INICIO</a></li>
+                    <li class="breadcrumb-item active">TABLERO</li>
                 </ol>
             </div>
         </div>
@@ -324,13 +329,30 @@
     <!-- ESTOS SON LOS SCRIPTS DE LOS FORMULATIOS PARA REALIZAR LA  VALIDACION -->
     {!!Html::script('/sistema/js/lib/form-validation/jquery.validate.min.js')!!}
     {!!Html::script('/sistema/js/lib/form-validation/jquery.validate-init.js')!!}
+
+    {!!Html::script('/sistema/js/lib/morris-chart/raphael-min.js')!!}
+    {!!Html::script('/sistema/js/lib/morris-chart/morris.js')!!}
+    {!!Html::script('/sistema/js/lib/morris-chart/dashboard1-init.js')!!}
+    {!!Html::script('/sistema/js/lib/calendar-2/moment.latest.min.js')!!}
+    {!!Html::script('/sistema/js/lib/calendar-2/semantic.ui.min.js')!!}
+    {!!Html::script('/sistema/js/lib/calendar-2/prism.min.js')!!}
+
+
+    {!!Html::script('/sistema/js/lib/calendar-2/pignose.calendar.min.js')!!}
+    {!!Html::script('/sistema/js/lib/calendar-2/pignose.init.js')!!}
+    {!!Html::script('/sistema/js/lib/owl-carousel/owl.carousel.min.js')!!}
+    {!!Html::script('/sistema/js/lib/owl-carousel/owl.carousel-init.js')!!}
+    {!!Html::script('/sistema/js/scripts.js')!!}
+    {!!Html::script('/sistema/js/custom.min.js')!!}
+    {!!Html::script('/sistema/js/lib/dropzone/dropzone.js')!!}
     
+    
+
+
 </body>
     
 </body>
 
 </html> 
  
-
-
-
+ 

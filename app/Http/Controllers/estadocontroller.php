@@ -1,21 +1,14 @@
 <?php
-
 namespace michinmx\Http\Controllers;
-
-
-
 use michinmx\Http\Requests;
 use michinmx\Http\Requests\EstadoRequestCreate;
 use michinmx\estados;
 use Session;
 use Redirect;
 use Illuminate\Http\Request;
-
-
 class estadocontroller extends Controller
 {
   
-
     public function index()
     {
         $estados = estados::all();
@@ -35,7 +28,6 @@ class estadocontroller extends Controller
         'id_estado' => $request['id_estado'],
         'estado' => $request['estado'],  ]);
        
-
      Session::flash('message','Estado creado exitosamente');
      return  Redirect::to('/estado');
     }
@@ -53,8 +45,6 @@ class estadocontroller extends Controller
         $estado = estados::find($id_estado);
         $estado->fill($request->all());
         $estado->save();
-
-
         Session::flash('message','Estado editado correctamente');
         return  Redirect::to('/estado');
     }

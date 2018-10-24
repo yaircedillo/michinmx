@@ -4,6 +4,7 @@ namespace michinmx\Http\Controllers;
 
 use Illuminate\Http\Request;
 use michinmx\Http\Requests;
+
 use michinmx\Http\Requests\PesonalesRequestCreate;
 use michinmx\personales;
 use Session;
@@ -44,11 +45,30 @@ class personalcontroller extends Controller
             'cp' => $request['cp'],  
             'correo' => $request['correo'],  
             'telefono' => $request['telefono'],  
+            'archivo' =>$request['archivo'],  
+                
             'id_municipios' => $request['id_municipios'],  
             'id_puesto' => $request['id_puesto'], 
 
             ]);
 
+         
+          
+                $file = $request->file('archivo');
+                if($file!="")
+                {
+                $ldate = date('Ymd_His_');
+                $img = $file->getClientOriginalName();
+                $img2 = $ldate.$img;
+                \Storage::disk('local')->put($img2, \File::get($file));
+                }
+                else
+                {
+                 $img2= 'sinfoto.png';
+                }
+    
+            
+          
             Session::flash('message','Personal registrado exitosamente');
             return  Redirect::to('/personal');
     }
@@ -67,7 +87,14 @@ class personalcontroller extends Controller
         $personal->fill($request->all());
         $personal->save();
 
-
+        $file = $request->file('archivo');
+        if($file!="")
+        {
+        $ldate = date('Ymd_His_');
+        $img = $file->getClientOriginalName();
+        $img2 = $ldate.$img;
+        \Storage::disk('local')->put($img2, \File::get($file));
+        }
         Session::flash('message','Estado editado correctamente');
         return  Redirect::to('/personal');
     }

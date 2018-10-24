@@ -19,10 +19,12 @@ Route::get('menu','MichinmxController@menu');
 Route::get('reservacion','MichinmxController@reservation');
 Route::get('especialidad','MichinmxController@specialties');
 Route::get('iniciar_sesión','MichinmxController@login');
+Route::get('inicio','MichinmxController@inicio');
 Route::resource('estado','estadocontroller');
 Route::resource('personal','personalcontroller');
 Route::resource('proveedor','proveedorcontroller');
 Route::resource('cliente','clientecontroller');
+Route::resource('usuarios','UsuariosController');
 
 // Route::get('estado/{id_estado}/destroy', [
 //'estadoss'=>'estadocontroller@destroy',

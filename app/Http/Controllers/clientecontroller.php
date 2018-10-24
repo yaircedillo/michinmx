@@ -15,16 +15,16 @@ class clientecontroller extends Controller
     public function index()
     {
         
-        $clientess = clientes::all();
-        return view("cliente.index",compact('cliente'));
+        $clientes = clientes::all();
+        return view("cliente.index",compact('clientes'));
      
     }
     
     public function create()
     {
         $municipios = municipios::all();
-        $clientess = clientes::all();
-        return view("cliente.create",compact('clientes','municipios'));
+        $clientes = clientes::all();
+        return view("cliente.create",compact('cliente','municipios'));
         
     }
     

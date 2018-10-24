@@ -4,7 +4,7 @@ namespace michinmx\Http\Requests;
 
 use michinmx\Http\Requests\Request;
 
-class PesonalesRequestCreate extends Request
+class Usuariovalidacion extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,12 +24,9 @@ class PesonalesRequestCreate extends Request
     public function rules()
     {
         return [
-           'nombre' => 'required|alpha',
-            
-           'correo' => 'required|email',
-            
-
-            
+            'name'=>'required',
+            'email'=>'required',
+            'password'=>'required',
         ];
     }
 }

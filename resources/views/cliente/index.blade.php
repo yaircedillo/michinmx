@@ -18,20 +18,18 @@
                             <div class="card-body">
                                 <div class="table-responsive m-t-40">
                                     
-                                    <table class="table display ">
+                                    <table class="table display">
                                     <thead>
                                         <tr>
                                                 <th>#</th>
                                                 <th>Nombre</th>
                                                 <th>Apellido Paterno</th>
                                                 <th>Apellido Materno</th>
-                                                <th>Genero</th>
-                                                <th>Calle</th>
-                                                <th>Colonia</th>
-                                                <th>Código Postal</th>
+                                                
                                                 <th>Correo</th>
                                                 <th>Telefono</th>
-                                                <th>Municipio</th>
+                                                
+                                            
                                                 <th>operaciones</th>  
                                         </tr>    
                                     </thead>
@@ -41,31 +39,25 @@
                                               <th>Nombre</th>
                                               <th>Apellido Paterno</th>
                                               <th>Apellido Materno</th>
-                                              <th>Genero</th>
-                                              <th>Calle</th>
-                                              <th>Colonia</th>
-                                              <th>Código Postal</th>
+                                             
                                               <th>Correo</th>
                                               <th>Telefono</th>
-                                              <th>Municipio</th>
+                                            
                                           
                                               <th>operaciones</th>
                                               
                                             </tr>
                                     </tfoot>
-                                      @foreach($clientess as $cliente)
-                                      <tbody>
-                                      <td>{{$cliente->id_cliente}}</td>
+                                        @foreach($clientes as $cliente)
+                                        <tbody>
+                                       <td>{{$cliente->id_cliente}}</td>
                                        <td>{{$cliente->nombre}}</td>
                                        <td>{{$cliente->ap_pat}}</td>
                                        <td>{{$cliente->ap_mat}}</td>
-                                       <td>{{$cliente->genero}}</td>
-                                       <td>{{$cliente->calle}}</td>
-                                       <td>{{$cliente->colonia}}</td>
-                                       <td>{{$cliente->cp}}</td>
+                                       
                                        <td>{{$cliente->correo}}</td>
                                        <td>{{$cliente->telefono}}</td>
-                                       <td>{{$cliente->id_municipios}}</td>
+                                       
                                        <td>
                                         {!!link_to_route('cliente.edit', $title = 'Editar', $parameters = $cliente->id_cliente, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     

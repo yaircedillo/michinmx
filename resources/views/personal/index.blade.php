@@ -21,19 +21,13 @@
                                     <table class="table display ">
                                     <thead>
                                         <tr>
-                                                <th>#</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido Paterno</th>
-                                                <th>Apellido Materno</th>
-                                                <th>Genero</th>
-                                                <th>Calle</th>
-                                                <th>Colonia</th>
-                                                <th>Código Postal</th>
-                                                <th>Correo</th>
-                                                <th>Telefono</th>
-                                                <th>Municipio</th>
-                                                <th>Puesto</th>
-                                                <th>operaciones</th>  
+                                            <th>#</th>
+                                            <th>Nombre</th>
+                                            <th>Apellido Paterno</th>
+                                            <th>Apellido Materno</th>
+                                            <th>Correo</th>
+                                            <th>Telefono</th>
+                                            <th>operaciones</th>  
                                         </tr>    
                                     </thead>
                                     <tfoot>
@@ -42,14 +36,9 @@
                                               <th>Nombre</th>
                                               <th>Apellido Paterno</th>
                                               <th>Apellido Materno</th>
-                                              <th>Genero</th>
-                                              <th>Calle</th>
-                                              <th>Colonia</th>
-                                              <th>Código Postal</th>
                                               <th>Correo</th>
                                               <th>Telefono</th>
-                                              <th>Municipio</th>
-                                              <th>Puesto</th>
+                                            
                                               <th>operaciones</th>
                                               
                                             </tr>
@@ -60,14 +49,10 @@
                                        <td>{{$personal->nombre}}</td>
                                        <td>{{$personal->ap_pat}}</td>
                                        <td>{{$personal->ap_mat}}</td>
-                                       <td>{{$personal->genero}}</td>
-                                       <td>{{$personal->calle}}</td>
-                                       <td>{{$personal->colonia}}</td>
-                                       <td>{{$personal->cp}}</td>
+                                       
                                        <td>{{$personal->correo}}</td>
                                        <td>{{$personal->telefono}}</td>
-                                       <td>{{$personal->id_municipios}}</td>
-                                       <td>{{$personal->id_puesto}}</td>
+                                      
                                        <td>
                                         {!!link_to_route('personal.edit', $title = 'Editar', $parameters = $personal->id_personal, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     

@@ -22,6 +22,7 @@ class Personales extends Migration
             $table->integer('telefono');
             $table->integer('id_municipios')->unsigned();
             $table->integer('id_puesto')->unsigned();
+            $table->boolean('activo');
             $table->foreign('id_municipios')->references ('id_municipios')->on('municipio');
             $table->foreign('id_puesto')->references ('id_puesto')->on('puestos');
             $table ->rememberToken();

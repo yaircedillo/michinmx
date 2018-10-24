@@ -54,6 +54,12 @@ return [
             'visibility' => 'public',
         ],
 
+        'archivos' => [ 
+            'driver' => 'local',
+            'root' => public_path('img_usuario'),
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => 'your-key',
