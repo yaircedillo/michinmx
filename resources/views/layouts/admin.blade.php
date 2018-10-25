@@ -271,7 +271,7 @@
                             <li><a href="{{route('usuarios.index')}}">Usuario </a></li>
                             <li><a href="{{route('promociones.index')}}">Promociones </a></li>
                             <li><a href="{{route('medida.index')}}">Unidad de Medida </a></li>
-                            
+                            <li><a href="{{route('tipo_carta.index')}}">Tipo de Carta </a></li>
                         </ul>
                     </li>
                                     
