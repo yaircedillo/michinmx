@@ -62,6 +62,11 @@
             </div>
             <div>
             </div>
+        </div>
+        @if($errors->first('img')) 
+        <i> {{ $errors->first('img') }} </i> 
+        @endif	<br>
+    </div>
             </div>
           
             </form>

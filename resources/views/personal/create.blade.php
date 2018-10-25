@@ -62,8 +62,8 @@
                 <div class="input-group">
           
             </div>
-                @if($errors->first('ap_mat')) 
-                <i> {{ $errors->first('ap_mat') }} </i> 
+                @if($errors->first('genero')) 
+                <i> {{ $errors->first('genero') }} </i> 
                 @endif	<br>
             </div> 
 
@@ -143,8 +143,8 @@
                                         
                                         
                                     </div>
-                                        @if($errors->first('ap_mat')) 
-                                        <i> {{ $errors->first('ap_mat') }} </i> 
+                                        @if($errors->first('id_municipios')) 
+                                        <i> {{ $errors->first('id_municipios') }} </i> 
                                         @endif	<br>
                                     </div>
                                     <div class="form-group row ">
@@ -163,8 +163,8 @@
 
                                                                                                 
                                     </div>
-                                        @if($errors->first('ap_mat')) 
-                                        <i> {{ $errors->first('ap_mat') }} </i> 
+                                        @if($errors->first('id_puesto')) 
+                                        <i> {{ $errors->first('id_puesto') }} </i> 
                                         @endif	<br>
                                     </div>
                                     <div class="form-group row ">
@@ -175,6 +175,9 @@
                                         </div>
                                         <div>
                                         </div>
+                                        @if($errors->first('img')) 
+                                        <i> {{ $errors->first('img') }} </i> 
+                                        @endif	<br>
                                         </div>
      </form>
      {!!Form::submit('Guardar',[' class'=>'btn btn-success waves-effect waves-light m-r-10'])!!}

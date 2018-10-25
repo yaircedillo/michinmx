@@ -143,8 +143,8 @@
                                         
                                         
                                     </div>
-                                        @if($errors->first('ap_mat')) 
-                                        <i> {{ $errors->first('ap_mat') }} </i> 
+                                        @if($errors->first('id_municipios')) 
+                                        <i> {{ $errors->first('id_municipios') }} </i> 
                                         @endif	<br>
                                     </div>
                                  

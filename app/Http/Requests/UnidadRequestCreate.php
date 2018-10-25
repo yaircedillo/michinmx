@@ -24,7 +24,7 @@ class UnidadRequestCreate extends Request
     public function rules()
     {
         return [
-            //
+            'medida' => 'required|alpha|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
         ];
     }
 }

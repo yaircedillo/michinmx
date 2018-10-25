@@ -4,7 +4,7 @@ namespace michinmx\Http\Requests;
 
 use michinmx\Http\Requests\Request;
 
-class PromocionRequestCreate extends Request
+class CartaRequestCreate extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,11 @@ class PromocionRequestCreate extends Request
     public function rules()
     {
         return [
-            'descripcion' => 'required',
-            'fecha_inicio' => 'required|date',
-            'fecha_final' => 'required|date',
-            'horario' => 'required',
-            
+            'nombre' => 'required|alpha|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
+            'descripcion' => 'required|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
+            'precio' => 'required|regex:/^[0-9]{1,5}(\.?)[0-9]{1,2}$/',
+            'id_tipo_c' => 'required',
+            'id_personal' => 'required',
         ];
     }
 }

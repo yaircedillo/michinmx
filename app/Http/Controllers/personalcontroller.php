@@ -68,13 +68,22 @@ class personalcontroller extends Controller
 
          
         }else{
-            usuario::create([
-                'name' => $request['name'],
-                'email'=> $request['email'],
-                'password'=> base64_encode($request['password']),
-                'archivo'=> 'sinfoto.jpg'
+            personales::create([
+                'nombre' => $request['nombre'],  
+                'ap_pat' => $request['ap_pat'],  
+                'ap_mat' => $request['ap_mat'],  
+                'genero' => $request['genero'],  
+                'calle' => $request['calle'],  
+                'colonia' => $request['colonia'],  
+                'cp' => $request['cp'],  
+                'correo' => $request['correo'],  
+                'telefono' => $request['telefono'],
+             
+                'archivo'=> 'sinfoto.jpg',
+                'id_municipios' => $request['id_municipios'],  
+                'id_puesto' => $request['id_puesto'], 
             ]);
-                 Session::flash('message','Usuario creado exitosamente sin foto');
+                 Session::flash('message','Personal creado exitosamente sin foto');
          return  Redirect::to('/personal'); // esta linea solo redireccionara un mensaje de realizado corrctamente
             }
         }

@@ -28,7 +28,8 @@ Route::resource('usuarios','UsuariosController');
 Route::resource('promociones','promocioncontroller');
 Route::resource('medida','medidacontroller');
 Route::resource('tipo_carta','UnidadMedidacontroller');
-
+Route::resource('puesto','puesto');
+Route::resource('carta','cartacontroller');
 // Route::get('estado/{id_estado}/destroy', [
 //'estadoss'=>'estadocontroller@destroy',
 //'as' => 'estado.destroy'
