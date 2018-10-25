@@ -131,7 +131,7 @@
                                         <label class="col-lg-4 col-form-label" >Municipio. <span class="text-danger">*</span></label>
                                         <div class="col-md-9">
                                             <div class="input-group-addon"><i class="icon-key"></i></div>
-                                            <select class="form-control custom-select" name='id_municipios'>
+                                            <select class="form-control " name='id_municipios'>
                                                 @foreach ($municipios as $municipio)
                                             <option value="{{$municipio['id_municipios']}}">{{$municipio['municipio']}}
 
@@ -151,7 +151,7 @@
                                         <label class="col-lg-4 col-form-label" >Puesto. <span class="text-danger">*</span></label>
                                         <div class="col-md-9">
                                                 <div class="input-group-addon"><i class="icon-key"></i></div>
-                                           <select class="form-control custom-select" name="id_puesto">
+                                           <select class="form-control " name="id_puesto">
                                                 @foreach($puestos as $puesto)
                                                 <option value="{{$puesto['id_puesto']}}"> {{$puesto['puesto']}}
                                                 </option>
@@ -159,19 +159,23 @@
                                             </select>
                                             </div>
                                             <div class="input-group">
-                                             
+
+
+                                                                                                
                                     </div>
                                         @if($errors->first('ap_mat')) 
                                         <i> {{ $errors->first('ap_mat') }} </i> 
                                         @endif	<br>
                                     </div>
-                                   
-                                        
-                                
-
-
-
-    
+                                    <div class="form-group row ">
+                                            <label class="col-lg-4 col-form-label" >Imagen. <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                                            <input type="file" id="img" name="img">
+                                        </div>
+                                        <div>
+                                        </div>
+                                        </div>
      </form>
      {!!Form::submit('Guardar',[' class'=>'btn btn-success waves-effect waves-light m-r-10'])!!}
      {!!Form::reset('Limpiar',[' class'=>'btn btn-inverse waves-effect waves-light'])!!}

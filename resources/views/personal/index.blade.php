@@ -11,7 +11,9 @@
 <div class="card ">
                             <div class="card-title">
                                 <h4 aling-text='center'>Registros del Personal... </h4>
-                                <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('personal.create')}}"   role="button"> + Agregar un nuevo Resgistro</a></td>
+                                <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('personal.create')}}"   role="button">
+                                 + Agregar un nuevo Resgistro</a></td>
+                                 <!-- esta linea tiene un boton que redirige a la funcion del controlador create donde llamara una vista  -->
                                
                                
                             </div>
@@ -27,6 +29,7 @@
                                             <th>Apellido Materno</th>
                                             <th>Correo</th>
                                             <th>Telefono</th>
+                                            <th>Imagen</th>
                                             <th>operaciones</th>  
                                         </tr>    
                                     </thead>
@@ -38,31 +41,33 @@
                                               <th>Apellido Materno</th>
                                               <th>Correo</th>
                                               <th>Telefono</th>
-                                            
+                                              <th>Imagen</th>
                                               <th>operaciones</th>
                                               
                                             </tr>
-                                    </tfoot>
-                                        @foreach($personales as $personal)
+                                      </tfoot>
+
                                         <tbody>
-                                      <td>{{$personal->id_personal}}</td>
-                                       <td>{{$personal->nombre}}</td>
-                                       <td>{{$personal->ap_pat}}</td>
-                                       <td>{{$personal->ap_mat}}</td>
-                                       
-                                       <td>{{$personal->correo}}</td>
-                                       <td>{{$personal->telefono}}</td>
-                                      
-                                       <td>
+                                        @foreach($personales as $personal)
+                                        <tr>
+                                         <td>{{$personal->id_personal}}</td>
+                                          <td>{{$personal->nombre}}</td>
+                                          <td>{{$personal->ap_pat}}</td>
+                                          <td>{{$personal->ap_mat}}</td>
+                                          <td>{{$personal->correo}}</td>
+                                          <td>{{$personal->telefono}}</td>
+                                          <td><img src="img_usuario/{{$personal->archivo}}" alt="" style=" width: 200px; height: 100px;"></td>
+                                          <td>
                                         {!!link_to_route('personal.edit', $title = 'Editar', $parameters = $personal->id_personal, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     
                                         {!!Form::open(['route' => ['personal.destroy',$personal->id_personal],'method'=>'DELETE'])!!} 
                                         {!!Form::submit('Eliminar',['class'=>'btn btn-inverse waves-effect waves-light'  ])!!}
                                         {!!Form::close()!!}
+                                          </td>
+                                        </tr>
 
-                                       </td>
-                                        </tbody>
                                        @endforeach
+                                        </tbody>
                                    </table>
                                 </div>
                                </div>

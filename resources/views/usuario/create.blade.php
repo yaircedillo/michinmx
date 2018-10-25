@@ -60,9 +60,10 @@
                 <div class="input-group-addon"><i class="ti-user"></i></div>
                 <input type="file" id="img" name="img">
             </div>
-            <br>
-            <br>
-            <br>
+            <div>
+            </div>
+            </div>
+          
             </form>
      {!!Form::submit('Guardar',[' class'=>'btn btn-success waves-effect waves-light m-r-10'])!!}
      <!-- el boton de arriba accionara el formulario el cual lo enviara a la funcion de store del controler usuario -->

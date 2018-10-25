@@ -269,6 +269,8 @@
                             <li><a href="{{route('proveedor.index')}}">Proveedores</a></li>
                             <li><a href="{{route('personal.index')}}">Personal </a></li>
                             <li><a href="{{route('usuarios.index')}}">Usuario </a></li>
+                            <li><a href="{{route('promociones.index')}}">Promociones </a></li>
+                            <li><a href="{{route('medida.index')}}">Unidad de Medida </a></li>
                             
                         </ul>
                     </li>
@@ -345,6 +347,8 @@
     {!!Html::script('/sistema/js/scripts.js')!!}
     {!!Html::script('/sistema/js/custom.min.js')!!}
     {!!Html::script('/sistema/js/lib/dropzone/dropzone.js')!!}
+
+
     
     
 
