@@ -26,6 +26,7 @@ class Proveedores extends Migration
         $table->integer('telefono');
         $table->integer('id_municipios')->unsigned();
         $table->foreign('id_municipios')->references ('id_municipios')->on('municipio');
+       
         $table ->rememberToken();
         $table->timestamps();
         $table->softDeletes();

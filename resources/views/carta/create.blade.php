@@ -19,7 +19,7 @@
                 <label class="col-lg-4 col-form-label" >Nombre. <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
+                {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la  Carta.'])!!}
                 
             </div>
                 @if($errors->first('nombre')) 
@@ -31,7 +31,7 @@
                 <label class="col-lg-4 col-form-label" >Descripciòn. <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('descripcion',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
+                {!!Form::text('descripcion',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la  Carta.'])!!}
                 
             </div>
                 @if($errors->first('descripcion')) 
@@ -43,7 +43,7 @@
                 <label class="col-lg-4 col-form-label" >Precio. <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('precio',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
+                {!!Form::text('precio',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la  Carta.'])!!}
                 
             </div>
                 @if($errors->first('precio')) 

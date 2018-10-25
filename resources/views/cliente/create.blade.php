@@ -55,9 +55,9 @@
                 <label class="col-lg-4 col-form-label" >Genero. <span class="text-danger">*</span></label>
                 <div class="col-md-9">
                     <div class="input-group-addon"><i class="ti-user"></i></div>
-                    <select class="form-control custom-select" name="genero">
-                        <option value="M">M</option>
-                        <option value="F">F</option>
+                    
+                        <input type = 'radio' name = 'genero' value = 'M' checked >M
+                    <input type = 'radio' name = 'genero' value = 'F'>F
                     </select>
                 </div>
                 <div class="input-group">
@@ -130,25 +130,27 @@
                                 
                                 
                                 <div class="form-group row ">
-                                        <label class="col-lg-4 col-form-label" >Municipio. <span class="text-danger">*</span></label>
-                                        <div class="col-md-9">
-                                            <div class="input-group-addon"><i class="icon-key"></i></div>
-                                            <select class="form-control custom-select" name='id_municipios'>
-                                                @foreach ($municipios as $municipio)
-                                            <option value="{{$municipio['id_municipios']}}">{{$municipio['municipio']}}
+                                    <label class="col-lg-4 col-form-label" >Municipio. <span class="text-danger">*</span></label>
+                                    <div class="col-md-9">
+                                        <div class="input-group-addon"><i class="icon-key"></i></div>
+                                        <select class="form-control custom-select" name='id_municipios'>
+                                            @foreach ($municipios as $municipio)
+                                        <option value="{{$municipio['id_municipios']}}">{{$municipio['municipio']}}
 
-                                                    </option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="input-group">
-                                        
-                                        
+                                                </option>
+                                            @endforeach
+                                        </select>
                                     </div>
-                                        @if($errors->first('id_municipios')) 
-                                        <i> {{ $errors->first('id_municipios') }} </i> 
-                                        @endif	<br>
-                                    </div> 
+                                    <div class="input-group">
+                                    
+                                    
+                                </div>
+                                    @if($errors->first('id_municipios')) 
+                                    <i> {{ $errors->first('id_municipios') }} </i> 
+                                    @endif	<br>
+</div> 
+                                 
+                                    
                                     
                                         
                                    

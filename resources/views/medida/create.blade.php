@@ -18,7 +18,7 @@
                 <label class="col-lg-4 col-form-label" >Unidad de Medida <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-location-pin"></i></div>
-                {!!Form::text('medida',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
+                {!!Form::text('medida',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la medida.'])!!}
                 
             </div>
                 @if($errors->first('medida')) 

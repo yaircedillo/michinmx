@@ -18,7 +18,7 @@
                 <label class="col-lg-4 col-form-label" >Nombre <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-location-pin"></i></div>
-                {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
+                {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del tipo de carta.'])!!}
                 
             </div>
                 @if($errors->first('nombre')) 

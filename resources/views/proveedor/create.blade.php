@@ -54,13 +54,11 @@
                 <label class="col-lg-4 col-form-label" >Genero. <span class="text-danger">*</span></label>
                 <div class="col-md-9">
                     <div class="input-group-addon"><i class="ti-user"></i></div>
-                    <select class="form-control custom-select" name="genero">
-                        <option value="M">M</option>
-                        <option value="F">F</option>
-                    </select>
+                    <input type = 'radio' name = 'genero' value = 'M' checked >M
+                    <input type = 'radio' name = 'genero' value = 'F'>F
                 </div>
                 <div class="input-group">
-          
+                    
             </div>
                 @if($errors->first('ap_mat')) 
                 <i> {{ $errors->first('ap_mat') }} </i> 

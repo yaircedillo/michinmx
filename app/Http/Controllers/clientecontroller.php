@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use michinmx\Http\Requests;
 use michinmx\Http\Requests\ClientesRequestCreate;
 use michinmx\clientes;
+
 use Session;
 use michinmx\municipios;
 use Redirect;
@@ -24,6 +25,7 @@ class clientecontroller extends Controller
     {
         $municipios = municipios::all();
         $clientes = clientes::all();
+      
         return view("cliente.create",compact('cliente','municipios'));
         
     }

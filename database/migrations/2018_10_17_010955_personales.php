@@ -25,6 +25,7 @@ class Personales extends Migration
             $table->boolean('activo');
             $table->foreign('id_municipios')->references ('id_municipios')->on('municipio');
             $table->foreign('id_puesto')->references ('id_puesto')->on('puestos');
+            
             $table ->rememberToken();
             $table->timestamps();
             $table->softDeletes();

@@ -18,7 +18,7 @@
                 <label class="col-lg-4 col-form-label" >Nombre. <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
+                {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Empleado.'])!!}
                 
             </div>
                 @if($errors->first('nombre')) 
@@ -30,7 +30,7 @@
                 <label class="col-lg-4 col-form-label" >Apellido Paterno. <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('ap_pat',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
+                {!!Form::text('ap_pat',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Empleado.'])!!}
                 
             </div>
                 @if($errors->first('ap_pat')) 
@@ -42,7 +42,7 @@
                 <label class="col-lg-4 col-form-label" >Apellido Materno. <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('ap_mat',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
+                {!!Form::text('ap_mat',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Empleado.'])!!}
                 
             </div>
                 @if($errors->first('ap_mat')) 
@@ -55,8 +55,8 @@
                 <div class="col-md-9">
                     <div class="input-group-addon"><i class="ti-user"></i></div>
                     <select class="form-control custom-select" name="genero">
-                        <option value="M">M</option>
-                        <option value="F">F</option>
+                        <input type = 'radio' name = 'genero' value = 'M' checked >M
+                        <input type = 'radio' name = 'genero' value = 'F'>F
                     </select>
                 </div>
                 <div class="input-group">
