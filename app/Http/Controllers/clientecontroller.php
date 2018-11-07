@@ -16,15 +16,17 @@ class clientecontroller extends Controller
     public function index()
     {
         
-        $clientes = clientes::all();
-        return view("cliente.index",compact('clientes'));
+        $clientes = clientes::withTrashed()
+        ->get();
+        return view("cliente.index")
+        ->with('clientes',$clientes);
      
     }
     
     public function create()
     {
         $municipios = municipios::all();
-        $clientes = clientes::all();
+        $clientes = clientes::withTrashed();
       
         return view("cliente.create",compact('cliente','municipios'));
         
@@ -42,7 +44,7 @@ class clientecontroller extends Controller
             'colonia' => $request['colonia'],  
             'cp' => $request['cp'],  
             'correo' => $request['correo'],  
-            'telefono' => $request['telefono'],  
+            'telefono_c' => $request['telefono_c'],  
             'id_municipios' => $request['id_municipios'],  
           
 
@@ -51,14 +53,19 @@ class clientecontroller extends Controller
             Session::flash('message','Cliente   registrado exitosamente');
             return  Redirect::to('/cliente');
     }
-   public function show($id_proveedores)
+   public function show($id_cliente)
    {
-       
+    clientes::withTrashed()
+    ->where('id_cliente',$id_cliente)
+    ->restore();
+    Session::flash('message','Cliente restaurado correctamente');
+    return Redirect::to('/cliente');
    }
     public function edit($id_cliente)
     {
-        $municipios = municipios::find($id_municipios);
         $cliente = clientes::find($id_cliente);
+        $municipios = municipios::all();
+        
         return view('cliente.edit', ['cliente'=>$cliente,'municipios'=>$municipios]);
     }
     public function update($id_cliente, Request $request )
@@ -67,13 +74,13 @@ class clientecontroller extends Controller
         $cliente->fill($request->all());
         $cliente->save();
 
-
-        Session::flash('message','Estado editado correctamente');
-        return  Redirect::to('/cliente');
+    Session::flash('message','Cliente editado correctamente');      
+    return  Redirect::to('/cliente');
     }
    public function destroy($id_cliente)
     {
-        clientes::destroy($id_cliente);
+        clientes::find($id_cliente)
+        ->delete();
       
         Session::flash('message','Cliente eliminado correctamente');
         return Redirect::to('/cliente');

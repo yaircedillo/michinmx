@@ -11,11 +11,15 @@
        <h4 class="card-title">Ingresar un nuevo Proveedor.</h4>
        <form class="table-responsive m-t-40">
 
+
+
+
             <div class="form-group row ">
                     <label class="col-lg-4 col-form-label" >ID. <span class="text-danger">*</span></label>
                     <div class="input-group">
                     <div class="input-group-addon"><i class="ti-user"></i></div>
-                    {!!Form::text('id_proveedores',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
+                    {!!Form::text('id_proveedores',null,['class'=>'form-control', 'readonly' => 'readonly'])!!}
+                    
                     
                 </div>
                     @if($errors->first('nombre')) 
@@ -60,22 +64,23 @@
                @endif	<br>
            </div> 
 
+           
            <div class="form-group row ">
-               <label class="col-lg-4 col-form-label" >Genero. <span class="text-danger">*</span></label>
-               <div class="col-md-9">
-                   <div class="input-group-addon"><i class="ti-user"></i></div>
-                   <select class="form-control custom-select" name="genero">
-                       <option value="M">M</option>
-                       <option value="F">F</option>
-                   </select>
-               </div>
-               <div class="input-group">
-         
-           </div>
-               @if($errors->first('ap_mat')) 
-               <i> {{ $errors->first('ap_mat') }} </i> 
-               @endif	<br>
-           </div> 
+                <label class="col-lg-4 col-form-label" >Genero. <span class="text-danger">*</span></label>
+                <div class="col-md-9">
+                    <div class="input-group-addon"><i class="ti-user"></i></div>
+                    
+                        <input type = 'radio' name = 'genero' value = 'M' checked >M
+                    <input type = 'radio' name = 'genero' value = 'F'>F
+                    </select>
+                </div>
+                <div class="input-group">
+          
+            </div>
+                @if($errors->first('genero')) 
+                <i> {{ $errors->first('genero') }} </i> 
+                @endif	<br>
+            </div>  
 
            <div class="form-group row ">
                    <label class="col-lg-4 col-form-label" >Calle. <span class="text-danger">*</span></label>

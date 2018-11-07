@@ -20,8 +20,10 @@ class UsuariosController extends Controller
     public function index()
     { 
         // realizaremos una consulta con el Controller
-        $usuarios = usuario::all();
-        return view('usuario.index')->with('usuarios',$usuarios);
+        $usuarios = usuario::withTrashed()
+        ->get();
+        return view('usuario.index')
+        ->with('usuarios',$usuarios);
         // esto solo retonara la vista que haremos con los datos que consultamos
     }
 
@@ -87,7 +89,11 @@ class UsuariosController extends Controller
      */
     public function show($id)
     {
-        //
+        usuario::withTrashed()
+    ->where('id',$id)
+    ->restore();
+    Session::flash('message','Usuario restaurado correctamente');
+    return Redirect::to('/usuarios');
     }
 
     /**
@@ -148,9 +154,10 @@ class UsuariosController extends Controller
      */
     public function destroy($id)
     {
-      usuario::destroy($id);
+      usuario::find($id)
+      ->delete();
       
-      Session::flash('message','usuario eliminado correctamente');
+      Session::flash('message','Usuario eliminado correctamente');
       return Redirect::to('/usuarios');
     }
 }

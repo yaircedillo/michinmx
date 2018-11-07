@@ -31,9 +31,9 @@ class cartacontroller extends Controller
     }
     public function create()
     {
-        $tipos = tipo_cartas::all();
+        $tipos = tipo_cartas::withTrashed()->get();
         $cartas = cartas::withTrashed();
-        $personales = personales::all();
+        $personales = personales::withTrashed()->get();
         return view("carta.create",compact('cartas','personales','tipos'));
         
     }
@@ -61,13 +61,11 @@ class cartacontroller extends Controller
    }
     public function edit($id_carta)
     {
-        $cartas = cartas::find($id_carta);
-        $personales = personales::all();
-        $tipos = tipo_cartas::all();
-       return view('carta.edit')
-       ->with('cartas',$cartas)
-       ->with('personales',$personales)
-       ->with('tipos',$tipos);
+      
+       $cartas = cartas::find($id_carta);//el $ cartas es la variable el segundo cartes es la referencia al modelo es como decir $cartas = a select * from cartas where id == al id que recibes :: esto que es es como el termino es decir lo que esta antes es select  * from cartas y lo que esta despues :: son las condiciones 
+         $personales = personales::withTrashed()->get();
+         $tipos = tipo_cartas::withTrashed()->get();
+        return view('carta.edit')->with('cartas',$cartas)->with('personales',$personales)->with('tipos',$tipos);
     }
     public function update($id_carta, Request $request )
     {   

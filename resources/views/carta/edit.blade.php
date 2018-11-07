@@ -14,7 +14,17 @@
         <h4 class="card-title">Ingresar un nueva Carta.</h4>
         <form class="table-responsive m-t-40">
             
-
+                <div class="form-group row ">
+                        <label class="col-lg-4 col-form-label" >ID. <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                        <div class="input-group-addon"><i class="ti-user"></i></div>
+                        {!!Form::text('id_carta',null,['class'=>'form-control', 'readonly' => 'readonly'])!!}
+                        
+                    </div>
+                        @if($errors->first('id_carta')) 
+                        <i> {{ $errors->first('id_carta') }} </i> 
+                        @endif  <br>
+                    </div>
             <div class="form-group row ">
                 <label class="col-lg-4 col-form-label" >Nombre. <span class="text-danger">*</span></label>
                 <div class="input-group">

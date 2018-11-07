@@ -33,7 +33,7 @@ class ClientesRequestCreate extends Request
             'colonia' => 'required|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
             'cp'   =>  'required|max:5',
             'correo' => 'required|email',
-            'telefono'=>'required|max:10',
+            'telefono_c'=>'required|max:10',
             'img'=> 'image|mimes:jpeg,png,jpg,gif',     
         ];
     }

@@ -20,14 +20,15 @@ class personalcontroller extends Controller
     public function index()
     {
         
-        $personales = personales::all();
+        $personales = personales:: withTrashed()
+        ->get();
         return view("personal.index")->with('personales',$personales);
      
     }
     
     public function create()
     {
-        $puestos = puestos::all();
+        $puestos = puestos::withTrashed()->get();
         $municipios = municipios::all();
         return view("personal.create",compact('puestos','municipios'));
         
@@ -89,12 +90,20 @@ class personalcontroller extends Controller
         }
    public function show($id_personal)
    {
-       
+    personales::withTrashed()
+    ->where('id_personal',$id_personal)
+    ->restore();
+    Session::flash('message','Personal restaurado correctamente');
+    return Redirect::to('/personal');
    }
+
+
     public function edit($id_personal)
     {
         $personal = personales::find($id_personal);
-        return view('personal.edit', ['personal'=>$personal]);
+        $municipios = municipios::all();
+        $puestos = puestos::withTrashed()->get();
+        return view('personal.edit', ['personal'=>$personal,'municipios'=>$municipios,'puestos'=>$puestos]);
     }
     public function update($id_personal, Request $request )
     {
@@ -105,8 +114,8 @@ class personalcontroller extends Controller
         $r1              = Storage::disk('archivos')->put($nombre_original, \File::get($archivo));
         $ruta            = public_path('archivos') . "/" . $nombre_original;
 
-        $personales = personales::find($id);
-        $personales->name = $request->name;
+        $personales = personales::find($id_personal);
+        $personales->nombre = $request->nombre;
         $personales->ap_pat = $request->ap_pat;
         $personales->ap_mat = $request->ap_mat;
         $personales->genero = $request->genero;
@@ -119,12 +128,12 @@ class personalcontroller extends Controller
         $personales->id_puesto = $request->id_puesto;
         $personales->archivo = $nombre_original;
         $personales->save();
-        Session::flash('message','Usuario modificado exitosamente');
+        Session::flash('message','Personal modificado exitosamente');
      return  Redirect::to('/personal'); // esta linea solo redireccionara un mensaje de realizado corrctamente
     }else{
 
-        $personales = personales::find($id);
-        $personales->name = $request->name;
+        $personales = personales::find($id_personal);
+        $personales->nombre = $request->nombre;
         $personales->ap_pat = $request->ap_pat;
         $personales->ap_mat = $request->ap_mat;
         $personales->genero = $request->genero;
@@ -137,15 +146,16 @@ class personalcontroller extends Controller
         $personales->id_puesto = $request->id_puesto;
         $personales->archivo = 'sinfoto.jpg';
         $personales->save();
-        Session::flash('message','Usuario modificado exitosamente sin foto');
-     return  Redirect::to('/personal'); // esta linea solo redireccionara un mensaje de realizado corrctamente
+        Session::flash('message','Empleado modificado exitosamente sin foto');
+     return  Redirect::to('/personal'); // esta linea solo redireccionara un mensaje de realizado correctamente
     }
 
     }
 
    public function destroy($id_personal)
     {
-        personales::destroy($id_personal);
+        personales::find($id_personal)
+        ->delete();
       
         Session::flash('message','Personal eliminado correctamente');
         return Redirect::to('/personal');

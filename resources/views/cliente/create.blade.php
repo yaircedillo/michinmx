@@ -63,8 +63,8 @@
                 <div class="input-group">
           
             </div>
-                @if($errors->first('ap_mat')) 
-                <i> {{ $errors->first('ap_mat') }} </i> 
+                @if($errors->first('genero')) 
+                <i> {{ $errors->first('genero') }} </i> 
                 @endif	<br>
             </div> 
 
@@ -120,11 +120,11 @@
                                     <label class="col-lg-4 col-form-label" >Telefono.<span class="text-danger">*</span></label>
                                     <div class="input-group">
                                     <div class="input-group-addon"><i class="icon-screen-smartphone"></i></div>
-                                    {!!Form::text('telefono',null,['class'=>'form-control', 'placeholder'=>'Coloca el numero de telefono'])!!}
+                                    {!!Form::text('telefono_c',null,['class'=>'form-control', 'placeholder'=>'Coloca el numero de telefono'])!!}
                                     
                                 </div>
-                                    @if($errors->first('telefono')) 
-                                    <i> {{ $errors->first('telefono') }} </i> 
+                                    @if($errors->first('telefono_c')) 
+                                    <i> {{ $errors->first('telefono_c') }} </i> 
                                     @endif	<br>
                                 </div>
                                 

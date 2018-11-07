@@ -16,15 +16,17 @@ class proveedorcontroller extends Controller
     public function index()
     {
         
-        $proveedores = proveedores::all();
-        return view("proveedor.index",compact('proveedores'));
+        $proveedores = proveedores::withTrashed()
+        ->get();
+        return view("proveedor.index")
+        ->with('proveedores',$proveedores);
      
     }
     
     public function create()
     {
         $municipios = municipios::all();
-        $proveedores = proveedores::all();
+        $proveedores = proveedores::withTrashed();
         return view("proveedor.create",compact('proveedores','municipios'));
         
     }
@@ -52,11 +54,15 @@ class proveedorcontroller extends Controller
     }
    public function show($id_proveedores)
    {
-       
+    proveedores::withTrashed()
+    ->where('id_proveedores',$id_proveedores)
+    ->restore();
+    Session::flash('message','Proveedor  restaurado correctamente');
+    return Redirect::to('/proveedor');
    }
     public function edit($id_proveedores)
     {
-        $municipios = municipios::find($id_municipios);
+        $municipios = municipios::all();
         $proveedor = proveedores::find($id_proveedores);
         return view('proveedor.edit', ['proveedor'=>$proveedor,'municipios'=>$municipios]);
     }
@@ -67,13 +73,13 @@ class proveedorcontroller extends Controller
         $proveedor->save();
 
 
-        Session::flash('message','Estado editado correctamente');
+        Session::flash('message','Personal editado correctamente');
         return  Redirect::to('/proveedor');
     }
    public function destroy($id_proveedores)
     {
-        proveedores::destroy($id_proveedores);
-      
+        proveedores::find($id_proveedores)
+        ->delete();
         Session::flash('message','Proveedor eliminado correctamente');
         return Redirect::to('/proveedor');
     }

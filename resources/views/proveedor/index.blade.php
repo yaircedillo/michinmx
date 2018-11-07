@@ -11,7 +11,7 @@
 <div class="card ">
                             <div class="card-title">
                                 <h4 aling-text='center'>Registros de los Proveedores... </h4>
-                                <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('proveedor.create')}}"   role="button"> + Agregar un nuevo Resgistro</a></td>
+                                <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('proveedor.create')}}"   role="button"> + Agregar un nuevo Registro</a></td>
                                
                                
                             </div>
@@ -48,6 +48,7 @@
                                               
                                             </tr>
                                     </tfoot>
+                                    @if(count($proveedores) > 0)
                                         @foreach($proveedores as $proveedor)
                                         <tbody>
                                       <td>{{$proveedor->id_proveedores}}</td>
@@ -59,15 +60,20 @@
                                        <td>{{$proveedor->telefono}}</td>
                                       
                                        <td>
+                                            @if($proveedor->deleted_at =="")
                                         {!!link_to_route('proveedor.edit', $title = 'Editar', $parameters = $proveedor->id_proveedores, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     
                                         {!!Form::open(['route' => ['proveedor.destroy',$proveedor->id_proveedores],'method'=>'DELETE'])!!} 
                                         {!!Form::submit('Eliminar',['class'=>'btn btn-inverse waves-effect waves-light'  ])!!}
                                         {!!Form::close()!!}
-
+                                        @else
+                                        {!!link_to_route('proveedor.show', $title = 'Restaurar', $parameters =$proveedor->id_proveedores, $attributes = ['class'=>'btn btn-info btn-flat btn-addon m-b-10 m-l-5'] )!!} 
+                                        
+                                        @endif
                                        </td>
                                         </tbody>
                                        @endforeach
+                                       @endif
                                    </table>
                                 </div>
                                </div>

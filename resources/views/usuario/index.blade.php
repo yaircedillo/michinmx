@@ -12,7 +12,7 @@
                             <div class="card-title">
                                 <h4 aling-text='center'>Registros de los Usuarios... </h4>
                                 <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('usuarios.create')}}"   role="button">
-                                 + Agregar un nuevo Resgistro</a></td>
+                                 + Agregar un nuevo Registro</a></td>
                                  <!-- esta linea tiene un boton que redirige a la funcion del controlador create donde llamara una vista  -->
                                
                                
@@ -43,6 +43,7 @@
                                                 </tr>
                                         </tfoot>
                                         <tbody>
+                                     @if(count($usuarios) > 0)
                                         @foreach($usuarios as $usuario)
                                         <tr>
                                           <td>{{$usuario->id}}</td>
@@ -51,15 +52,21 @@
                                           <td>{{$usuario->password}}</td>
                                           <td><img src="img_usuario/{{$usuario->archivo}}" alt="" style=" width: 200px; height: 100px;"></td>
                                           <td>
+                                    @if($usuario->deleted_at =="")
                                         {!!link_to_route('usuarios.edit', $title = 'Editar', $parameters = $usuario->id, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     
                                         {!!Form::open(['route' => ['usuarios.destroy',$usuario->id],'method'=>'DELETE'])!!} 
                                         {!!Form::submit('Eliminar',['class'=>'btn btn-inverse waves-effect waves-light'  ])!!}
                                         {!!Form::close()!!}
+                                        @else
+                                        {!!link_to_route('usuarios.show', $title = 'Restaurar', $parameters = $usuario->id, $attributes = ['class'=>'btn btn-info btn-flat btn-addon m-b-10 m-l-5'] )!!} 
+                                        
+                                        @endif
                                           </td>
                                         </tr>
 
                                        @endforeach
+                                       @endif
                                         </tbody>
                                    </table>
                                 </div>
