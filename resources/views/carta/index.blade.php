@@ -11,7 +11,7 @@
 <div class="card ">
                             <div class="card-title">
                                 <h4 aling-text='center'>Registros de las Cartas... </h4>
-                                <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('carta.create')}}"   role="button"> + Agregar un nuevo Resgistro</a></td>
+                                <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('carta.create')}}"   role="button"> + Agregar un nuevo Registro</a></td>
                                
                                
                             </div>
@@ -43,6 +43,7 @@
                                               
                                             </tr>
                                     </tfoot>
+                                    @if(count($cartas) > 0)
                                         @foreach($cartas as $carta)
                                         <tbody>
                                        <td>{{$carta->id_carta}}</td>
@@ -53,15 +54,22 @@
                                      
                                        
                                         <td>
+                                         @if($carta->deleted_at =="")
                                         {!!link_to_route('carta.edit', $title = 'Editar', $parameters = $carta->id_carta, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                         {!!Form::open(['route' => ['carta.destroy',$carta->id_carta],'method'=>'DELETE'])!!} 
                                         {!!Form::submit('Eliminar',['class'=>'btn btn-inverse waves-effect waves-light'  ])!!}
                                         {!!Form::close()!!}
+                                        @else
+                                        {!!link_to_route('carta.show', $title = 'Restaurar', $parameters = $carta->id_carta, $attributes = ['class'=>'btn btn-info btn-flat btn-addon m-b-10 m-l-5'] )!!} 
+                                        
+                                        @endif
 
                                        </td>
                                         </tbody>
                                        @endforeach
+                                       @endif
                                    </table>
+                                
                                 </div>
                                </div>
                              </div>   

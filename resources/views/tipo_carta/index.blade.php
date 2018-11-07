@@ -23,14 +23,14 @@
                                     <thead>
                                         <tr>
                                                 <th>#</th>
-                                                <th>Estado</th>
+                                                <th>Tipo Carta</th>
                                                 <th>operaciones</th>  
                                         </tr>    
                                     </thead>
                                     <tfoot>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Estado</th>
+                                                <th>Tipo Carta</th>
                                                 
                                               
                                             </tr>

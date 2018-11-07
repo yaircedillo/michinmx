@@ -13,8 +13,10 @@ class puesto extends Controller
 {
     public function index()
     {
-        $puestos = puestos::all();
-        return view('puestos.index',compact('puestos'));
+        $puestos = puestos::withTrashed()
+        ->get();
+        return view('puestos.index')
+        ->with('puestos',$puestos);
     }
     
     public function create()
@@ -36,7 +38,11 @@ class puesto extends Controller
     }
    public function show($id_puesto)
    {
-       
+    puestos::withTrashed()
+    ->where('id_puesto',$id_puesto)
+    ->restore();
+    Session::flash('message','Puesto restaurado correctamente ');
+    return Redirect::to('/puesto');
    }
     public function edit($id_puesto)
     {
@@ -53,8 +59,9 @@ class puesto extends Controller
     }
    public function destroy($id_puesto)
     {
-        puestos::destroy($id_puesto);
-      
+        puestos::find($id_puesto)
+        ->delete();
+             
       Session::flash('message','Puesto eliminado correctamente');
       return Redirect::to('/puesto');
     }

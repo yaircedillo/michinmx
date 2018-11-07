@@ -29,7 +29,7 @@ class promocioncontroller extends Controller
         'descripcion' => $request['descripcion'], 
         'descripcion' => $request['descripcion'], 
         'fecha_inicio' => $request['fecha_inicio'], 
-        'fecha_final' => $request['fecha_inicio'], 
+        'fecha_final' => $request['fecha_final'], 
         'horario' => $request['horario'],
         
         ]);
@@ -37,21 +37,21 @@ class promocioncontroller extends Controller
      Session::flash('message','Promoción creado exitosamente');
      return  Redirect::to('/promociones');
     }
-   public function show($id_estado)
+   public function show($id_promocion)
    {
        
    }
-    public function edit($id_estado)
+    public function edit($id_promocion)
     {
-      $estado = estados::find($id_estado);
-      return view('estado.edit', ['estado'=>$estado]);
+        $promociones = promociones::find($id_promocion);
+            return view('promociones.edit', ['promociones'=>$promociones,'promociones'=>$promociones]);
     }
-    public function update($id_estado, Request $request )
+    public function update($id_promocion, Request $request )
     {
-        $estado = estados::find($id_estado);
-        $estado->fill($request->all());
-        $estado->save();
-        Session::flash('message','Estado editado correctamente');
+        $promociones = promociones::find($id_promocion);
+        $promociones->fill($request->all());
+        $promociones->save();
+        Session::flash('message','Promocíón editada correctamente');
         return  Redirect::to('/promociones');
     }
    public function destroy($id_promocion)

@@ -13,23 +13,30 @@ use michinmx\personales;
 use Redirect;
 class cartacontroller extends Controller
 {
+    public function restaura($id_carta)
+
+	{
+       
+
+    }
     public function index()
     {
         
-        $cartas = cartas::all();
-        return view("carta.index",compact('cartas'));
-     
+        $cartas = cartas::withTrashed()
+        ->get();
+        return view('carta.index')
+        ->with('cartas',$cartas);
+
+       
     }
-    
     public function create()
     {
         $tipos = tipo_cartas::all();
-        $cartas = cartas::all();
+        $cartas = cartas::withTrashed();
         $personales = personales::all();
         return view("carta.create",compact('cartas','personales','tipos'));
         
     }
-    
     public function store(CartaRequestCreate $request)
     {
         cartas::create([
@@ -46,29 +53,39 @@ class cartacontroller extends Controller
     }
    public function show($id_carta)
    {
-       
+    cartas::withTrashed()
+    ->where('id_carta',$id_carta)
+    ->restore();
+    Session::flash('message','Carta restaurada correctamente');
+    return Redirect::to('/carta');
    }
     public function edit($id_carta)
     {
-        $municipios = municipios::find($id_municipios);
-        $cliente = clientes::find($id_cliente);
-        return view('cliente.edit', ['cliente'=>$cliente,'municipios'=>$municipios]);
+        $cartas = cartas::find($id_carta);
+        $personales = personales::all();
+        $tipos = tipo_cartas::all();
+       return view('carta.edit')
+       ->with('cartas',$cartas)
+       ->with('personales',$personales)
+       ->with('tipos',$tipos);
     }
-    public function update($id_cliente, Request $request )
+    public function update($id_carta, Request $request )
     {   
-        $cliente = clientes::find($id_cliente);
-        $cliente->fill($request->all());
-        $cliente->save();
-
-
-        Session::flash('message','Estado editado correctamente');
-        return  Redirect::to('/cliente');
+        $cartas = cartas::find($id_carta);
+        $cartas->fill($request->all());
+        $cartas->save();
+        Session::flash('message','Carta modificado exitosamente');
+        return  Redirect::to('/carta');
     }
-   public function destroy($id_cliente)
+   public function destroy($id_carta)
     {
-        clientes::destroy($id_cliente);
-      
-        Session::flash('message','Cliente eliminado correctamente');
-        return Redirect::to('/cliente');
+        cartas::find($id_carta)
+        ->delete();
+             
+        Session::flash('message','Carta eliminada correctamente');
+        return Redirect::to('/carta');
     }
+
+   
+    
 }

@@ -24,8 +24,8 @@ class CartaRequestCreate extends Request
     public function rules()
     {
         return [
-            'nombre' => 'required|alpha|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
-            'descripcion' => 'required|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
+            'nombre' => 'required|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
+            'descripcion' => 'required',
             'precio' => 'required|regex:/^[0-9]{1,5}(\.?)[0-9]{1,2}$/',
             'id_tipo_c' => 'required',
             'id_personal' => 'required',

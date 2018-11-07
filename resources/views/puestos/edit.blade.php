@@ -3,7 +3,7 @@
 
 {!!Form::model($puesto,['route' => ['puesto.update',$puesto->id_puesto],'method'=>'PUT'])!!} 
 
-<div class="row">
+<div class="row  justify-content-center">
      <div class="col-lg-6">
         <div class="card">
         <div class="card-body">

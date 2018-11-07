@@ -16,7 +16,7 @@ class PuestoRequestCreate extends Request
     public function rules()
     {
         return [
-            'puesto' => 'required|alpha|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
+            'puesto' => 'required|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
               
         ];
     }

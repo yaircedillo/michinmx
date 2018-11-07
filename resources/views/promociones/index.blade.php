@@ -7,8 +7,7 @@
   {{Session::get('message')}}
 </div>
 @endif
-<div class="row justify-content-center">
-<div class="col-lg-6">                 
+             
 <div class="card ">
                             <div class="card-title">
                                 <h4 aling-text='center'>Promociones  Registrados.. </h4>
@@ -17,9 +16,9 @@
                                
                             </div>
                             <div class="card-body">
-                                <div class="table-responsive">
+                                <div class="table-responsive  m-t-40">
                                     
-                                    <table class="table table-hover ">
+                                    <table class=" table display ">
                                     <thead>
                                         <tr>
                                                 <th>#</th>

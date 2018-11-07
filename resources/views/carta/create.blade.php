@@ -51,26 +51,7 @@
                 @endif	<br>
             </div>                  
                                 
-                                    <div class="form-group row ">
-                                            <label class="col-lg-4 col-form-label" >Personales. <span class="text-danger">*</span></label>
-                                            <div class="col-md-9">
-                                                    <div class="input-group-addon"><i class="icon-key"></i></div>
-                                               <select class="form-control " name="id_personal">
-                                                    @foreach($personales as $personal)
-                                                    <option value="{{$personal['id_personal']}}">{{$personal['nombre']}}
-                                                    </option>
-                                                   @endforeach
-                                                </select>
-                                                </div>
-                                                <div class="input-group">
-    
-    
-                                                                                                    
-                                        </div>
-                                            @if($errors->first('id_personal')) 
-                                            <i> {{ $errors->first('id_personal') }} </i> 
-                                            @endif	<br>
-                                        </div>
+                                    
                                         
                                     
                                     <div class="form-group row ">
@@ -93,7 +74,26 @@
                                             <i> {{ $errors->first('id_tipo_c') }} </i> 
                                             @endif	<br>
                                         </div>
-                                        
+                                        <div class="form-group row ">
+                                            <label class="col-lg-4 col-form-label" >Personales. <span class="text-danger">*</span></label>
+                                            <div class="col-md-9">
+                                                    <div class="input-group-addon"><i class="icon-key"></i></div>
+                                               <select class="form-control " name="id_personal">
+                                                    @foreach($personales as $personal)
+                                                    <option value="{{$personal['id_personal']}}">{{$personal['nombre']}}
+                                                    </option>
+                                                   @endforeach
+                                                </select>
+                                                </div>
+                                                <div class="input-group">
+    
+    
+                                                                                                    
+                                        </div>
+                                            @if($errors->first('id_personal')) 
+                                            <i> {{ $errors->first('id_personal') }} </i> 
+                                            @endif	<br>
+                                        </div>
                                         
                                    
                                     

@@ -37,18 +37,18 @@ class UnidadMedidacontroller extends Controller
    {
        
    }
-    public function edit($id_estado)
+    public function edit($id_tipo_c)
     {
-      $estado = estados::find($id_estado);
-      return view('estado.edit', ['estado'=>$estado]);
+        $tipo_cartas = tipo_cartas::find($id_tipo_c);
+        return view('tipo_carta.edit', ['tipo_cartas'=>$tipo_cartas]);
     }
-    public function update($id_estado, Request $request )
+    public function update($id_tipo_c, Request $request )
     {
-        $estado = estados::find($id_estado);
-        $estado->fill($request->all());
-        $estado->save();
-        Session::flash('message','Estado editado correctamente');
-        return  Redirect::to('/estado');
+        $tipo_cartas = tipo_cartas::find($id_tipo_c);
+        $tipo_cartas->fill($request->all());
+        $tipo_cartas->save();
+        Session::flash('message','Tipo de carta editada correctamente');
+        return  Redirect::to('/tipo_carta');
     }
    public function destroy($id_tipo_c)
     {

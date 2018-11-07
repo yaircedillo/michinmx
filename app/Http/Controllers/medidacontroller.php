@@ -38,16 +38,16 @@ class medidacontroller extends Controller
    }
     public function edit($id_unidad)
     {
-      $estado = unidades::find($id_unidad);
-      return view('estado.edit', ['estado'=>$estado]);
+        $unidad = unidades::find($id_unidad);
+        return view('medida.edit', ['unidades'=>$unidad]);
     }
     public function update($id_unidad, Request $request )
     {
-        $estado = unidades::find($id_unidad);
-        $estado->fill($request->all());
-        $estado->save();
-        Session::flash('message','Estado editado correctamente');
-        return  Redirect::to('/estado');
+        $unidad = unidades::find($id_unidad);
+        $unidad->fill($request->all());
+        $unidad->save();
+        Session::flash('message','Unidad editada correctamente');
+        return  Redirect::to('/medida');
     }
    public function destroy($id_unidad)
     {

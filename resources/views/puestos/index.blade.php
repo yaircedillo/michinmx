@@ -35,20 +35,25 @@
                                               
                                             </tr>
                                     </tfoot>
+                                       @if(count($puestos) > 0)
                                         @foreach($puestos as $puesto)
                                         <tbody>
                                         <td>{{$puesto->id_puesto}}</td>
                                        <td>{{$puesto->puesto}}</td>
                                        <td>
+                                        @if($puesto->deleted_at =="")
                                         {!!link_to_route('puesto.edit', $title = 'Editar', $parameters = $puesto->id_puesto, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     
                                         {!!Form::open(['route' => ['puesto.destroy',$puesto->id_puesto],'method'=>'DELETE'])!!} 
                                         {!!Form::submit('Eliminar',['class'=>'btn btn-inverse waves-effect waves-light'])!!}
                                         {!!Form::close()!!}
-
-                                       </td>
+                                        @else
+                                        {!!link_to_route('puesto.show', $title = 'Restaurar', $parameters = $puesto->id_puesto, $attributes = ['class'=>'btn btn-info btn-flat btn-addon m-b-10 m-l-5'] )!!} 
+                                        @endif
+                                    </td>
                                         </tbody>
                                        @endforeach
+                                       @endif
                                    </table>
                                 </div>
                                </div>

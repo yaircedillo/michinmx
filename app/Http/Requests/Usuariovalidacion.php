@@ -24,7 +24,7 @@ class Usuariovalidacion extends Request
     public function rules()
     {
         return [
-            'name' => 'required|alpha|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
+            'name' => 'required|regex:/^[A-Z,,a-z, ,ñ,á,é,í,ó,ú]+$/',
             'email' => 'required|unique:users',
             'password' => 'required|min:6',
             'img'=> 'image|mimes:jpeg,png,jpg,gif',
