@@ -35,21 +35,28 @@
                                               
                                             </tr>
                                     </tfoot>
+                                     @if(count($unidades) > 0)
                                         @foreach($unidades as $unidad)
                                         <tbody>
                                         <td>{{$unidad->id_unidad}}</td>
                                        <td>{{$unidad->medida}}</td>
                                        
                                        <td>
+                                     @if($unidad->deleted_at =="")
                                         {!!link_to_route('medida.edit', $title = 'Editar', $parameters = $unidad->id_unidad, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     
                                         {!!Form::open(['route' => ['medida.destroy',$unidad->id_unidad],'method'=>'DELETE'])!!} 
                                         {!!Form::submit('Eliminar',['class'=>'btn btn-inverse waves-effect waves-light'  ])!!}
                                         {!!Form::close()!!}
+                                    @else
+                                         {!!link_to_route('medida.show', $title = 'Restaurar', $parameters = $unidad->id_unidad, $attributes = ['class'=>'btn btn-info btn-flat btn-addon m-b-10 m-l-5'] )!!} 
+                                        
+                                    @endif
 
                                        </td>
                                         </tbody>
                                        @endforeach
+                                       @endif
                                    </table>
                                 </div>
                                </div>

@@ -12,8 +12,10 @@ class medidacontroller extends Controller
 {
     public function index()
     {
-        $unidades = unidades::all();
-        return view('medida.index',compact('unidades'));
+        $unidades = unidades::withTrashed()
+        ->get();
+        return view('medida.index')
+        ->with('unidades',$unidades);
     }
     
     public function create()
@@ -34,7 +36,11 @@ class medidacontroller extends Controller
     }
    public function show($id_unidad)
    {
-       
+    unidades::withTrashed()
+    ->where('id_unidad',$id_unidad)
+    ->restore();
+    Session::flash('message','Unidad de Medida restaurada correctamente');
+    return Redirect::to('/medida');
    }
     public function edit($id_unidad)
     {
@@ -51,7 +57,8 @@ class medidacontroller extends Controller
     }
    public function destroy($id_unidad)
     {
-        unidades::destroy($id_unidad);
+        unidades::find($id_unidad)
+        ->delete();
       
       Session::flash('message','Unidad de Medida eliminada correctamente');
       return Redirect::to('/medida');

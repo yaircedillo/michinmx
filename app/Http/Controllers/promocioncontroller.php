@@ -11,8 +11,10 @@ class promocioncontroller extends Controller
 {
     public function index()
     {
-        $promociones = promociones ::all();
-        return view('promociones.index',compact('promociones'));
+        $promociones = promociones ::withTrashed()
+        ->get();
+        return view('promociones.index')
+        ->with('promociones',$promociones);
     }
     
     public function create()
@@ -39,7 +41,11 @@ class promocioncontroller extends Controller
     }
    public function show($id_promocion)
    {
-       
+    promociones::withTrashed()
+    ->where('id_promocion',$id_promocion)
+    ->restore();
+    Session::flash('message','Promoción restaurada correctamente');
+    return Redirect::to('/promociones');
    }
     public function edit($id_promocion)
     {
@@ -56,9 +62,10 @@ class promocioncontroller extends Controller
     }
    public function destroy($id_promocion)
     {
-      promociones::destroy($id_promocion);
+      promociones::find($id_promocion)
+      ->delete();
       
-      Session::flash('message','Estado eliminado correctamente');
+      Session::flash('message','Promoción eliminada correctamente');
       return Redirect::to('/promociones');
     }
     

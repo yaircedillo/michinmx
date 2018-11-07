@@ -35,20 +35,25 @@
                                               
                                             </tr>
                                     </tfoot>
+                                       @if(count($tipos) > 0)
                                         @foreach($tipos as $tipo)
                                         <tbody>
                                         <td>{{$tipo->id_tipo_c}}</td>
                                        <td>{{$tipo->nombre}}</td>
                                        <td>
+                                        @if($tipo->deleted_at =="")
                                         {!!link_to_route('tipo_carta.edit', $title = 'Editar', $parameters = $tipo->id_tipo_c, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     
                                         {!!Form::open(['route' => ['tipo_carta.destroy',$tipo->id_tipo_c],'method'=>'DELETE'])!!} 
                                         {!!Form::submit('Eliminar',['class'=>'btn btn-inverse waves-effect waves-light'  ])!!}
                                         {!!Form::close()!!}
-
-                                       </td>
+                                        @else
+                                        {!!link_to_route('tipo_carta.show', $title = 'Restaurar', $parameters =$tipo->id_tipo_c, $attributes = ['class'=>'btn btn-info btn-flat btn-addon m-b-10 m-l-5'] )!!}                                        
+                                        @endif
+                                    </td>
                                         </tbody>
                                        @endforeach
+                                       @endif
                                    </table>
                                 </div>
                                </div>

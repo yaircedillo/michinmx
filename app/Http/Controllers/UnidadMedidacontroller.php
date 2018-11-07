@@ -13,9 +13,12 @@ class UnidadMedidacontroller extends Controller
 {
     public function index()
     {
-        $tipos = tipo_cartas::all();
-        return view('tipo_carta.index',compact('tipos'));
+        $tipos = tipo_cartas::withTrashed()
+        ->get();
+        return view('tipo_carta.index')
+        ->with('tipos',$tipos);
     }
+
     
     public function create()
     {
@@ -33,9 +36,13 @@ class UnidadMedidacontroller extends Controller
      Session::flash('message','Tipo de Carta  creada exitosamente');
      return  Redirect::to('/tipo_carta');
     }
-   public function show($id_estado)
+   public function show($id_tipo_c)
    {
-       
+    tipo_cartas::withTrashed()
+    ->where('id_tipo_c',$id_tipo_c)
+    ->restore();
+    Session::flash('message','Tipo de carta  restaurada correctamente');
+    return Redirect::to('/tipo_carta');
    }
     public function edit($id_tipo_c)
     {
@@ -52,7 +59,8 @@ class UnidadMedidacontroller extends Controller
     }
    public function destroy($id_tipo_c)
     {
-        tipo_cartas::destroy($id_tipo_c);
+        tipo_cartas::find($id_tipo_c)
+        ->delete();
       
       Session::flash('message','Tipo de Carta eliminada correctamente');
       return Redirect::to('/tipo_carta');

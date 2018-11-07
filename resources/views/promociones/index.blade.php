@@ -41,6 +41,7 @@
                                               
                                             </tr>
                                     </tfoot>
+                                    @if(count($promociones) > 0)
                                         @foreach($promociones as $promocion)
                                         <tbody>
                                         <td>{{$promocion->id_promocion}}</td>
@@ -49,15 +50,21 @@
                                        <td>{{$promocion->fecha_final}}</td>
                                        <td>{{$promocion->horario}}</td>
                                        <td>
+                                    @if($promocion->deleted_at =="")
                                         {!!link_to_route('promociones.edit', $title = 'Editar', $parameters = $promocion->id_promocion, $attributes = ['class'=>'btn btn-success btn-flat btn-addon m-b-10 m-l-5'])!!} 
                                     
                                         {!!Form::open(['route' => ['promociones.destroy',$promocion->id_promocion],'method'=>'DELETE'])!!} 
                                         {!!Form::submit('Eliminar',['class'=>'btn btn-inverse waves-effect waves-light'  ])!!}
                                         {!!Form::close()!!}
+                                        @else
+                                        {!!link_to_route('promociones.show', $title = 'Restaurar', $parameters = $promocion->id_promocion, $attributes = ['class'=>'btn btn-info btn-flat btn-addon m-b-10 m-l-5'] )!!} 
+                                        
+                                        @endif
 
                                        </td>
                                         </tbody>
                                        @endforeach
+                                       @endif
                                    </table>
                                 </div>
                                </div>
