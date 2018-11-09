@@ -29,8 +29,6 @@ Route::resource('promociones','promocioncontroller');
 Route::resource('medida','medidacontroller');
 Route::resource('tipo_carta','UnidadMedidacontroller');
 Route::resource('puesto','puesto');
-
-
 Route::resource('carta','cartacontroller');
 
 
