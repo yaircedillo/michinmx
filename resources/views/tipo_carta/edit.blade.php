@@ -19,15 +19,13 @@
                 <div class="input-group-addon"><i class="ti-key"></i></div>
                 {!!Form::text('id_tipo_c',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.', 'readonly' => 'readonly'])!!}
             </div>
-            <div class="form-group">
+            <div class="form-group {{ $errors->has('nombre')  ? 'has-error' : '' }} ">
                 <label class="col-lg-4 col-form-label" >Nombre <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-location-pin"></i></div>
                 {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
             </div>
-            @if($errors->first('nombre')) 
-            <i> {{ $errors->first('nombre') }} </i> 
-            @endif  <br>
+            {!! $errors->first('nombre','<span class="text-danger">:message</span>')!!}
      </div> 
      </form>
              {!!Form::submit('Actualizar',[' class'=>'btn btn-success waves-effect waves-light m-r-10'])!!}

@@ -15,46 +15,40 @@
         <form class="table-responsive m-t-40">
             
 
-            <div class="form-group row ">
+            <div class="form-group row  {{ $errors->has('nombre')  ? 'has-error' : '' }} ">
                 <label class="col-lg-4 col-form-label" >Nombre. <span class="text-danger">*</span></label>
                 <div class="input-group">
-                <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la  Carta.'])!!}
+                <div class="input-group-addon"><i class="icon-user"></i></div>
+                {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre.'])!!}
                 
             </div>
-                @if($errors->first('nombre')) 
-                <i> {{ $errors->first('nombre') }} </i> 
-                @endif	<br>
+            {!! $errors->first('nombre','<span class="text-danger">:message</span>')!!}
             </div> 
             
-            <div class="form-group row ">
+            <div class="form-group row {{ $errors->has('descripcion')  ? 'has-error' : '' }}">
                 <label class="col-lg-4 col-form-label" >Descripciòn. <span class="text-danger">*</span></label>
                 <div class="input-group">
-                <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('descripcion',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la  Carta.'])!!}
+                <div class="input-group-addon"><i class="icon-menu"></i></div>
+                {!!Form::text('descripcion',null,['class'=>'form-control', 'placeholder'=>'Colocar una descripción.'])!!}
                 
             </div>
-                @if($errors->first('descripcion')) 
-                <i> {{ $errors->first('descripcion') }} </i> 
-                @endif	<br>
+            {!! $errors->first('descripcion','<span class="text-danger">:message</span>')!!}
             </div> 
 
-            <div class="form-group row ">
+            <div class="form-group row {{ $errors->has('precio')  ? 'has-error' : '' }}">
                 <label class="col-lg-4 col-form-label" >Precio. <span class="text-danger">*</span></label>
                 <div class="input-group">
-                <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('precio',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la  Carta.'])!!}
+                <div class="input-group-addon"><i class="icon-note"></i></div>
+                {!!Form::text('precio',null,['class'=>'form-control', 'placeholder'=>'Colocar el Precio.'])!!}
                 
             </div>
-                @if($errors->first('precio')) 
-                <i> {{ $errors->first('precio') }} </i> 
-                @endif	<br>
+            {!! $errors->first('precio','<span class="text-danger">:message</span>')!!}
             </div>                  
                                 
                                     
                                         
                                     
-                                    <div class="form-group row ">
+                                    <div class="form-group row  {{ $errors->has('id_tipo_c')  ? 'has-error' : '' }} ">
                                             <label class="col-lg-4 col-form-label" >Tipo de Carta. <span class="text-danger">*</span></label>
                                             <div class="col-md-9">
                                                     <div class="input-group-addon"><i class="icon-key"></i></div>
@@ -70,11 +64,9 @@
     
                                                                                                     
                                         </div>
-                                            @if($errors->first('id_tipo_c')) 
-                                            <i> {{ $errors->first('id_tipo_c') }} </i> 
-                                            @endif	<br>
+                                        {!! $errors->first('id_tipo_c','<span class="text-danger">:message</span>')!!}
                                         </div>
-                                        <div class="form-group row ">
+                                        <div class="form-group row {{ $errors->has('id_personal')  ? 'has-error' : '' }}">
                                             <label class="col-lg-4 col-form-label" >Personales. <span class="text-danger">*</span></label>
                                             <div class="col-md-9">
                                                     <div class="input-group-addon"><i class="icon-key"></i></div>
@@ -90,9 +82,7 @@
     
                                                                                                     
                                         </div>
-                                            @if($errors->first('id_personal')) 
-                                            <i> {{ $errors->first('id_personal') }} </i> 
-                                            @endif	<br>
+                                        {!! $errors->first('id_tipo_c','<span class="text-danger">:message</span>')!!}
                                         </div>
                                         
                                    

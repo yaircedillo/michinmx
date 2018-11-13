@@ -49,7 +49,7 @@ class UnidadMedidacontroller extends Controller
         $tipo_cartas = tipo_cartas::find($id_tipo_c);
         return view('tipo_carta.edit', ['tipo_cartas'=>$tipo_cartas]);
     }
-    public function update($id_tipo_c, Request $request )
+    public function update($id_tipo_c, UnidadMedidaRequestCreate $request )
     {
         $tipo_cartas = tipo_cartas::find($id_tipo_c);
         $tipo_cartas->fill($request->all());

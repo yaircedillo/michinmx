@@ -49,7 +49,7 @@ class puesto extends Controller
       $puesto = puestos::find($id_puesto);
       return view('puestos.edit', ['puesto'=>$puesto]);
     }
-    public function update($id_puesto, Request $request )
+    public function update($id_puesto, PuestoRequestCreate $request )
     {
         $puesto = puestos::find($id_puesto);
         $puesto->fill($request->all());

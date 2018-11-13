@@ -4,7 +4,7 @@ namespace michinmx\Http\Controllers;
 
 use Illuminate\Http\Request;
 use michinmx\Http\Requests;
-
+use michinmx\Http\Requests\actualizarPersonal;
 use michinmx\Http\Requests\PesonalesRequestCreate;
 use michinmx\personales;
 use Session;
@@ -105,7 +105,7 @@ class personalcontroller extends Controller
         $puestos = puestos::withTrashed()->get();
         return view('personal.edit', ['personal'=>$personal,'municipios'=>$municipios,'puestos'=>$puestos]);
     }
-    public function update($id_personal, Request $request )
+    public function update($id_personal, actualizarPersonal $request )
     {
         $archivo         = $request->file('img');
         if($archivo != '' || $archivo != null ){

@@ -52,7 +52,7 @@ class promocioncontroller extends Controller
         $promociones = promociones::find($id_promocion);
             return view('promociones.edit', ['promociones'=>$promociones,'promociones'=>$promociones]);
     }
-    public function update($id_promocion, Request $request )
+    public function update($id_promocion, PromocionRequestCreate $request )
     {
         $promociones = promociones::find($id_promocion);
         $promociones->fill($request->all());

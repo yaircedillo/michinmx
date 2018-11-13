@@ -105,7 +105,7 @@
 							<span class="icon">
 								<i class="icon-map4"></i>
 							</span>
-							<h2>Address</h2>
+							<h2>Ubicación</h2>
 							<p>198 West 21th Street, Suite 721 New York NY 10016</p>
 						</div>
 					</div>
@@ -124,7 +124,7 @@
 							<span class="icon">
 								<i class="icon-mobile2"></i>
 							</span>
-							<h2>Phone</h2>
+							<h2>Telefono</h2>
 							<p>+ 001 234 567</p>
 							<p>+ 001 234 567</p>
 						</div>
@@ -134,8 +134,9 @@
 							<span class="icon">
 								<i class="icon-envelope"></i>
 							</span>
-							<h2>Email</h2>
-							<p><a href="#">info@domain.com</a><br><a href="#">luto@email.com</a></p>
+							<h2>Correo Electronico</h2>
+							<p><a href="#">info@michinmx.online</a><br><a href="#">contacto@michinmx.online</a></p>
+							
 						</div>
 					</div>
 				</div>
@@ -151,7 +152,7 @@
 						<div class="row">
 							<div class="about-desc">
 								<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-									<span>Welcome to luto</span>
+									<span>Bienvenido a Michinmx</span>
 									<h2>Taste a delicious food here in Italy &amp; We are inspired since 1895</h2>
 								</div>
 								<div class="col-md-12 animate-box">

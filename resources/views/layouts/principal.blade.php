@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Luto Template</title>
+	<title>	Michinmx</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -21,13 +21,11 @@
 	<meta name="twitter:card" content="" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href=" {{asset('/sistema/favicon.ico')}}">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 	
-	
-
 	
 	{!!Html::style('/css/style.css')!!}
 	{!!Html::style('/css/bootstrap-datepicker.css')!!}
@@ -37,21 +35,11 @@
 	{!!Html::style('/css/owl.theme.default.min.css')!!}
 	{!!Html::style('/css/owl.carousel.min.css')!!}
 	{!!Html::style('/css/bootstrap.css')!!}
-		
 	{!!Html::style('/css/icomoon.css')!!}
-		
 	{!!Html::style('/css/animate.css')!!}
 	{!!Html::script('/js/modernizr-2.6.2.min.js')!!}	
 
 
-
-
-	<!-- Modernizr JS -->
-	
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
 
 	</head>
 	<body>
@@ -71,11 +59,11 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<ul>
-							<li class="active"><a href="{!!URL::to('/index')!!}">INICIO</a></li>
+							<li class="active"><a href="{!!URL::to('/')!!}">INICIO</a></li>
 							<li><a href="{!!URL::to('menu')!!}">MENU</a></li>
 							<li><a href="{!!URL::to('especialidad')!!}">ESPECIALIDADES</a></li>
 							<li><a href="{!!URL::to('reservacion')!!}">RESERVACIÓN</a></li>
-							<li><a href="{!!URL::to('blog')!!}">BLOG</a></li>
+							
 							<li><a href="{!!URL::to('nosotros')!!}">SOBRE NOSOTROS</a></li>
 							<li><a href="{!!URL::to('contactanos')!!}">CANTACTANOS</a></li>
 							<li><a href="{!!URL::to('iniciar_sesión')!!}">LOGIN</a></li>
@@ -163,18 +151,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</div>
 
 	<!-- jQuery -->
-	
 	{!!Html::script('/js/jquery.min.js')!!}
-	<!-- jQuery Easing -->
-	
 	{!!Html::script('/js/jquery.easing.1.3.js')!!}
-	
 	{!!Html::script('/js/bootstrap.min.js')!!}
-	<!-- Waypoints -->
-		
 	{!!Html::script('/js/jquery.waypoints.min.js')!!}
-	<!-- Parallax -->
-	
 	{!!Html::script('/js/jquery.stellar.min.js')!!}
 	<!-- Owl Carousel -->
 	{!!Html::script('/js/owl.carousel.min.js')!!}
@@ -184,13 +164,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Flexslider -->
 	{!!Html::script('/js/jquery.flexslider-min.js')!!}
 	<!-- Date Picker -->
-	
 	{!!Html::script('/js/bootstrap-datepicker.js')!!}
     <!-- Google Map -->
 	{!!Html::script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false')!!}
 	{!!Html::script('/js/google_map.js')!!}
 	<!-- Main JS (Do not remove) -->
-
 	{!!Html::script('/js/main.js')!!}
 
 	</body>

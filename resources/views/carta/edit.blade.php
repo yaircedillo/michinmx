@@ -25,86 +25,77 @@
                         <i> {{ $errors->first('id_carta') }} </i> 
                         @endif  <br>
                     </div>
-            <div class="form-group row ">
-                <label class="col-lg-4 col-form-label" >Nombre. <span class="text-danger">*</span></label>
-                <div class="input-group">
-                <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la  Carta.'])!!}
-                
-            </div>
-                @if($errors->first('nombre')) 
-                <i> {{ $errors->first('nombre') }} </i> 
-                @endif  <br>
-            </div> 
             
-            <div class="form-group row ">
-                <label class="col-lg-4 col-form-label" >Descripciòn. <span class="text-danger">*</span></label>
-                <div class="input-group">
-                <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('descripcion',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la  Carta.'])!!}
-                
-            </div>
-                @if($errors->first('descripcion')) 
-                <i> {{ $errors->first('descripcion') }} </i> 
-                @endif  <br>
-            </div> 
+                    <div class="form-group row  {{ $errors->has('nombre')  ? 'has-error' : '' }} ">
+                        <label class="col-lg-4 col-form-label" >Nombre. <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                        <div class="input-group-addon"><i class="icon-user"></i></div>
+                        {!!Form::text('nombre',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre.'])!!}
+                        
+                    </div>
+                    {!! $errors->first('nombre','<span class="text-danger">:message</span>')!!}
+                    </div> 
+            
+                    <div class="form-group row {{ $errors->has('descripcion')  ? 'has-error' : '' }}">
+                        <label class="col-lg-4 col-form-label" >Descripciòn. <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                        <div class="input-group-addon"><i class="icon-menu"></i></div>
+                        {!!Form::text('descripcion',null,['class'=>'form-control', 'placeholder'=>'Colocar una descripción.'])!!}
+                        
+                    </div>
+                    {!! $errors->first('descripcion','<span class="text-danger">:message</span>')!!}
+                </div> 
 
-            <div class="form-group row ">
-                <label class="col-lg-4 col-form-label" >Precio. <span class="text-danger">*</span></label>
-                <div class="input-group">
-                <div class="input-group-addon"><i class="ti-user"></i></div>
-                {!!Form::text('precio',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la  Carta.'])!!}
-                
-            </div>
-                @if($errors->first('precio')) 
-                <i> {{ $errors->first('precio') }} </i> 
-                @endif  <br>
-            </div>                  
+                <div class="form-group row {{ $errors->has('precio')  ? 'has-error' : '' }}">
+                    <label class="col-lg-4 col-form-label" >Precio. <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                    <div class="input-group-addon"><i class="icon-note"></i></div>
+                    {!!Form::text('precio',null,['class'=>'form-control', 'placeholder'=>'Colocar el Precio.'])!!}
+                    
+                </div>
+                {!! $errors->first('precio','<span class="text-danger">:message</span>')!!}
+                </div>                  
                                 
                                    
                                         
                                     
-                                    <div class="form-group row ">
-                                            <label class="col-lg-4 col-form-label" >Tipo de Carta. <span class="text-danger">*</span></label>
-                                            <div class="col-md-9">
-                                                    <div class="input-group-addon"><i class="icon-key"></i></div>
-                                               <select class="form-control " name="id_tipo_c">
-                                                    @foreach($tipos as $tipo)
-                                                    <option value="{{$tipo['id_tipo_c']}}"> {{$tipo['nombre']}}
-                                                    </option>
-                                                   @endforeach
-                                                </select>
-                                                </div>
-                                                <div class="input-group">
-    
-    
-                                                                                                    
-                                        </div>
-                                            @if($errors->first('id_tipo_c')) 
-                                            <i> {{ $errors->first('id_tipo_c') }} </i> 
-                                            @endif  <br>
-                                        </div>
+                <div class="form-group row  {{ $errors->has('id_tipo_c')  ? 'has-error' : '' }} ">
+                    <label class="col-lg-4 col-form-label" >Tipo de Carta. <span class="text-danger">*</span></label>
+                    <div class="col-md-9">
+                            <div class="input-group-addon"><i class="icon-key"></i></div>
+                       <select class="form-control " name="id_tipo_c">
+                            @foreach($tipos as $tipo)
+                            <option value="{{$tipo['id_tipo_c']}}"> {{$tipo['nombre']}}
+                            </option>
+                           @endforeach
+                        </select>
+                        </div>
+                        <div class="input-group">
+
+
+                                                                            
+                </div>
+                {!! $errors->first('id_tipo_c','<span class="text-danger">:message</span>')!!}
+                </div>
                                         
-                                        <div class="form-group row ">
-                                            <label class="col-lg-4 col-form-label" >Personales. <span class="text-danger">*</span></label>
-                                            <div class="col-md-9">
-                                                    <div class="input-group-addon"><i class="icon-key"></i></div>
-                                               <select class="form-control " name="id_personal">
-                                                    @foreach($personales as $personal)
-                                                    <option value="{{$personal['id_personal']}}">{{$personal['nombre']}}
-                                                    </option>
-                                                   @endforeach
-                                                </select>
-                                                </div>
-                                                <div class="input-group">
-    
-    
-                                                                                                    
-                                        </div>
-                                            @if($errors->first('id_personal')) 
-                                            <i> {{ $errors->first('id_personal') }} </i> 
-                                            @endif  <br>
-                                        </div>
+                <div class="form-group row {{ $errors->has('id_personal')  ? 'has-error' : '' }}">
+                    <label class="col-lg-4 col-form-label" >Personales. <span class="text-danger">*</span></label>
+                    <div class="col-md-9">
+                            <div class="input-group-addon"><i class="icon-key"></i></div>
+                       <select class="form-control " name="id_personal">
+                            @foreach($personales as $personal)
+                            <option value="{{$personal['id_personal']}}">{{$personal['nombre']}}
+                            </option>
+                           @endforeach
+                        </select>
+                        </div>
+                        <div class="input-group">
+
+
+                                                                            
+                </div>
+                {!! $errors->first('id_tipo_c','<span class="text-danger">:message</span>')!!}
+                </div>
                                         
                                    
                                     

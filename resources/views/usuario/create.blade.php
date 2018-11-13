@@ -12,60 +12,55 @@
         <div class="card  ">
         <div class="card-body ">
         <h4 class="card-title">Ingresar un nuevo usuario.</h4>
+        
+        <h6 class= "text-info">Campos obligatorios<span class="text-danger">*</span></h6>
+        <br>
         <form class="table-responsive m-t-40">
 
-            <div class="form-group row ">
+            <div class="form-group row   {{ $errors->has('name')  ? 'has-error' : '' }}">
                 <label class="col-lg-4 col-form-label" >Nombre. <span class="text-danger">*</span></label>
                 <div class="input-group">
-                <div class=0input-group-addon"><i class="ti-user"></i></div>
+                <div class="input-group-addon"><i class="icon-user"></i></div>
                 {!!Form::text('name',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Usuario.'])!!}
-                <!-- esta es la caja de nombre -->
+               
                 
             </div>
-                @if($errors->first('name')) 
-                <i> {{ $errors->first('name') }} </i> 
-                @endif	<br>
+            {!! $errors->first('name','<span class="text-danger">:message</span>')!!}
             </div> 
             
 
             
-                        <div class="form-group row ">
+                        <div class="form-group row  {{ $errors->has('email')  ? 'has-error' : '' }} ">
                                 <label class="col-lg-4 col-form-label" >Dirección de Correo.<span class="text-danger">*</span></label>
                                 <div class="input-group">
                                 <div class="input-group-addon"><i class="ti-email"></i></div>
                                 {!!Form::text('email',null,['class'=>'form-control', 'placeholder'=>'ejemplo@gmail.com'])!!}
-                                <!-- esta es la caja de email o correo -->
+                               
                                 
                             </div>
-                                @if($errors->first('email')) 
-                                <i> {{ $errors->first('email') }} </i> 
-                                @endif	<br>
+                            {!! $errors->first('email','<span class="text-danger">:message</span>')!!}
                             </div>
 
-            <div class="form-group row ">
+            <div class="form-group row   {{ $errors->has('password')  ? 'has-error' : '' }}">
                 <label class="col-lg-4 col-form-label" >Contraseña. <span class="text-danger">*</span></label>
                 <div class="input-group">
-                <div class="input-group-addon"><i class="ti-user"></i></div>
+                <div class="input-group-addon"><i class="icon-eye"></i></div>
                 {!!Form::text('password',null,['class'=>'form-control', 'placeholder'=>'Colocar contraseña del usuario.'])!!}
                 <!-- esta es la caja de contraseña -->
                 
             </div>
-                @if($errors->first('password')) 
-                <i> {{ $errors->first('password') }} </i> 
-                @endif	<br>
+            {!! $errors->first('password','<span class="text-danger">:message</span>')!!}
             </div> 
-            <div class="form-group row ">
-                <label class="col-lg-4 col-form-label" >Imagen. <span class="text-danger">*</span></label>
+            <div class="form-group row {{ $errors->has('img')  ? 'has-error' : '' }}">
+                <label class="col-lg-4 col-form-label" >Imagen. </label>
                 <div class="input-group">
-                <div class="input-group-addon"><i class="ti-user"></i></div>
+                <div class="input-group-addon"><i class="icon-camera"></i></div>
                 <input type="file" id="img" name="img">
             </div>
             <div>
             </div>
         </div>
-        @if($errors->first('img')) 
-        <i> {{ $errors->first('img') }} </i> 
-        @endif	<br>
+        {!! $errors->first('img','<span class="text-danger">:message</span>')!!}
     </div>
             </div>
           

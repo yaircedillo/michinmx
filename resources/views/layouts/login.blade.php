@@ -1,81 +1,102 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('sistema/images/favicon.png')}}">
-    <title>Ela - Bootstrap Admin Dashboard Template</title>
-    <!-- Bootstrap Core CSS -->
-    
+	<title>Iniciar seción</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+    <link rel="icon" type="image/png" href="{{asset('login/images/icons/favicon.ico')}}"/>
    
-      
-    {!!Html::style('/sistema/css/helper.css')!!}    
-    {!!Html::style('/sistema/css/lib/bootstrap/bootstrap.min.css')!!}
-    {!!Html::style('sistema/css/style.css')!!}
+<!--===============================================================================================-->
+    {!!Html::style('/login/vendor/bootstrap/css/bootstrap.min.css')!!}
+<!--===============================================================================================-->
+    {!!Html::style('/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css')!!}
+<!--===============================================================================================-->
+    {!!Html::style('/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css')!!}
+<!--===============================================================================================-->
+    {!!Html::style('/login/vendor/animate/animate.css')!!}
+<!--===============================================================================================-->	
+    {!!Html::style('/login/vendor/css-hamburgers/hamburgers.min.css')!!}
+<!--===============================================================================================-->
+    {!!Html::style('/login/vendor/animsition/css/animsition.min.css')!!}
+<!--===============================================================================================-->
+    {!!Html::style('/login/vendor/select2/select2.min.css')!!}
+<!--===============================================================================================-->	
+    {!!Html::style('/login/vendor/daterangepicker/daterangepicker.css')!!}
+<!--===============================================================================================-->
+    {!!Html::style('/login/css/util.css')!!}
+    {!!Html::style('/login/css/main.css')!!}
+<!--===============================================================================================-->
 </head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('/login/images/bg-02.jpg');">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(/login/images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						Sign In
+					</span>
+				</div>
 
-<body class="fix-header fix-sidebar">
-    <!-- Preloader - style you can find in spinners.css -->
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
-    </div>
-    <!-- Main wrapper  -->
-    <div id="main-wrapper">
+				<form class="login100-form validate-form">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" name="username" placeholder="Enter username">
+						<span class="focus-input100"></span>
+					</div>
 
-        <div class="unix-login">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="login-content card">
-                            <div class="login-form">
-                                <h4>Login</h4>
-                                <form>
-                                    <div class="form-group">
-                                        <label>Email address</label>
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Password</label>
-                                        <input type="password" class="form-control" placeholder="Password">
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-        										<input type="checkbox"> Remember Me
-        									</label>
-                                        <label class="pull-right">
-        										<a href="#">Forgotten Password?</a>
-        									</label>
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" name="pass" placeholder="Enter password">
+						<span class="focus-input100"></span>
+					</div>
 
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Sign in</button>
-                                    <div class="register-link m-t-15 text-center">
-                                        <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+					<div class="flex-sb-m w-full p-b-30">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" for="ckb1">
+								Remember me
+							</label>
+						</div>
 
-    </div>
-  
-    {!!Html::script('/sistema/js/custom.min.js')!!}  
-    {!!Html::script('/sistema/js/lib/sticky-kit-master/dist/sticky-kit.min.js')!!} 
-    {!!Html::script('/sistema/js/sidebarmenu.js')!!} 
-    {!!Html::script('/sistema/js/jquery.slimscroll.js')!!} 
-    {!!Html::script('/sistema/js/lib/bootstrap/js/bootstrap.min.js')!!} 
-    {!!Html::script('/sistema/js/lib/bootstrap/js/popper.min.js')!!} 
-    {!!Html::script('/sistema/js/lib/jquery/jquery.min.js')!!} 
+						<div>
+							<a href="#" class="txt1">
+								Olvide mi contraseña?
+							</a>
+						</div>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->
+    <script src=""></script>
+    {!!Html::script('/login/vendor/jquery/jquery-3.2.1.min.js')!!}
+<!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    {!!Html::script('/login/vendor/jquery/jquery-3.2.1.min.js')!!}
+<!--===============================================================================================-->
+
+    {!!Html::script('/login/vendor/bootstrap/js/popper.js')!!}
+    {!!Html::script('/login/vendor/bootstrap/js/bootstrap.min.js')!!}
+<!--===============================================================================================-->
+    {!!Html::script('/login/vendor/select2/select2.min.js')!!}
+<!--===============================================================================================-->
+    {!!Html::script('/login/vendor/daterangepicker/moment.min.jss')!!}
+    {!!Html::script('/login/vendor/daterangepicker/daterangepicker.js')!!}
+<!--===============================================================================================-->
+    {!!Html::script('/login/vendor/countdowntime/countdowntime.js')!!}
+<!--===============================================================================================-->
+   
+    {!!Html::script('/login/js/main.js')!!}
 
 </body>
-
 </html>

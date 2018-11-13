@@ -1,10 +1,10 @@
 @extends('layouts.admin')
 @section('content')
 
-@if(Session::has('message'))
+@if(Session::has('mensaje'))
 <div class="alert alert-info alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  {{Session::get('message')}}
+  <button type="button" class="close" data-dismiss="alert"  aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  {{Session::get('mensaje')}}
 </div>
 @endif
 <div class="row justify-content-center">

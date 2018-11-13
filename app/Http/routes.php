@@ -19,7 +19,7 @@ Route::get('menu','MichinmxController@menu');
 Route::get('reservacion','MichinmxController@reservation');
 Route::get('especialidad','MichinmxController@specialties');
 Route::get('iniciar_sesión','MichinmxController@login');
-Route::get('inicio','MichinmxController@inicio');
+
 Route::resource('estado','estadocontroller');
 Route::resource('personal','personalcontroller');
 Route::resource('proveedor','proveedorcontroller');
@@ -30,6 +30,6 @@ Route::resource('medida','medidacontroller');
 Route::resource('tipo_carta','UnidadMedidacontroller');
 Route::resource('puesto','puesto');
 Route::resource('carta','cartacontroller');
-
+Route::resource('inicio','vista');
 
 

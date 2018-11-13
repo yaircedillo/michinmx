@@ -47,7 +47,7 @@ class medidacontroller extends Controller
         $unidad = unidades::find($id_unidad);
         return view('medida.edit', ['unidades'=>$unidad]);
     }
-    public function update($id_unidad, Request $request )
+    public function update($id_unidad, UnidadRequestCreate $request )
     {
         $unidad = unidades::find($id_unidad);
         $unidad->fill($request->all());

@@ -3,11 +3,14 @@
 namespace michinmx\Http\Controllers;
 
 use Illuminate\Http\Request;
-use michinmx\Http\Requests\Usuariovalidacion; //llama a la validacion del request
+use michinmx\Http\Requests\Usuariovalidacion;
+use michinmx\Http\Requests\actualizarUsuario;//llama a la validacion del request
 use michinmx\usuario; //esto es el modelo 
 use Session; //para usar flash
 use Redirect;//para redirigir
 use Storage;
+
+
 use michinmx\Http\Requests;
 
 class UsuariosController extends Controller
@@ -115,7 +118,7 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(actualizarUsuario $request, $id)
     {
 
         $archivo         = $request->file('img');

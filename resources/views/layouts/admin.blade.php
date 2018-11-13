@@ -51,7 +51,7 @@
         <nav class="navbar top-navbar navbar-expand-md navbar-light">
             <!-- Logo -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{route('inicio.index')}}">
                     <!-- Logo icon -->
                     <b><img src="{{asset('sistema/images/logo.png')}}"  alt="homepage" class="dark-logo" /></b>
                     <!--End Logo icon -->
@@ -256,16 +256,15 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li class="nav-devider"></li>
-                    <li class="nav-label"></li>
-                    <li> <a href="#" ><i class="fa fa-tachometer"></i>INICIO</a></li>
+                    <li class="nav-label"> Panel de Administraciòn</li>
+                    <li> <a class="has-arrow" href="{{route('inicio.index')}}" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">INICIO </span></a>
                         
                     </li>
-                    <li class="#">Formularios</li>
-                    
-                    <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Formularios</span></a>
+                    <li class="nav-label">Formularios</li>
+                    <li> <a class="has-arrow" href="" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Formularios</span></a>
                         <ul aria-expanded="false" class="collapse">
                          <!-- <li><a href="{{route('estado.index')}}">Estados</a></li> -->
-                            <li><a href="{{route('cliente.index')}}">Clientes</a></li>
+                            <li><a href="{{route('cliente.index')}}" >Clientes</a></li>
                             <li><a href="{{route('proveedor.index')}}">Proveedores</a></li>
                             <li><a href="{{route('personal.index')}}">Personal </a></li>
                             <li><a href="{{route('usuarios.index')}}">Usuario </a></li>

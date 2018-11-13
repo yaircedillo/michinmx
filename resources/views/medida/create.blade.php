@@ -14,16 +14,14 @@
         <h4 class="card-title">Ingresar una nueva Unidad de Medida.</h4>
         <form class="form p-t-20">
 
-            <div class="form-group row ">
+            <div class="form-group row {{ $errors->has('medida')  ? 'has-error' : '' }} ">
                 <label class="col-lg-4 col-form-label" >Unidad de Medida <span class="text-danger">*</span></label>
                 <div class="input-group">
-                <div class="input-group-addon"><i class="ti-location-pin"></i></div>
+                <div class="input-group-addon"><i class="icon-equalizer"></i></div>
                 {!!Form::text('medida',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre de la medida.'])!!}
                 
             </div>
-                @if($errors->first('medida')) 
-                <i> {{ $errors->first('medida') }} </i> 
-                @endif	<br>
+            {!! $errors->first('medida','<span class="text-danger">:message</span>')!!}
      </div> 
 
     

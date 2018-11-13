@@ -18,12 +18,15 @@
                 <div class="input-group-addon"><i class="ti-key"></i></div>
                 {!!Form::text('id_puesto',null,['class'=>'form-control', 'readonly' => 'readonly'])!!}
             </div>
-            <div class="form-group">
-                {!!Form::label('Puesto.')!!}
+            
+            <div class="form-group row {{ $errors->has('puesto')  ? 'has-error' : '' }} ">
+                <label class="col-lg-4 col-form-label" >Puesto <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-location-pin"></i></div>
-                {!!Form::text('puesto',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Puesto.'])!!}
+                {!!Form::text('puesto',null,['class'=>'form-control', 'placeholder'=>'Colocar el Puesto.'])!!}
+                
             </div>
+            {!! $errors->first('puesto','<span class="text-danger">:message</span>')!!}
      </div> 
      </form>
              {!!Form::submit('Actualizar',[' class'=>'btn btn-success waves-effect waves-light m-r-10'])!!}

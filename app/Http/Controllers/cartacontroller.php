@@ -67,7 +67,7 @@ class cartacontroller extends Controller
          $tipos = tipo_cartas::withTrashed()->get();
         return view('carta.edit')->with('cartas',$cartas)->with('personales',$personales)->with('tipos',$tipos);
     }
-    public function update($id_carta, Request $request )
+    public function update($id_carta, CartaRequestCreate $request )
     {   
         $cartas = cartas::find($id_carta);
         $cartas->fill($request->all());

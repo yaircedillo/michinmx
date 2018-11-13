@@ -14,16 +14,15 @@
         <h4 class="card-title">Ingresar un nuevo Estado.</h4>
         <form class="form p-t-20">
 
-            <div class="form-group row ">
+            <div class="form-group row  {{ $errors->has('estado')  ? 'has-error' : '' }}">
                 <label class="col-lg-4 col-form-label" >Nombre <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="ti-location-pin"></i></div>
                 {!!Form::text('estado',null,['class'=>'form-control', 'placeholder'=>'Colocar el Nombre del Estado.'])!!}
                 
             </div>
-                @if($errors->first('estado')) 
-                <i> {{ $errors->first('estado') }} </i> 
-                @endif	<br>
+            {!! $errors->first('estado','<span class="text-danger">:message</span>')!!}
+
      </div> 
 
     
