@@ -66,7 +66,7 @@ class proveedorcontroller extends Controller
         $proveedor = proveedores::find($id_proveedores);
         return view('proveedor.edit', ['proveedor'=>$proveedor,'municipios'=>$municipios]);
     }
-    public function update($id_proveedores, Request $request )
+    public function update($id_proveedores, ProveedorRequestCreate $request )
     {   
         $proveedor = proveedores::find($id_proveedores);
         $proveedor->fill($request->all());

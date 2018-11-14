@@ -129,6 +129,9 @@
                                     </div>
                                     {!! $errors->first('id_municipios','<span class="text-danger">:message</span>')!!}
                                     </div>
+
+
+                                    
                                     <div class="form-group row   {{ $errors->has('id_puesto')  ? 'has-error' : '' }}">
                                         <label class="col-lg-4 col-form-label" >Puesto. <span class="text-danger">*</span></label>
                                         <div class="col-md-9">

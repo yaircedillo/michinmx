@@ -68,7 +68,7 @@ class clientecontroller extends Controller
         
         return view('cliente.edit', ['cliente'=>$cliente,'municipios'=>$municipios]);
     }
-    public function update($id_cliente, Request $request )
+    public function update($id_cliente, ClientesRequestCreate $request )
     {   
         $cliente = clientes::find($id_cliente);
         $cliente->fill($request->all());
