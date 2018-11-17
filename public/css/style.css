@@ -1499,3 +1499,11 @@ input[type="text"] {
 
 .js .animate-box {
   opacity: 0; }
+
+  .centrado  { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10.90%;
+    
+  }

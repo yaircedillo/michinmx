@@ -115,7 +115,8 @@
                                     <label class="col-lg-4 col-form-label" >Municipio. <span class="text-danger">*</span></label>
                                     <div class="col-md-9">
                                         <div class="input-group-addon"><i class="icon-key"></i></div>
-                                        <select class="form-control custom-select" name='id_municipios'>
+                                        <select class="form-control " name='id_municipios'>
+                                            <option value="">--Escoje un Municipio--</option>
                                             @foreach ($municipios as $municipio)
                                         <option value="{{$municipio['id_municipios']}}">{{$municipio['municipio']}}
 

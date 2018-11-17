@@ -131,9 +131,7 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="input-group">
-                                    
-                                    
+                                    <div class="input-group">                       
                                 </div>
                                 {!! $errors->first('id_municipios','<span class="text-danger">:message</span>')!!}
 </div> 

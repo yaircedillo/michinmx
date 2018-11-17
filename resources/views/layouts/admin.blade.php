@@ -25,8 +25,7 @@
 {!!Html::style('/sistema/css/lib/bootstrap/bootstrap.min.css')!!}
 {!!Html::style('/sistema/css/lib/owl.theme.default.min.css')!!}
 {!!Html::style('/sistema/css/helper.css')!!}
-
-{!!Html::style('/sistema/css/lib/dropzone/dropzone.css')!!}
+{!!Html::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.csss')!!}
 {!!Html::style('/sistema/css/style.css')!!}
 
 

@@ -63,14 +63,14 @@
                     <label class="col-lg-4 col-form-label" >Tipo de Carta. <span class="text-danger">*</span></label>
                     <div class="col-md-9">
                             <div class="input-group-addon"><i class="icon-key"></i></div>
-                       <select class="form-control " name="id_tipo_c">
+                       <select class="form-control " name="id_tipo_c" id="$tipos">
                             @foreach($tipos as $tipo)
                             <option value="{{$tipo['id_tipo_c']}}"> {{$tipo['nombre']}}
                             </option>
                            @endforeach
                         </select>
                         </div>
-                        <div class="input-group">
+                <div class="input-group">
 
 
                                                                             

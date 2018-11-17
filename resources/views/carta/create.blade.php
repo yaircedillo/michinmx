@@ -53,6 +53,7 @@
                                             <div class="col-md-9">
                                                     <div class="input-group-addon"><i class="icon-key"></i></div>
                                                <select class="form-control " name="id_tipo_c">
+                                                    <option value="">--Escoje un Tipo de Carta--</option>
                                                     @foreach($tipos as $tipo)
                                                     <option value="{{$tipo['id_tipo_c']}}"> {{$tipo['nombre']}}
                                                     </option>
@@ -71,6 +72,7 @@
                                             <div class="col-md-9">
                                                     <div class="input-group-addon"><i class="icon-key"></i></div>
                                                <select class="form-control " name="id_personal">
+                                                    <option value="">--Escoje un Personal--</option>
                                                     @foreach($personales as $personal)
                                                     <option value="{{$personal['id_personal']}}">{{$personal['nombre']}}
                                                     </option>

@@ -6,7 +6,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="colorlib-navbar-brand">
-							<a class="colorlib-logo" href="index.html"><i class="flaticon-cutlery"></i><span>Lu</span><span>to</span></a>
+								<img style="width:40.90%;"  href="{!!URL::to('/')!!}" src="{{asset('/images/logo.png')}}" > 
 						</div>
 						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 					</div>
@@ -23,8 +23,10 @@
 				   			<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
 				   				<div class="slider-text-inner text-center">
 				   					<div class="desc">
-				   						<span class="icon"><i class="flaticon-cutlery"></i></span>
-					   					<h1>Special &amp; Fresh Food</h1>
+												<div class="centrado">
+														<span> <img src="{{asset('/images/icons/chef.png')}}" > </span>
+												</div>
+											 <h1>¿Aún no sabes dónde comer?</h1>
 					   					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
 					   					<div class="desc2"></div>
@@ -41,9 +43,11 @@
 				   			<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
 				   				<div class="slider-text-inner text-center">
 				   					<div class="desc">
-				   						<span class="icon"><i class="flaticon-cutlery"></i></span>
-					   					<h1>Exquisite Dishes From Chef</h1>
-					   					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+												<div class="centrado" > 
+													<img  src="{{asset('/images/icons/tray.png')}}" >
+												 </div>
+					   					<h1>¡Estas delicias te esperan!...</h1>
+					   					<p>La comida más rica y saludable la encontrarás con nosotros..</p>
 					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
 					   					<div class="desc2"></div>
 					   				</div>
@@ -59,8 +63,11 @@
 				   			<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
 				   				<div class="slider-text-inner text-center">
 				   					<div class="desc">
-				   						<span class="icon"><i class="flaticon-cutlery"></i></span>
-					   					<h1>We are Delicious Restaurant</h1>
+												<div class="centrado" > 
+														<img  src="{{asset('/images/icons/cheers.png')}}" >
+													 </div>
+											 
+					   					<h1>¿Qué planes tienes para hoy?</h1>
 					   					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
 					   					<div class="desc2"></div>
@@ -77,8 +84,11 @@
 				   			<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
 				   				<div class="slider-text-inner text-center">
 				   					<div class="desc">
-				   						<span class="icon"><i class="flaticon-cutlery"></i></span>
-					   					<h1>Book a table here in our site</h1>
+												<div class="centrado" > 
+														<img  src="{{asset('/images/icons/cooking.png')}}" >
+													 </div>
+											 
+					   					<h1>¡Los mejores desayunos los encontrarás en MICHIN MX!</h1>
 					   					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
 					   					<div class="desc2"></div>
@@ -106,7 +116,7 @@
 								<i class="icon-map4"></i>
 							</span>
 							<h2>Ubicación</h2>
-							<p>198 West 21th Street, Suite 721 New York NY 10016</p>
+							<p>Av. Paseo de las Asunción 552, Plaza Bellavista (1,37 km) 52148 Metepec</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 text-center">
@@ -125,8 +135,8 @@
 								<i class="icon-mobile2"></i>
 							</span>
 							<h2>Telefono</h2>
-							<p>+ 001 234 567</p>
-							<p>+ 001 234 567</p>
+							<p>+01 722 402 0893</p>
+							
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 text-center">
@@ -181,8 +191,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
-						<span class="icon"><i class="flaticon-cutlery"></i></span>
-						<h2>Our Delicious Specialties</h2>
+						<span class="icon"><img   src="{{asset('/images/icons/michinmx.png')}}" ></i></span>
+						<h2>Nuestas Deliciosas Especialidades</h2>
 						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
 					</div>
 				</div>
@@ -239,9 +249,13 @@
 		<div class="colorlib-menu">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
-						<span class="icon"><i class="flaticon-cutlery"></i></span>
-						<h2>Our Delicious Specialties</h2>
+					<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">	
+							<div class="centrado" style="width:10.90%;"> 
+									<img src="{{asset('/images/icons/reading.png')}}" >
+							</div>
+							
+			
+						<h2>Lo Nuevo de Nuestro Menu...</h2>
 						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
 					</div>
 				</div>
@@ -249,7 +263,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="dish-wrap">
 							<div class="wrap">
-								<div class="dish-img" style="background-image: url(images/dish-1.jpg);"></div>
+								<div class="dish-img" style="background-image: url(images/dish-4.jpg);"></div>
 								<div class="desc">
 									<h2><a href="#">Luto Strawberry Dish</a></h2>
 								</div>
@@ -285,7 +299,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
-						<h2>Our Customer Says</h2>
+						<h2>Nuestros Clientes dicen: </h2>
 					</div>
 				</div>
 				<div class="row animate-box">
@@ -294,8 +308,8 @@
 							<div class="col-md-8 col-md-offset-2 text-center">
 								<div class="testimony">
 									<blockquote>
-										<p>"A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-										<span>" &mdash; George Brooks</span>
+										<p>"La comida muy rica, un lugar está muy lindo y agradable, lo súper recomiendo, desde el desayuno hasta la comida.</p>
+										<span>" &mdash; Nancy Guadalupe</span>
 									</blockquote>
 								</div>
 							</div>
@@ -304,8 +318,8 @@
 							<div class="col-md-8 col-md-offset-2 text-center">
 								<div class="testimony">
 									<blockquote>
-										<p>"Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-										<span>" &mdash; Daniel Foster</span>
+										<p>"La comida muy rica, el ambiente ideal para un desayuno con super amigas.</p>
+										<span>" &mdash; Bombon Kear </span>
 									</blockquote>
 								</div>
 							</div>
@@ -314,8 +328,19 @@
 							<div class="col-md-8 col-md-offset-2 text-center">
 								<div class="testimony">
 									<blockquote>
-										<p>"When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove</p>
-										<span>" &mdash; Liam Jenkins</span>
+										<p>"Un lugar de excelente calidad al igual que la comida y la atención al cliente.
+											Muy Recomendado, como si estuviera en casa.</p>
+										<span>" &mdash; Eder AC</span>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-md-8 col-md-offset-2 text-center">
+								<div class="testimony">
+									<blockquote>
+										<p>"El menú es diferente todos los días, buen servicio y muy rico. La verdad lo recomiendo!!!.</p>
+										<span>" &mdash;	Interaccion Bio</span>
 									</blockquote>
 								</div>
 							</div>
@@ -756,7 +781,7 @@
 			</div>
 		</div>
 
-		<div class="colorlib-reservation reservation-img" style="background-image: url(images/cover_bg_2.jpg);" data-stellar-background-ratio="0.5">
+		<div class="colorlib-reservation reservation-img" style="background-image: url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">

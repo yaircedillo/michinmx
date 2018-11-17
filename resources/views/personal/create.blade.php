@@ -116,6 +116,7 @@
                                         <div class="col-md-9">
                                             <div class="input-group-addon"><i class="icon-key"></i></div>
                                             <select class="form-control " name='id_municipios'>
+                                                    <option value="">--Escoje un Municipio--</option>
                                                 @foreach ($municipios as $municipio)
                                             <option value="{{$municipio['id_municipios']}}">{{$municipio['municipio']}}
 
@@ -137,6 +138,7 @@
                                         <div class="col-md-9">
                                                 <div class="input-group-addon"><i class="icon-key"></i></div>
                                            <select class="form-control " name="id_puesto">
+                                                <option value="">--Escoje un Puesto--</option>
                                                 @foreach($puestos as $puesto)
                                                 <option value="{{$puesto['id_puesto']}}"> {{$puesto['puesto']}}
                                                 </option>

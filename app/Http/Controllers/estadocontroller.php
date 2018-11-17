@@ -11,7 +11,8 @@ class estadocontroller extends Controller
   
     public function index()
     {
-        $estados = estados::all();
+        $estados = estados::all()
+        ->take(1);
         return view('estado.index',compact('estados'));
     }
     

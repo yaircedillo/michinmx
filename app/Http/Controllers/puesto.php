@@ -14,7 +14,8 @@ class puesto extends Controller
     public function index()
     {
         $puestos = puestos::withTrashed()
-        ->get();
+        ->paginate(1);
+       
         return view('puestos.index')
         ->with('puestos',$puestos);
     }

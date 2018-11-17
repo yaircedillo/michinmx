@@ -13,7 +13,16 @@ class medidacontroller extends Controller
     public function index()
     {
         $unidades = unidades::withTrashed()
+       
         ->get();
+        if(count($unidades)==0)
+			{
+				$id_unidades = 1;
+			}				
+			else
+			{
+           $id_unidades = $unidades[0]->id_unidad+1;
+			}	
         return view('medida.index')
         ->with('unidades',$unidades);
     }
