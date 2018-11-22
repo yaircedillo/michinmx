@@ -27,7 +27,7 @@
 														<span> <img src="{{asset('/images/icons/chef.png')}}" > </span>
 												</div>
 											 <h1>¿Aún no sabes dónde comer?</h1>
-					   					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					   					<h2>En desayunos de paquete y comidas del día obtén un 10% de descuento en tu consumo total.</h2>
 					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
 					   					<div class="desc2"></div>
 				   					</div>
@@ -47,7 +47,7 @@
 													<img  src="{{asset('/images/icons/tray.png')}}" >
 												 </div>
 					   					<h1>¡Estas delicias te esperan!...</h1>
-					   					<p>La comida más rica y saludable la encontrarás con nosotros..</p>
+					   					<h2>La comida más rica y saludable la encontrarás con nosotros..</h2>
 					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
 					   					<div class="desc2"></div>
 					   				</div>
@@ -68,7 +68,8 @@
 													 </div>
 											 
 					   					<h1>¿Qué planes tienes para hoy?</h1>
-					   					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+											 <h2>¿Y tú ya conoces nuestra variedad de bebidas?🍸.</h2>
+											 <h2> Cerveza nacional al 2x1 de 3 a 6 pm</h2>
 					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
 					   					<div class="desc2"></div>
 					   				</div>
@@ -89,7 +90,7 @@
 													 </div>
 											 
 					   					<h1>¡Los mejores desayunos los encontrarás en MICHIN MX!</h1>
-					   					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					   					<h2>La vida es corta cómete el postre primero..</h2>
 					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
 					   					<div class="desc2"></div>
 					   				</div>
@@ -124,9 +125,9 @@
 							<span class="icon">
 								<i class="icon-clock4"></i>
 							</span>
-							<h2>Opening Time</h2>
-							<p>Monday - Sunday</p>
-							<span>8am - 9pm</span>
+							<h2>Hora de apertura</h2>
+							<p>Lunes - Domingo</p>
+							<span>8am - 7pm</span>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 text-center">
@@ -163,10 +164,11 @@
 							<div class="about-desc">
 								<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
 									<span>Bienvenido a Michinmx</span>
-									<h2>Taste a delicious food here in Italy &amp; We are inspired since 1895</h2>
+									<h2>No dejes para mañana lo que puedes comer hoy.</h2>
 								</div>
 								<div class="col-md-12 animate-box">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+									<p>En Michinmx, sentirás un ambiente de tranquilidad desde el primer momento que llegas Inmediatamente te darán ganas de tomarte un café, comer algo y descansar.</p>
+							<p>Disfrute de la auténtica tradición gastronómica de esta nación, entradas especiales, desayunos, almuerzos, cafés,snacks, una amplia lista de vinos y licores.</p>
 								</div>
 							</div>
 						</div>
@@ -193,7 +195,7 @@
 					<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
 						<span class="icon"><img   src="{{asset('/images/icons/michinmx.png')}}" ></i></span>
 						<h2>Nuestas Deliciosas Especialidades</h2>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+						<p>En Michinmx lo primordial es la calidad no solo de los ingredientes, sino, especialmente la presentación de los platos así como su sabor.</p>
 					</div>
 				</div>
 				<div class="row">

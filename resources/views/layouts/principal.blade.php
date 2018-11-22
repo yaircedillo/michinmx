@@ -27,6 +27,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 	
 	
+
 	{!!Html::style('/css/style.css')!!}
 	{!!Html::style('/css/bootstrap-datepicker.css')!!}
 	{!!Html::style('/fonts/flaticon/font/flaticon.css')!!}
@@ -39,6 +40,8 @@
 	{!!Html::style('/css/animate.css')!!}
 	{!!Html::script('/js/modernizr-2.6.2.min.js')!!}	
 
+	<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
 	</head>
@@ -81,60 +84,107 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-3 col-pb-sm">
-							<h2>Lutong Bahay</h2>
-							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind.</p>
-							<p class="colorlib-social-icons">
-								<a href="#"><i class="icon-facebook4"></i></a>
-								<a href="#"><i class="icon-twitter3"></i></a>
-								<a href="#"><i class="icon-googleplus"></i></a>
-								<a href="#"><i class="icon-dribbble2"></i></a>
-							</p>
-						</div>
-						<div class="col-md-3 col-pb-sm">
-							<h2>Latest Blog</h2>
+								<section>
+										<h2>REDES SOCIALES.</h2>
+										<ul id="services">
+												
+												<li>
+											<div class="facebook ">
+											  <a href="https://facebook.com/colorlib/">
+												<i class="fa fa-facebook" aria-hidden="true"></i>
+											  </a>
+											</div>
+											<span>Facebook</span>
+										  </li>
+
+										  <li>
+												<div class="twitter">
+												<a href="https://twitter.com/colorlib/">
+												<i class="fa fa-twitter" aria-hidden="true"></i>
+											</a>
+										  </div>
+										  <span>Twitter</span>
+										</li>
+									
+										</ul>
+										
+									  </section> 
+					
+					</div>
+					<div class="col-md-3 col-pb-sm">
+							<h2>DESCRIPCIÓN</h2>
 							<div class="f-entry">
-								<a href="#" class="featured-img" style="background-image: url{{asset('images/dish-5.jpg')}}"></a>
 								<div class="desc">
-									<span>May 5, 2018</span>
-									<h3><a href="#">How to cook beef Grilled with potato</a></h3>
+									<span>Servicios</span>
+									<h3><a>Pedidos a domicilio</a></h3>
+									<h3><a>Comida para llevar</a></h3>
 								</div>
 							</div>
 							<div class="f-entry">
-								<a href="#" class="featured-img" style="background-image: url{{asset('images/dish-7.jpg')}}"></a>
+								
 								<div class="desc">
-									<span>May 5, 2018</span>
-									<h3><a href="#">A Japanese Master Chef</a></h3>
+									<span>Especialidades</span>
+									<h3><a >Almuerzo</a></h3>
+									<h3><a >Bebidas</a></h3>
+									<h3><a >Café</a></h3>
+								
 								</div>
 							</div>
 							<div class="f-entry">
 								<a href="#" class="featured-img" style="background-image: url{{asset('images/dessert-3.jpg')}}"></a>
 								<div class="desc">
-									<span>May 5, 2018</span>
-									<h3><a href="#">Special Recipe for this month</a></h3>
+									<span>Promociones</span>
+									<h3><a>Cerveza nacional al 2x1 de 3 a 6 pm</a></h3>
+									<h3><a >En desayunos de paquete y comidas del día obtén un 10% de descuento en tu consumo total.</a></h3>
 								</div>
 							</div>
 						</div>
+			
 						<div class="col-md-3 col-pb-sm">
-							<h2>Instagram</h2>
-							<div class="instagram">
-								<a href="#" class="insta-img" style="background-image: url(images/dessert-1.jpg);"></a>
-								<a href="#" class="insta-img" style="background-image: url(images/dessert-2.jpg);"></a>
-								<a href="#" class="insta-img" style="background-image: url(images/dish-9.jpg);"></a>
-								<a href="#" class="insta-img" style="background-image: url(images/dish-2.jpg);"></a>
-							</div>
-						</div>
-						<div class="col-md-3 col-pb-sm">
-							<h2>Newsletter</h2>
-							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia</p>
-							<div class="subscribe text-center">
-								<div class="form-group">
-									<input type="text" class="form-control text-center" placeholder="Enter Email address">
-									<input type="submit" value="Subscribe" class="btn btn-primary btn-custom">
+								<h2>INFORMACIÓN</h2>
+								<div class="f-entry">
+									<div class="desc">
+										<span>UBICACIÓN</span>
+										<h3><a >Av. Paseo de las Asunción 552, Plaza Bellavista (1,37 km) 52148 Metepec</a></h3>
+									</div>
 								</div>
+								<div class="f-entry">
+									
+									<div class="desc">
+										<span>Hora de apertura</span>
+										<h3><a >Lunes - Domingo</a></h3>
+										<h3><a >8am - 7pm</a></h3>
+										
+									</div>
+								</div>
+								<div class="f-entry">
+									<div class="desc">
+										<span>Telefono</span>
+										<h3><a >+01 722 402 0893</a></h3>
+									</div>
+								</div>
+								<div class="f-entry">
+										<div class="desc">
+											<span>Correo Electronico</span>
+											<h3><a >info@michinmx.online</a></h3>
+											<h3><a >contacto@michinmx.online</a></h3>
+											
+										</div>
+									</div>
 							</div>
-						</div>
-					</div>
-					<div class="row">
+						
+							<div class="col-md-3 col-pb-sm">
+									<h2>Newsletter</h2>
+									<p>A small river named Duden flows by their place and supplies it with the necessary regelialia</p>
+									<div class="subscribe text-center">
+										<div class="form-group">
+											<input type="text" class="form-control text-center" placeholder="Enter Email address">
+											<input type="submit" value="Subscribe" class="btn btn-primary btn-custom">
+										</div>
+									</div>
+								</div>
+		</div>
+						<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
 								<span class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -143,12 +193,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 								<span class="block">Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a> &amp; <a href="https://www.pexels.com/" target="_blank">Pexel</a></span>
 							</p>
 						</div>
-					</div>
+</div>
 				</div>
+				
 			</div>
 		</footer>
+		<br>
+		
 	
-	</div>
+</div>
 
 	<!-- jQuery -->
 	{!!Html::script('/js/jquery.min.js')!!}
