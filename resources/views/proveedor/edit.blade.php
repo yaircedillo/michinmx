@@ -55,18 +55,24 @@
                 </div>
                 {!! $errors->first('ap_mat','<span class="text-danger">:message</span>')!!}
                 </div> 
-    
-                <div class="form-group row {{ $errors->has('M')  ? 'has-error' : '' }} ">
+                <div class="form-group row   {{ $errors->has('genero')  ? 'has-error' : '' }} ">
                     <label class="col-lg-4 col-form-label" >Genero. <span class="text-danger">*</span></label>
                     <div class="col-md-9">
                         <div class="input-group-addon"><i class="ti-user"></i></div>
-                        <input type = 'radio' name = 'genero' value = 'M' checked >M
-                        <input type = 'radio' name = 'genero' value = 'F'>F
+                        @if($cliente->genero=="F")
+                            <input type = 'radio' name = 'genero' value = 'M' >M
+                            <input type = 'radio' name = 'genero' value = 'F' checked>F
+                        @else
+                            <input type = 'radio' name = 'genero' value = 'M' checked >M
+                            <input type = 'radio' name = 'genero' value = 'F'>F	
+                        @endif
+                            
+                        
                     </div>
                     <div class="input-group">
-                        
+              
                 </div>
-                {!! $errors->first('M','<span class="text-danger">:message</span>')!!}
+                {!! $errors->first('genero','<span class="text-danger">:message</span>')!!}
                 </div> 
     
                 <div class="form-group row {{ $errors->has('calle')  ? 'has-error' : '' }}">

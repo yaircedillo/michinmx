@@ -100,10 +100,31 @@ class personalcontroller extends Controller
 
     public function edit($id_personal)
     {
-        $personal = personales::find($id_personal);
-        $municipios = municipios::all();
-        $puestos = puestos::withTrashed()->get();
-        return view('personal.edit', ['personal'=>$personal,'municipios'=>$municipios,'puestos'=>$puestos]);
+        $personal = personales::where('id_personal','=',$id_personal)
+        ->get();
+      
+        $id_municipios = $personal[0]->id_municipios;
+        $id_puesto = $personal[0]->id_puesto;
+		
+		$puestos = puestos::where('id_puesto','=',$id_puesto)
+        ->get();
+        $municipios = municipios::where('id_municipios','=',$id_municipios)
+		->get();
+		$demasmunicipios = municipios::where('id_municipios','!=',$id_municipios)
+        ->get();
+        $demaspuesto = puestos::where('id_puesto','!=',$id_puesto)
+	    ->get();
+		
+        return view('personal.edit')
+        ->with('personal',$personal[0])
+        ->with('id_municipios',$id_municipios)
+        ->with('id_puesto',$id_puesto)
+        ->with('puestos',$puestos[0]->puesto)
+        ->with('municipios',$municipios[0]->municipio)
+        ->with('demaspuesto',$demaspuesto)
+        ->with('demasmunicipios',$demasmunicipios);
+  
+        
     }
     public function update($id_personal, actualizarPersonal $request )
     {
@@ -144,8 +165,11 @@ class personalcontroller extends Controller
         $personales->telefono = $request->telefono;
         $personales->id_municipios = $request->id_municipios;
         $personales->id_puesto = $request->id_puesto;
-        $personales->archivo = 'sinfoto.jpg';
-        $personales->save();
+        if($archivo!='')
+			{
+			$personales->img = $nombre_original;
+			}
+			$personales->save();
         Session::flash('message','Empleado modificado exitosamente sin foto');
      return  Redirect::to('/personal'); // esta linea solo redireccionara un mensaje de realizado correctamente
     }

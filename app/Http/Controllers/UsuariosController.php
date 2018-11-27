@@ -141,8 +141,11 @@ class UsuariosController extends Controller
         $usuarios->name = $request->name;
         $usuarios->email = $request->email;
         $usuarios->password = base64_encode($request->password);
-        $usuarios->archivo = 'sinfoto.jpg';
-        $usuarios->save();
+        if($archivo!='')
+			{
+			$usuarios->img = $nombre_original;
+			}
+			$usuarios->save();
         Session::flash('message','Usuario modificado exitosamente sin foto');
      return  Redirect::to('/usuarios'); // esta linea solo redireccionara un mensaje de realizado corrctamente
     }

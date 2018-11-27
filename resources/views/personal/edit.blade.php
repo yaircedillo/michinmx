@@ -42,20 +42,25 @@
            {!! $errors->first('ap_mat','<span class="text-danger">:message</span>')!!}
            </div> 
 
-           <div class="form-group row {{ $errors->has('M')  ? 'has-error' : '' }} ">
-               <label class="col-lg-4 col-form-label" >Genero. <span class="text-danger">*</span></label>
-               <div class="col-md-9">
-                   <div class="input-group-addon"><i class="ti-user"></i></div>
-                   <select class="form-control custom-select" name="genero">
-                       <input type = 'radio' name = 'genero' value = 'M' checked >M
-                       <input type = 'radio' name = 'genero' value = 'F'>F
-                   </select>
-               </div>
-               <div class="input-group">
-         
-           </div>
-           {!! $errors->first('M','<span class="text-danger">:message</span>')!!}
-           </div> 
+           <div class="form-group row   {{ $errors->has('genero')  ? 'has-error' : '' }} ">
+            <label class="col-lg-4 col-form-label" >Genero. <span class="text-danger">*</span></label>
+            <div class="col-md-9">
+                <div class="input-group-addon"><i class="ti-user"></i></div>
+                @if($personal->genero=="F")
+                    <input type = 'radio' name = 'genero' value = 'M' >M
+                    <input type = 'radio' name = 'genero' value = 'F' checked>F
+                @else
+                    <input type = 'radio' name = 'genero' value = 'M' checked >M
+                    <input type = 'radio' name = 'genero' value = 'F'>F	
+                @endif
+                    
+                
+            </div>
+            <div class="input-group">
+      
+        </div>
+        {!! $errors->first('genero','<span class="text-danger">:message</span>')!!}
+        </div> 
 
            <div class="form-group row {{ $errors->has('calle')  ? 'has-error' : '' }} ">
                    <label class="col-lg-4 col-form-label" >Calle. <span class="text-danger">*</span></label>
@@ -108,31 +113,37 @@
 
                                </div>
                                
-                               <div class="form-group row  {{ $errors->has('id_municipios')  ? 'has-error' : '' }} ">
-                                       <label class="col-lg-4 col-form-label" >Municipio. <span class="text-danger">*</span></label>
-                                       <div class="col-md-9">
-                                           <div class="input-group-addon"><i class="icon-key"></i></div>
-                                           <select class="form-control " name='id_municipios'>
-                                               @foreach ($municipios as $municipio)
-                                           <option value="{{$municipio['id_municipios']}}">{{$municipio['municipio']}}
+                               <div class="form-group row {{ $errors->has('id_municipios')  ? 'has-error' : '' }} ">
+                                <label class="col-lg-4 col-form-label" >Municipio. <span class="text-danger">*</span></label>
+                                <div class="col-md-9">
+                                    <div class="input-group-addon"><i class="icon-key"></i></div>
 
-                                                   </option>
-                                               @endforeach
-                                           </select>
-                                       </div>
-                                       <div class="input-group">
+
+
+                                    <select class="form-control " name='id_municipios'>
+                                        <option value = '{{$id_municipios}}'> {{$municipios}}</option>
+                                        @foreach ($demasmunicipios as $municipio)
+                                    <option value='{{$municipio->id_municipios}}'>{{$municipio->municipio}}
+
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                
                                        
-                                       
-                                   </div>
-                                   {!! $errors->first('id_municipios','<span class="text-danger">:message</span>')!!}
-                                   </div>
+                            </div>
+                            {!! $errors->first('id_municipios','<span class="text-danger">:message</span>')!!}
+                          </div> 
                                    <div class="form-group row   {{ $errors->has('id_puesto')  ? 'has-error' : '' }}">
                                        <label class="col-lg-4 col-form-label" >Puesto. <span class="text-danger">*</span></label>
                                        <div class="col-md-9">
                                                <div class="input-group-addon"><i class="icon-key"></i></div>
                                           <select class="form-control " name="id_puesto">
-                                               @foreach($puestos as $puesto)
-                                               <option value="{{$puesto['id_puesto']}}"> {{$puesto['puesto']}}
+
+                                                <option value = '{{$id_puesto}}'> {{$puestos}}</option>
+                                               @foreach($demaspuesto as $puesto)
+                                               <option value='{{$puesto->id_puesto}}'> {{$puesto->puesto}}
                                                </option>
                                               @endforeach
                                            </select>
@@ -147,7 +158,10 @@
                                    <div class="form-group row {{ $errors->has('img')  ? 'has-error' : '' }} ">
                                            <label class="col-lg-4 col-form-label" >Imagen. </label>
                                            <div class="input-group">
-                                           <div class="input-group-addon"><i class="ti-user"></i></div>
+                                                <img  src="{{asset('img_usuario/'.$personal->archivo)}}"  
+                                                height =150 width=250>
+                                                 <br>
+                                           <div class="input-group-addon"></div>
                                            <input type="file" id="img" name="img">
                                        </div>
                                        <div>

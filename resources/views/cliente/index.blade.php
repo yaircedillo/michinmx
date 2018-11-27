@@ -25,11 +25,9 @@
                                                 <th>Nombre</th>
                                                 <th>Apellido Paterno</th>
                                                 <th>Apellido Materno</th>
-                                                
                                                 <th>Correo</th>
                                                 <th>Telefono</th>
-                                                
-                                            
+                                                <th>municipio</th>
                                                 <th>operaciones</th>  
                                         </tr>    
                                     </thead>
@@ -39,11 +37,9 @@
                                               <th>Nombre</th>
                                               <th>Apellido Paterno</th>
                                               <th>Apellido Materno</th>
-                                             
                                               <th>Correo</th>
                                               <th>Telefono</th>
-                                            
-                                          
+                                              <th>municipio</th>
                                               <th>operaciones</th>
                                               
                                             </tr>
@@ -58,6 +54,7 @@
                                        
                                        <td>{{$cliente->correo}}</td>
                                        <td>{{$cliente->telefono_c}}</td>
+                                       <td>{{$cliente->id_municipios}}</td>
                                        
                                        <td>
                                             @if($cliente->deleted_at =="")

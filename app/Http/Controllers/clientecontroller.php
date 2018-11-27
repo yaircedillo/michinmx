@@ -63,10 +63,26 @@ class clientecontroller extends Controller
    }
     public function edit($id_cliente)
     {
-        $cliente = clientes::find($id_cliente);
-        $municipios = municipios::all();
+
+      
+        $cliente = clientes::where('id_cliente','=',$id_cliente)
+        ->get();
+		
+		$id_municipios = $cliente[0]->id_municipios;
+		
+		$municipios = municipios::where('id_municipios','=',$id_municipios)
+		->get();
+		$demasmunicipios = municipios::where('id_municipios','!=',$id_municipios)
+		                           ->get();
+		
+		
+		return view('cliente.edit')
+	                             ->with('cliente',$cliente[0])
+								 ->with('id_municipios',$id_municipios)
+								 ->with('municipios',$municipios[0]->municipio)
+                                 ->with('demasmunicipios',$demasmunicipios);
+                                 
         
-        return view('cliente.edit', ['cliente'=>$cliente,'municipios'=>$municipios]);
     }
     public function update($id_cliente, ClientesRequestCreate $request )
     {   

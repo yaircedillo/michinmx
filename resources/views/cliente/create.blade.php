@@ -129,7 +129,7 @@
                                     
                                 </div>
                                 {!! $errors->first('id_municipios','<span class="text-danger">:message</span>')!!}
-</div> 
+                              </div> 
                                  
                                     
                                     

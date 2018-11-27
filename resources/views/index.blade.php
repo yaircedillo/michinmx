@@ -28,7 +28,7 @@
 												</div>
 											 <h1>¿Aún no sabes dónde comer?</h1>
 					   					<h2>En desayunos de paquete y comidas del día obtén un 10% de descuento en tu consumo total.</h2>
-					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
+					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Hacer un pedido.</a></p>
 					   					<div class="desc2"></div>
 				   					</div>
 				   				</div>
@@ -48,7 +48,7 @@
 												 </div>
 					   					<h1>¡Estas delicias te esperan!...</h1>
 					   					<h2>La comida más rica y saludable la encontrarás con nosotros..</h2>
-					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
+					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Hacer un pedido.</a></p>
 					   					<div class="desc2"></div>
 					   				</div>
 				   				</div>
@@ -70,7 +70,7 @@
 					   					<h1>¿Qué planes tienes para hoy?</h1>
 											 <h2>¿Y tú ya conoces nuestra variedad de bebidas?🍸.</h2>
 											 <h2> Cerveza nacional al 2x1 de 3 a 6 pm</h2>
-					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
+					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Hacer un pedido.</a></p>
 					   					<div class="desc2"></div>
 					   				</div>
 				   				</div>
@@ -91,7 +91,7 @@
 											 
 					   					<h1>¡Los mejores desayunos los encontrarás en MICHIN MX!</h1>
 					   					<h2>La vida es corta cómete el postre primero..</h2>
-					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Book a table</a></p>
+					   					<p><a href="#" class="btn btn-primary btn-lg btn-learn">Hacer un pedido.</a></p>
 					   					<div class="desc2"></div>
 					   				</div>
 				   				</div>
@@ -275,7 +275,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="dish-wrap">
 							<div class="wrap">
-								<div class="dish-img" style="background-image: url(images/dish-2.jpg);"></div>
+								<div class="dish-img" style="background-image: url(images/imagen-5.jpg);"></div>
 								<div class="desc">
 									<h2><a href="#">Pizza with strawberries</a></h2>
 								</div>
@@ -285,7 +285,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="dish-wrap">
 							<div class="wrap">
-								<div class="dish-img" style="background-image: url(images/dish-3.jpg);"></div>
+								<div class="dish-img" style="background-image: url(images/imagen-6.jpg);"></div>
 								<div class="desc">
 									<h2><a href="#">Luto Grilled Beef</a></h2>
 								</div>
