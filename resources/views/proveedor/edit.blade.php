@@ -59,7 +59,7 @@
                     <label class="col-lg-4 col-form-label" >Genero. <span class="text-danger">*</span></label>
                     <div class="col-md-9">
                         <div class="input-group-addon"><i class="ti-user"></i></div>
-                        @if($cliente->genero=="F")
+                        @if($proveedor->genero=="F")
                             <input type = 'radio' name = 'genero' value = 'M' >M
                             <input type = 'radio' name = 'genero' value = 'F' checked>F
                         @else
@@ -125,24 +125,28 @@
                                     {!! $errors->first('telefono','<span class="text-danger">:message</span>')!!}
                                     </div>
                                     
-                                    <div class="form-group row  {{ $errors->has('id_municipios')  ? 'has-error' : '' }} ">
+                                    <div class="form-group row {{ $errors->has('id_municipios')  ? 'has-error' : '' }} ">
                                         <label class="col-lg-4 col-form-label" >Municipio. <span class="text-danger">*</span></label>
                                         <div class="col-md-9">
                                             <div class="input-group-addon"><i class="icon-key"></i></div>
+        
+        
+        
                                             <select class="form-control " name='id_municipios'>
-                                                @foreach ($municipios as $municipio)
-                                            <option value="{{$municipio['id_municipios']}}">{{$municipio['municipio']}}
-    
+                                                <option value = '{{$id_municipios}}'> {{$municipios}}</option>
+                                                @foreach ($demasmunicipios as $municipio)
+                                            <option value='{{$municipio->id_municipios}}'>{{$municipio->municipio}}
+        
                                                     </option>
                                                 @endforeach
                                             </select>
                                         </div>
                                         <div class="input-group">
                                         
-                                        
+                                               
                                     </div>
                                     {!! $errors->first('id_municipios','<span class="text-danger">:message</span>')!!}
-                                    </div>
+                                  </div>
                                      
 
 

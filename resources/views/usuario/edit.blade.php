@@ -48,7 +48,10 @@
                 <img src="img_usuario/{{$usuarios->archivo}}" alt="" style=" width: 200px; height: 100px;">
                 <label class="col-lg-4 col-form-label" >Imagen. <span class="text-danger">*</span></label>
                 <div class="input-group">
-                <div class="input-group-addon"><i class="ti-user"></i></div>
+                        <img  src="{{asset('img_usuario/'.$usuarios->archivo)}}"  
+                        height =150 width=250>
+                         <br>
+                <div class="input-group-addon"></div>
                 <input type="file" id="img" name="img"> 
             </div>
             {!! $errors->first('img','<span class="text-danger">:message</span>')!!}

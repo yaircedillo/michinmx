@@ -61,6 +61,30 @@ class cartacontroller extends Controller
    }
     public function edit($id_carta)
     {
+        $cartas = cartas::where('id_carta','=',$id_carta)
+        ->get();
+      
+        $id_tipo_c = $cartas[0]->id_tipo_c;
+        $id_personal = $cartas[0]->id_personal;
+		
+		$tipos = tipo_cartas::where('id_tipo_c','=',$id_tipo_c)
+        ->get();
+        $personales = personales::where('id_personal','=',$id_personal)
+		->get();
+		$demastipos = tipo_cartas::where('id_tipo_c','!=',$id_tipo_c)
+        ->get();
+        $demaspersonales = personales::where('id_personal','!=',$id_personal)
+	    ->get();
+		
+        return view('carta.edit')
+        ->with('cartas',$cartas[0])
+        ->with('id_tipo_c',$id_tipo_c)
+        ->with('id_personal',$id_personal)
+        ->with('personales',$personales[0]->nombre)
+        ->with('tipos',$tipos[0]->nombre)
+        ->with('demastipos',$demastipos)
+        ->with('demaspersonales',$demaspersonales);
+
       
        $cartas = cartas::find($id_carta);//el $ cartas es la variable el segundo cartes es la referencia al modelo es como decir $cartas = a select * from cartas where id == al id que recibes :: esto que es es como el termino es decir lo que esta antes es select  * from cartas y lo que esta despues :: son las condiciones 
          $personales = personales::withTrashed()->get();

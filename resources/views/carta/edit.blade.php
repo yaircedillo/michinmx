@@ -64,8 +64,9 @@
                     <div class="col-md-9">
                             <div class="input-group-addon"><i class="icon-key"></i></div>
                        <select class="form-control " name="id_tipo_c" id="$tipos">
-                            @foreach($tipos as $tipo)
-                            <option value="{{$tipo['id_tipo_c']}}"> {{$tipo['nombre']}}
+                            <option value = '{{$id_tipo_c}}'> {{$tipos}}</option>
+                            @foreach($demastipos as $tipo)
+                            <option value="{{$tipo->id_tipo_c}}"> {{$tipo->nombre}}
                             </option>
                            @endforeach
                         </select>
@@ -83,8 +84,9 @@
                     <div class="col-md-9">
                             <div class="input-group-addon"><i class="icon-key"></i></div>
                        <select class="form-control " name="id_personal">
-                            @foreach($personales as $personal)
-                            <option value="{{$personal['id_personal']}}">{{$personal['nombre']}}
+                            <option value = '{{$id_personal}}'> {{$personales}}</option>
+                            @foreach($demaspersonales as $personal)
+                            <option value="{{$personal->id_personal}}">{{$personal->nombre}}
                             </option>
                            @endforeach
                         </select>

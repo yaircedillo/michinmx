@@ -62,9 +62,23 @@ class proveedorcontroller extends Controller
    }
     public function edit($id_proveedores)
     {
-        $municipios = municipios::all();
-        $proveedor = proveedores::find($id_proveedores);
-        return view('proveedor.edit', ['proveedor'=>$proveedor,'municipios'=>$municipios]);
+
+        $proveedor = proveedores::where('id_proveedores','=',$id_proveedores)
+        ->get();
+		
+		$id_municipios = $proveedor[0]->id_municipios;
+		
+		$municipios = municipios::where('id_municipios','=',$id_municipios)
+		->get();
+		$demasmunicipios = municipios::where('id_municipios','!=',$id_municipios)
+		->get();
+		return view('proveedor.edit')
+	                             ->with('proveedor',$proveedor[0])
+								 ->with('id_municipios',$id_municipios)
+								 ->with('municipios',$municipios[0]->municipio)
+                                 ->with('demasmunicipios',$demasmunicipios);
+
+       
     }
     public function update($id_proveedores, ProveedorRequestCreate $request )
     {   
