@@ -50,7 +50,7 @@
         <nav class="navbar top-navbar navbar-expand-md navbar-light">
             <!-- Logo -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="{{route('inicio.index')}}">
+                <a class="navbar-brand" href="{{route('admin')}}">
                     <!-- Logo icon -->
                     <b><img src="{{asset('sistema/images/logo.png')}}"  alt="homepage" class="dark-logo" /></b>
                     <!--End Logo icon -->
@@ -238,7 +238,7 @@
                                 <li><a href="#"><i class="ti-wallet"></i> Balance</a></li>
                                 <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
                                 <li><a href="#"><i class="ti-settings"></i> Setting</a></li>
-                                <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                <li><a href="{{URL::action('login@cerrarsesion')}}"><i class="fa fa-power-off"></i> Cerrar Seción</a></li>
                             </ul>
                         </div>
                     </li>
@@ -256,7 +256,7 @@
                 <ul id="sidebarnav">
                     <li class="nav-devider"></li>
                     <li class="nav-label"> Panel de Administraciòn</li>
-                    <li> <a class="has-arrow" href="{{route('inicio.index')}}" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">INICIO </span></a>
+                    <li> <a class="has-arrow" href="{{route('admin')}}" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">INICIO </span></a>
                         
                     </li>
                     <li class="nav-label">Formularios</li>
@@ -266,8 +266,12 @@
                             <li><a href="{{route('cliente.index')}}" >Clientes</a></li>
                             <li><a href="{{route('proveedor.index')}}">Proveedores</a></li>
                             <li><a href="{{route('personal.index')}}">Personal </a></li>
+                            @if(Session::get('sesiontipo')=="admin")
                             <li><a href="{{route('usuarios.index')}}">Usuario </a></li>
+                            @endif
+                            @if(Session::get('sesiontipo')=="admin")
                             <li><a href="{{route('promociones.index')}}">Promociones </a></li>
+                            @endif
                             <li><a href="{{route('medida.index')}}">Unidad de Medida </a></li>
                             <li><a href="{{route('tipo_carta.index')}}">Tipo de Carta </a></li>
                             <li><a href="{{route('puesto.index')}}">Puesto </a></li>
@@ -295,7 +299,7 @@
             <div class="col-md-7 align-self-center">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">INICIO</a></li>
-                    <li class="breadcrumb-item active">TABLERO</li>
+                    <li class="breadcrumb-item active">{{Session::get('sesionname')}}</li>
                 </ol>
             </div>
         </div>
@@ -305,7 +309,7 @@
         </div>
         <!-- End Container fluid  -->
         <!-- footer -->
-        <footer class="footer"> © 2018 All rights reserved. Template designed by <a href="https://colorlib.com">Colorlib</a></footer>
+        <footer class="footer"> ©MichinMx 2018 Todos los derechos reservados. 
         <!-- End footer -->
     </div>
     <!-- End Page wrapper  -->

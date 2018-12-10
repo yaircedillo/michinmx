@@ -65,7 +65,7 @@ class UsuariosController extends Controller
         usuario::create([
             'name' => $request['name'],
             'email'=> $request['email'],
-            'password'=> base64_encode($request['password']),
+            'password'=> $request['password'],
             'archivo'=> $nombre_original
         ]);
              Session::flash('message','Usuario creado exitosamente');
@@ -76,7 +76,7 @@ class UsuariosController extends Controller
         usuario::create([
             'name' => $request['name'],
             'email'=> $request['email'],
-            'password'=> base64_encode($request['password']),
+            'password'=> $request['password'],
             'archivo'=> 'sinfoto.jpg'
         ]);
              Session::flash('message','Usuario creado exitosamente sin foto');
@@ -131,7 +131,7 @@ class UsuariosController extends Controller
         $usuarios = usuario::find($id);
         $usuarios->name = $request->name;
         $usuarios->email = $request->email;
-        $usuarios->password = base64_encode($request->password);
+        $usuarios->password = $request->password;
         $usuarios->archivo = $nombre_original;
         $usuarios->save();
         Session::flash('message','Usuario modificado exitosamente');
@@ -140,7 +140,7 @@ class UsuariosController extends Controller
          $usuarios = usuario::find($id);
         $usuarios->name = $request->name;
         $usuarios->email = $request->email;
-        $usuarios->password = base64_encode($request->password);
+        $usuarios->password = $request->password;
         if($archivo!='')
 			{
 			$usuarios->img = $nombre_original;

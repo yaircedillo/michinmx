@@ -7,7 +7,9 @@
      <div class="col-lg-6">
         <div class="card">
         <div class="card-body">
-        <h4 class="card-title">Actualizar Informaciòn del Puesto</h4>
+        <h4 class="card-title">Actualizar Informaciòn del Puesto ( {{ $puesto->puesto}} )</h4>
+        <h6 class= "text-info">Campos obligatorios<span class="text-danger">*</span></h6>
+        <br>
         <form class="form p-t-20">
        
      

@@ -1805,16 +1805,16 @@
         },
         {
             "name": "uxweb/sweet-alert",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uxweb/sweet-alert.git",
-                "reference": "6d0335fc4658e6f4b29eea5bb824f9c7ef5262bb"
+                "reference": "5b74ad1e51b913ede67c17c667dad6c162766fdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uxweb/sweet-alert/zipball/6d0335fc4658e6f4b29eea5bb824f9c7ef5262bb",
-                "reference": "6d0335fc4658e6f4b29eea5bb824f9c7ef5262bb",
+                "url": "https://api.github.com/repos/uxweb/sweet-alert/zipball/5b74ad1e51b913ede67c17c667dad6c162766fdc",
+                "reference": "5b74ad1e51b913ede67c17c667dad6c162766fdc",
                 "shasum": ""
             },
             "require": {
@@ -1862,7 +1862,7 @@
                 "notifier",
                 "sweet"
             ],
-            "time": "2018-07-24T06:20:52+00:00"
+            "time": "2018-11-20T19:21:08+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

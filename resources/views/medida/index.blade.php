@@ -7,6 +7,7 @@
   {{Session::get('message')}}
 </div>
 @endif
+
 <div class="row justify-content-center">
 <div class="col-lg-6">                 
 <div class="card ">

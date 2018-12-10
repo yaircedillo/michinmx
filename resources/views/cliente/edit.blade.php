@@ -12,7 +12,9 @@
      <div class="col-lg-6">
         <div class="card  ">
         <div class="card-body ">
-        <h4 class="card-title"> Cliente a editar.</h4>
+        <h4 class="card-title"> Cliente a editar ( {{ $cliente->nombre}} ).</h4>
+        <h6 class= "text-info">Campos obligatorios<span class="text-danger">*</span></h6>
+        <br>
         <form class="table-responsive m-t-40">
             
 

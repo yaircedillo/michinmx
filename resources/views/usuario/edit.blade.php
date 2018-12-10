@@ -7,7 +7,7 @@
      <div class="col-lg-6">
         <div class="card">
         <div class="card-body">
-        <h4 class="card-title">Editar datos de usuario</h4>
+        <h4 class="card-title">Editar datos del usuario ( {{ $usuarios->name}} )</h4>
         <h6 class= "text-info">Campos obligatorios<span class="text-danger">*</span></h6>
         <br>
         <form class="table-responsive m-t-40">
@@ -46,7 +46,7 @@
             
             <div class="form-group">
                 <img src="img_usuario/{{$usuarios->archivo}}" alt="" style=" width: 200px; height: 100px;">
-                <label class="col-lg-4 col-form-label" >Imagen. <span class="text-danger">*</span></label>
+                <label class="col-lg-4 col-form-label" >Imagen. </label>
                 <div class="input-group">
                         <img  src="{{asset('img_usuario/'.$usuarios->archivo)}}"  
                         height =150 width=250>
