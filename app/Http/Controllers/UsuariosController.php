@@ -22,6 +22,18 @@ class UsuariosController extends Controller
      */
     public function index()
     { 
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         // realizaremos una consulta con el Controller
         $usuarios = usuario::withTrashed()
         ->get();
@@ -29,17 +41,27 @@ class UsuariosController extends Controller
         ->with('usuarios',$usuarios);
         // esto solo retonara la vista que haremos con los datos que consultamos
     }
+}
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function create()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         return view('usuario.create');
         // esto retonara la vista del alta.
     }
+}
 
     /**
      * Store a newly created resource in storage.
@@ -107,10 +129,22 @@ class UsuariosController extends Controller
      */
     public function edit($id)
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $usuarios = usuario::find($id);
         return view('usuario.edit')->with('usuarios',$usuarios);
     }
-
+    }
     /**
      * Update the specified resource in storage.
      *

@@ -11,16 +11,41 @@ class estadocontroller extends Controller
   
     public function index()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $estados = estados::all()
         ->take(1);
         return view('estado.index',compact('estados'));
     }
+}
     
     public function create()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         return view("estado.create");
         
-        
+        }
     }
     
     public function store(EstadoRequestCreate $request)
@@ -38,9 +63,22 @@ class estadocontroller extends Controller
    }
     public function edit($id_estado)
     {
+       $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
       $estado = estados::find($id_estado);
       return view('estado.edit', ['estado'=>$estado]);
     }
+}
     public function update($id_estado, Request $request )
     {
         $estado = estados::find($id_estado);

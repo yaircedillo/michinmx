@@ -5,10 +5,10 @@ function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
-    var myLatlng = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
+    var myLatlng = new google.maps.LatLng(19.259215, -99.5712491,21);
     // 39.399872
     // -8.224454
-    
+   
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
         zoom: 7,
@@ -44,6 +44,6 @@ function init() {
 
         });
     }
-    
+    <iframe src="https://www.google.com/maps/embed?pb=" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 }
 google.maps.event.addDomListener(window, 'load', init);

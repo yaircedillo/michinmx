@@ -13,19 +13,44 @@ class puesto extends Controller
 {
     public function index()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $puestos = puestos::withTrashed()
         ->paginate(1);
        
         return view('puestos.index')
         ->with('puestos',$puestos);
     }
-    
+}
     public function create()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         return view("puestos.create");
         
         
     }
+}
     
     public function store(PuestoRequestCreate $request)
     {
@@ -47,9 +72,22 @@ class puesto extends Controller
    }
     public function edit($id_puesto)
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
       $puesto = puestos::find($id_puesto);
       return view('puestos.edit', ['puesto'=>$puesto]);
     }
+}
     public function update($id_puesto, PuestoRequestCreate $request )
     {
         $puesto = puestos::find($id_puesto);

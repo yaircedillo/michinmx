@@ -19,20 +19,45 @@ class personalcontroller extends Controller
 {
     public function index()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
         
+        else
+        {
+
         $personales = personales:: withTrashed()
         ->get();
         return view("personal.index")->with('personales',$personales);
      
     }
+}
     
     public function create()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $puestos = puestos::withTrashed()->get();
         $municipios = municipios::all();
         return view("personal.create",compact('puestos','municipios'));
         
     }
+}
     
     public function store( PesonalesRequestCreate $request)
     {
@@ -100,6 +125,18 @@ class personalcontroller extends Controller
 
     public function edit($id_personal)
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $personal = personales::where('id_personal','=',$id_personal)
         ->get();
       
@@ -126,6 +163,7 @@ class personalcontroller extends Controller
   
         
     }
+}
     public function update($id_personal, actualizarPersonal $request )
     {
         $archivo         = $request->file('img');

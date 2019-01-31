@@ -10,7 +10,7 @@
                 
 <div class="card ">
                             <div class="card-title">
-                                <h4 aling-text='center'>Registros de las Cartas... </h4>
+                                <h4 aling-text='center'>  Registros de las Cartas... </h4>
                                 <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('carta.create')}}"   role="button"> + Agregar un nuevo Registro</a></td>
                                
                                

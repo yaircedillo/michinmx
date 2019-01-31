@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- Favicon icon -->
-<link rel="icon" type="image/png" sizes="16x16"  href="{{asset('sistema/images/favicon.png')}}">
+<link rel="icon" type="image/png"   href="{{asset('sistema/images/favicon.png')}}">
 <title>MichinMx</title>
 <!-- Bootstrap Core CSS -->
 
@@ -263,15 +263,17 @@
                     <li> <a class="has-arrow" href="" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Formularios</span></a>
                         <ul aria-expanded="false" class="collapse">
                          <!-- <li><a href="{{route('estado.index')}}">Estados</a></li> -->
-                            <li><a href="{{route('cliente.index')}}" >Clientes</a></li>
+                            
+                         <li><a href="{{route('cliente.index')}}" >Clientes</a></li>
                             <li><a href="{{route('proveedor.index')}}">Proveedores</a></li>
+                            @if(Session::get('sesiontipo')=="admin")
                             <li><a href="{{route('personal.index')}}">Personal </a></li>
+                            @endif
                             @if(Session::get('sesiontipo')=="admin")
                             <li><a href="{{route('usuarios.index')}}">Usuario </a></li>
                             @endif
-                            @if(Session::get('sesiontipo')=="admin")
                             <li><a href="{{route('promociones.index')}}">Promociones </a></li>
-                            @endif
+                            
                             <li><a href="{{route('medida.index')}}">Unidad de Medida </a></li>
                             <li><a href="{{route('tipo_carta.index')}}">Tipo de Carta </a></li>
                             <li><a href="{{route('puesto.index')}}">Puesto </a></li>

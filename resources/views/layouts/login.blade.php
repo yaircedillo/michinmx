@@ -1,4 +1,4 @@
-@extends('layouts.contenido.css')
+@extends('layouts.contenido.estilos')
 @section('content')
 
 

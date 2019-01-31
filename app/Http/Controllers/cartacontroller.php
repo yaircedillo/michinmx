@@ -21,24 +21,49 @@ class cartacontroller extends Controller
     }
     public function index()
     {
-        
+        $sesionid = Session::get('sesionid');
+       
+       
+       if ( $sesionid=="")
+       {
+        Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+        return redirect()->route('iniciar_secion');
+       }
+       
+       else
+       {
+   
         $cartas = cartas::withTrashed()
         ->get();
         return view('carta.index')
         ->with('cartas',$cartas);
 
-       
+    }
     }
     public function create()
-    {
+    { 
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $tipos = tipo_cartas::withTrashed()->get();
         $cartas = cartas::withTrashed();
         $personales = personales::withTrashed()->get();
         return view("carta.create",compact('cartas','personales','tipos'));
-        
+    }
     }
     public function store(CartaRequestCreate $request)
     {
+     
+      
         cartas::create([
             'id_carta' => $request['id_carta'],
             'nombre' => $request['nombre'],  
@@ -50,6 +75,7 @@ class cartacontroller extends Controller
 
             Session::flash('message','Carta registrada exitosamente');
             return  Redirect::to('/carta');
+       
     }
    public function show($id_carta)
    {
@@ -61,6 +87,18 @@ class cartacontroller extends Controller
    }
     public function edit($id_carta)
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $cartas = cartas::where('id_carta','=',$id_carta)
         ->get();
       
@@ -91,6 +129,7 @@ class cartacontroller extends Controller
          $tipos = tipo_cartas::withTrashed()->get();
         return view('carta.edit')->with('cartas',$cartas)->with('personales',$personales)->with('tipos',$tipos);
     }
+}
     public function update($id_carta, CartaRequestCreate $request )
     {   
         $cartas = cartas::find($id_carta);

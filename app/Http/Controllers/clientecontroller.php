@@ -15,23 +15,47 @@ class clientecontroller extends Controller
 {
     public function index()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
         
+        else
+        {
+ 
         $clientes = clientes::withTrashed()
         ->get();
         return view("cliente.index")
         ->with('clientes',$clientes);
      
     }
+}
     
     public function create()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $municipios = municipios::all();
         $clientes = clientes::withTrashed();
       
         return view("cliente.create",compact('cliente','municipios'));
         
     }
-    
+}
     public function store(ClientesRequestCreate $request)
     {
         clientes::create([
@@ -63,6 +87,17 @@ class clientecontroller extends Controller
    }
     public function edit($id_cliente)
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
 
       
         $cliente = clientes::where('id_cliente','=',$id_cliente)
@@ -84,6 +119,7 @@ class clientecontroller extends Controller
                                  
         
     }
+}
     public function update($id_cliente, ClientesRequestCreate $request )
     {   
         $cliente = clientes::find($id_cliente);

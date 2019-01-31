@@ -38,12 +38,7 @@ class login extends Controller
 		  Session::put('sesionname',$consulta[0]->name);
 		  Session::put('sesionid',$consulta[0]->id);
 		  Session::put('sesiontipo',$consulta[0]->tipo);
-	      
-		  /*$sname = Session::get('sesionname');
-		  $sidu = Session::get('sesionidu');
-		  $stipo = Session::get('sesiontipo');
-		  echo $sname . ' '. $sidu . ' '. $stipo;*/
-		   return redirect()->route('admin');
+		  return redirect()->route('admin');
 		}
 	}		
 		
@@ -51,6 +46,10 @@ class login extends Controller
    }
    public function admin()
    { 
+	   $id = Session::get('sesionid');
+	   $name = Session::get('sesionname');
+	   $tipo = Session::get('sesiontipo');
+	  
       if(Session::get('sesionid')!="")
 	  {
 	   return view ('vista.index');

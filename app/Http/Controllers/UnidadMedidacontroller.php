@@ -13,18 +13,43 @@ class UnidadMedidacontroller extends Controller
 {
     public function index()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $tipos = tipo_cartas::withTrashed()
         ->get();
         return view('tipo_carta.index')
         ->with('tipos',$tipos);
     }
+}
 
     
     public function create()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         return view("tipo_carta.create");
         
-        
+        }
     }
     
     public function store(UnidadMedidaRequestCreate $request)
@@ -46,9 +71,22 @@ class UnidadMedidacontroller extends Controller
    }
     public function edit($id_tipo_c)
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $tipo_cartas = tipo_cartas::find($id_tipo_c);
         return view('tipo_carta.edit', ['tipo_cartas'=>$tipo_cartas]);
     }
+}
     public function update($id_tipo_c, UnidadMedidaRequestCreate $request )
     {
         $tipo_cartas = tipo_cartas::find($id_tipo_c);

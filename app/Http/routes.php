@@ -6,13 +6,11 @@ Route::get('nosotros','MichinmxController@about');
 Route::get('blog','MichinmxController@blog');
 Route::get('contactanos','MichinmxController@contact');
 Route::get('menu','MichinmxController@menu');
-Route::get('reservacion','MichinmxController@reservation');
-Route::get('especialidad','MichinmxController@specialties');
-
+Route::resource('especialidad','MichinmxController@specialties');
+Route::resource('reservaciones','MichinmxController@reservation');
 
 
 Route::resource('estado','estadocontroller');
-
 Route::resource('personal','personalcontroller');
 Route::resource('proveedor','proveedorcontroller');
 Route::resource('cliente','clientecontroller');
@@ -34,3 +32,4 @@ Route::get('admin','login@admin')->name('admin');
 Route::get('cerrarsesion','login@cerrarsesion')->name('cerrarsesion');
 
 
+Route::resource('reservacion','mailcontroller');

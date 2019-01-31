@@ -21,7 +21,7 @@
 	<meta name="twitter:card" content="" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href=" {{asset('/sistema/favicon.ico')}}">
+	<link rel="icon" type="image/png"   href="{{asset('sistema/images/favicon.png')}}">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
@@ -39,6 +39,7 @@
 	{!!Html::style('/css/icomoon.css')!!}
 	{!!Html::style('/css/animate.css')!!}
 	{!!Html::script('/js/modernizr-2.6.2.min.js')!!}	
+	{!!Html::script('/css/jquery.fancybox.css')!!}	
 
 	<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -52,24 +53,18 @@
 		<div class="js-fullheight colorlib-table">
 			<div class="colorlib-table-cell js-fullheight">
 				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="form-group">
-							<input type="text" class="form-control" id="search" placeholder="Enter any key to search...">
-							<button type="submit" class="btn btn-primary"><i class="icon-search3"></i></button>
-						</div>
-					</div>
+					
 				</div>
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<ul>
 							<li class="active"><a href="{!!URL::to('/')!!}">INICIO</a></li>
 							<li><a href="{!!URL::to('menu')!!}">MENU</a></li>
-							<li><a href="{!!URL::to('especialidad')!!}">ESPECIALIDADES</a></li>
+							<li><a href="{!!URL::to('especialidad')!!}">GALERIA</a></li>
 							<li><a href="{!!URL::to('reservacion')!!}">RESERVACIÓN</a></li>
-							
 							<li><a href="{!!URL::to('nosotros')!!}">SOBRE NOSOTROS</a></li>
 							<li><a href="{!!URL::to('contactanos')!!}">CANTACTANOS</a></li>
-							<li><a href="{!!URL::to('iniciar_sesión')!!}">LOGIN</a></li>
+							<li><a href="{!!URL::to('iniciar_secion')!!}">LOGIN</a></li>
 						</ul>
 					</div>
 				</div>
@@ -90,7 +85,7 @@
 												
 												<li>
 											<div class="facebook ">
-											  <a href="https://facebook.com/colorlib/">
+											  <a href="https://www.facebook.com/michinmx.restaurante/">
 												<i class="fa fa-facebook" aria-hidden="true"></i>
 											  </a>
 											</div>
@@ -99,7 +94,7 @@
 
 										  <li>
 												<div class="twitter">
-												<a href="https://twitter.com/colorlib/">
+												<a href="#">
 												<i class="fa fa-twitter" aria-hidden="true"></i>
 											</a>
 										  </div>
@@ -174,12 +169,12 @@
 							</div>
 						
 							<div class="col-md-3 col-pb-sm">
-									<h2>Newsletter</h2>
-									<p>A small river named Duden flows by their place and supplies it with the necessary regelialia</p>
+									<h2>CONTACTANOS</h2>
+
 									<div class="subscribe text-center">
 										<div class="form-group">
-											<input type="text" class="form-control text-center" placeholder="Enter Email address">
-											<input type="submit" value="Subscribe" class="btn btn-primary btn-custom">
+												<p><a href="{!!URL::to('contactanos')!!}" class="btn btn-primary btn-custom">Enviar un mensaje.</a></p>
+											
 										</div>
 									</div>
 								</div>
@@ -187,10 +182,10 @@
 						<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
-								<span class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><br></span> 
-								<span class="block">Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a> &amp; <a href="https://www.pexels.com/" target="_blank">Pexel</a></span>
+								<span class="block">&copy; 
+										MichinMx 2018 Todos los derechos reservados. 
+                                <br></span> 
+							
 							</p>
 						</div>
 </div>
@@ -224,6 +219,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Main JS (Do not remove) -->
 	{!!Html::script('/js/main.js')!!}
 
+	{!!Html::script('/js/jquery.fancybox.js')!!}
 	</body>
 </html>
 

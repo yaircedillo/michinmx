@@ -12,8 +12,9 @@
 <div class="card ">
                             <div class="card-title">
                                 <h4 aling-text='center'>Puestos Registrados.. </h4>
+                                @if(Session::get('sesiontipo')=="admin")
                                 <td><a class="btn btn-dark btn-outline m-b-10 m-l-5" href="{{route('puesto.create')}}"   role="button"> + Agregar un nuevo Puesto</a></td>
-                               
+                                @endif
                                
                             </div>
                             <div class="card-body">

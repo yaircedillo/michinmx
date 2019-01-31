@@ -15,21 +15,45 @@ class proveedorcontroller extends Controller
 {
     public function index()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
         
+        else
+        {
+
         $proveedores = proveedores::withTrashed()
         ->get();
         return view("proveedor.index")
         ->with('proveedores',$proveedores);
-     
+        }
     }
     
     public function create()
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
         $municipios = municipios::all();
         $proveedores = proveedores::withTrashed();
         return view("proveedor.create",compact('proveedores','municipios'));
         
     }
+}
     
     public function store( ProveedorRequestCreate $request)
     {
@@ -62,6 +86,18 @@ class proveedorcontroller extends Controller
    }
     public function edit($id_proveedores)
     {
+        $sesionid = Session::get('sesionid');
+       
+       
+        if ( $sesionid=="")
+        {
+         Session::flash('error', 'Es necesario iniciar sesion antes de continuar');
+         return redirect()->route('iniciar_secion');
+        }
+        
+        else
+        {
+
 
         $proveedor = proveedores::where('id_proveedores','=',$id_proveedores)
         ->get();
@@ -78,7 +114,7 @@ class proveedorcontroller extends Controller
 								 ->with('municipios',$municipios[0]->municipio)
                                  ->with('demasmunicipios',$demasmunicipios);
 
-       
+        }
     }
     public function update($id_proveedores, ProveedorRequestCreate $request )
     {   
