@@ -61,7 +61,7 @@
 							<li class="active"><a href="{!!URL::to('/')!!}">INICIO</a></li>
 							<li><a href="{!!URL::to('menu')!!}">MENU</a></li>
 							<li><a href="{!!URL::to('especialidad')!!}">GALERIA</a></li>
-							<li><a href="{!!URL::to('reservacion')!!}">RESERVACIÓN</a></li>
+							<li><a href="{!!URL::to('reservaciones')!!}">RESERVACIÓN</a></li>
 							<li><a href="{!!URL::to('nosotros')!!}">SOBRE NOSOTROS</a></li>
 							<li><a href="{!!URL::to('contactanos')!!}">CANTACTANOS</a></li>
 							<li><a href="{!!URL::to('iniciar_secion')!!}">LOGIN</a></li>
@@ -147,8 +147,10 @@
 									
 									<div class="desc">
 										<span>Hora de apertura</span>
-										<h3><a >Lunes - Domingo</a></h3>
-										<h3><a >8am - 7pm</a></h3>
+										<h3><a >Lunes - Viernes</a></h3>
+										<h3><a >8:20 am - 18:00 pm</a></h3>
+										<h3><a >Sabado</a></h3>
+										<h3><a >8:00 am - 15:00 pm</a></h3>
 										
 									</div>
 								</div>

@@ -192,7 +192,7 @@
                 <div class="col-md-12 animate-box text-center">
                     <p>¿ Te dio hambre de repente ?....</p>
                     
-                    <p><a href="{!!URL::to('reservacion')!!}" class="btn btn-primary btn-outline btn-md">Pedir una mesa </a></p>
+                    <p><a href="{!!URL::to('reservaciones')!!}" class="btn btn-primary btn-outline btn-md">Pedir una mesa </a></p>
                 </div>
             </div>
         </div>

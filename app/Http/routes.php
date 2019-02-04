@@ -33,3 +33,4 @@ Route::get('cerrarsesion','login@cerrarsesion')->name('cerrarsesion');
 
 
 Route::resource('reservacion','mailcontroller');
+Route::resource('contacto','contacto');

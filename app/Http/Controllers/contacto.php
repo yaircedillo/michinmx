@@ -8,23 +8,19 @@ use Session;
 use Redirect;
 use michinmx\Http\Requests;
 
-class mailcontroller extends Controller
+class contacto extends Controller
 {
     public function index(){
    
     }
         public function store(Request $request)
         {
-           Mail::send('emails.contact',$request->all(), function($msj){
-            $msj->subject('Correo de Reservación');
+           Mail::send('emails.formulario',$request->all(), function($msj){
+            $msj->subject('Correo de Contacto');
             $msj->to('contacto@michinmx.online');
            });
 
         Session::flash('message','Mensaje enviado Correctamente');
-        return Redirect::to('/reservaciones');
+        return Redirect::to('/contactanos');
         }
-        
-           
 }
-        
-

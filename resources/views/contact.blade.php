@@ -38,13 +38,15 @@
 			  	</ul>
 		  	</div>
 		</aside>
-
+		<div class="colorlib-intro">
+			@include('folder.contenido')
+			</div>
 		<div id="colorlib-contact">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
 						<h2>¿ Tienes alguna pregunta  ?</h2>
-						<p>Para preguntas generales, por favor completa el siguiente formulario:</p>
+						<p>Para preguntas generales, por favor completar el siguiente formulario:</p>
 					</div>
 				</div>
 				<div class="row">
@@ -59,30 +61,42 @@
 									<li><span><i class="icon-globe3"></i></span><a href="#">contacto@michinmx.online</a></li>
 								</ul>
 							</div>
-							<div class="col-md-7 col-md-push-1 animate-box">
+
+							{!!Form::open(['route'=>'contacto.store', 'method'=>'POST','class'=>'col-md-7 col-md-push-1 animate-box'])!!}
+							@if(Session::has('message'))
+                            <div class="alert alert-info alert-dismissible" role="alert">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              {{Session::get('message')}}
+                            </div>
+                            @endif
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
-											<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Mensaje"></textarea>
+											
+											{!!Form::textarea('area',null,['class'=>'form-control', 'cols'=>'30', 'rows'=> '7','placeholder'=>'Mensaje'])!!}
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Nombre">
+                                                {!!Form::text('name',null,['class'=>'form-control', 'placeholder'=>'Nombre'])!!}
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Correo Electronico">
+											{!!Form::text('email',null,['class'=>'form-control', 'placeholder'=>'Correo Electronico'])!!}
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-											<input type="submit" value="Enviar Mensaje" class="btn btn-primary">
+											{!!Form::submit('Enviar Mensaje',[' class'=>'btn btn-primary '])!!} 
 										</div>
 									</div>
 								</div>
-							</div>
+							
+							{!!Form::close()!!}
+
+
+
 						</div>
 					</div>
 				</div>
