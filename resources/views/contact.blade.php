@@ -62,7 +62,7 @@
 								</ul>
 							</div>
 
-							{!!Form::open(['route'=>'contacto.store', 'method'=>'POST','class'=>'col-md-7 col-md-push-1 animate-box'])!!}
+							{!!Form::open(['route'=>'mensaje.store', 'method'=>'POST','class'=>'col-md-7 col-md-push-1 animate-box'])!!}
 			
 							@if(Session::has('message'))
                             <div class="alert alert-info alert-dismissible" role="alert">
@@ -77,12 +77,12 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											
-											{!!Form::textarea('area',null,['class'=>'form-control', 'cols'=>'30', 'rows'=> '7','placeholder'=>'Mensaje'])!!}
+										{!!Form::textarea('area',null,['class'=>'form-control', 'cols'=>'30', 'rows'=> '7','placeholder'=>'Mensaje'])!!}
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-                                                {!!Form::text('name',null,['class'=>'form-control', 'placeholder'=>'Nombre'])!!}
+                     {!!Form::text('name',null,['class'=>'form-control', 'placeholder'=>'Nombre'])!!}
 										</div>
 									</div>
 									<div class="col-md-6">

@@ -39,7 +39,7 @@
 	{!!Html::style('/css/icomoon.css')!!}
 	{!!Html::style('/css/animate.css')!!}
 	{!!Html::script('/js/modernizr-2.6.2.min.js')!!}	
-	
+	{!!Html::script('/css/jquery.fancybox.css')!!}	
 
 	<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
