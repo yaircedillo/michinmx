@@ -18,7 +18,12 @@
 
     {!!Html::style('/login/css/util.css')!!}
     {!!Html::style('/login/css/main.css')!!}
- 
+    <!--======================== NOTIFICACION ==============================-->	
+
+    <link rel="stylesheet" type="text/css" href="alertifyjs/css/alertify.css">
+	<link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/default.css">
+	<script src="alertifyjs/jquery-3.2.1.min.js"></script>
+	<script src="alertifyjs/alertify.js"></script>
 
 </head>
 <body>

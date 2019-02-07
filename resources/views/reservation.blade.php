@@ -44,8 +44,6 @@
 			@include('folder.contenido')
 		</div>
 		<div class="colorlib-reservation reservation-page">
-		
-			@include('folder.reservar')
-			
-		</div>
+					@include('folder.reservar')
+					</div>
 @stop

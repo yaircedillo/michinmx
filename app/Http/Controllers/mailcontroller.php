@@ -22,9 +22,7 @@ class mailcontroller extends Controller
 
         Session::flash('message','Mensaje enviado Correctamente');
         return Redirect::to('/reservaciones');
-        }
-        
-           
+        }      
 }
         
 

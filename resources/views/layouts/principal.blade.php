@@ -26,7 +26,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 	
-	
+	 <!--======================== NOTIFICACION ==============================-->	
+
+	 <link rel="stylesheet" type="text/css" href="alertifyjs/css/alertify.css">
+	 <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/default.css">
+	 <script src="alertifyjs/jquery-3.2.1.min.js"></script>
+	 <script src="alertifyjs/alertify.js"></script>
 
 	{!!Html::style('/css/style.css')!!}
 	{!!Html::style('/css/bootstrap-datepicker.css')!!}
@@ -224,4 +229,3 @@
 	{!!Html::script('/js/jquery.fancybox.js')!!}
 	</body>
 </html>
-
