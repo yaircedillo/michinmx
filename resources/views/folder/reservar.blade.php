@@ -12,12 +12,15 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="row">
                         <div class="col-md-12">
+                          
                             @if(Session::has('message'))
                             <div class="alert alert-info alert-dismissible" role="alert">
                               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                               {{Session::get('message')}}
                             </div>
                             @endif
+
+
                                 {!!Form::open(['route'=>'reservacion.store', 'method'=>'POST','class'=>'colorlib-form'])!!}
                                 {{csrf_field()}}
                                 <div class="row">
@@ -118,7 +121,7 @@
                                         <div class="row">
                                             <div class="col-md-4 col-md-offset-4">
                                                 {!!Form::submit('Pedir mesa',[' class'=>'btn btn-primary btn-block'])!!}   
-                                     
+                                              
                                             </div>
                                         </div>
                                     </div>
