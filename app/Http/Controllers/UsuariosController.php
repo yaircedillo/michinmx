@@ -88,6 +88,8 @@ class UsuariosController extends Controller
             'name' => $request['name'],
             'email'=> $request['email'],
             'password'=> $request['password'],
+            'tipo'=> $request['tipo'],
+            'user'=> $request['user'],
             'archivo'=> $nombre_original
         ]);
              Session::flash('message','Usuario creado exitosamente');
@@ -99,6 +101,8 @@ class UsuariosController extends Controller
             'name' => $request['name'],
             'email'=> $request['email'],
             'password'=> $request['password'],
+            'tipo'=> $request['tipo'],
+            'user'=> $request['user'],
             'archivo'=> 'sinfoto.jpg'
         ]);
              Session::flash('message','Usuario creado exitosamente sin foto');
@@ -145,13 +149,7 @@ class UsuariosController extends Controller
         return view('usuario.edit')->with('usuarios',$usuarios);
     }
     }
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function update(actualizarUsuario $request, $id)
     {
 
@@ -166,6 +164,8 @@ class UsuariosController extends Controller
         $usuarios->name = $request->name;
         $usuarios->email = $request->email;
         $usuarios->password = $request->password;
+        $usuarios->tipo = $request->tipo;
+        $usuarios->user = $request->user;
         $usuarios->archivo = $nombre_original;
         $usuarios->save();
         Session::flash('message','Usuario modificado exitosamente');
@@ -175,6 +175,8 @@ class UsuariosController extends Controller
         $usuarios->name = $request->name;
         $usuarios->email = $request->email;
         $usuarios->password = $request->password;
+        $usuarios->tipo = $request->tipo;
+        $usuarios->user = $request->user;
         if($archivo!='')
 			{
 			$usuarios->img = $nombre_original;
@@ -186,12 +188,7 @@ class UsuariosController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy($id)
     {
       usuario::find($id)

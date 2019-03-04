@@ -191,7 +191,93 @@
 				</div>
 			</div>
 		</div>
-
+		<div class="colorlib-blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
+						<h2>Promociones</h2>
+						<p>No te distraigas y aprovecha esta oportunidad para revisar  todas nuestras promociones  que hemos seleccionado para ti.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<article class="article-entry">
+							<a  class="blog-img" style="background-image: url(images/bebidas-6.jpg);"></a>
+							<div class="desc">
+								<p class="meta"><span class="day">2x1</span><span class="month">Lunes-Viernes</span></p>
+								<br>
+								<br><br>
+								<p>Cerveza nacional al 2x1 de  3:00 a 6:00 pm </p>
+								
+							</div>
+						</article>
+					</div>
+					<div class="col-md-4">
+						<article class="article-entry">
+							<a  class="blog-img" style="background-image: url(images/dish-11.jpg);"></a>
+							<div class="desc">
+								<p class="meta"><span class="day">-10%</span><span class="month">Descuento</span></p>
+								<br>
+								<br><br>
+								
+								<p>En desayunos de paquete y comidas del día obtén un 10% de descuento en tu consumo total.</p>
+							</div>
+						</article>
+					</div>
+					<div class="col-md-4">
+						<article class="article-entry">
+							<a href="blog.html" class="blog-img" style="background-image: url(images/promocion-1.jpg);"></a>
+							<div class="desc">
+								<p class="meta"><span class="day">En tu cumpleaños</span><span class="month">Lunes-Sabado</span></p>
+								<br>
+								<br>
+								<br>
+								<p>¡Te regalamos un desayuno en paquete en tu cumpleaños! (Presentando tu identificación)</p>
+								
+								
+								
+								
+							</div>
+						</article>
+					</div>
+					
+					<div class="col-md-4">
+						<article class="article-entry">
+							<a class="blog-img" style="background-image: url(images/promocion-2.jpg);"></a>
+							<div class="desc">
+								<p class="meta"><span class="day">Café</span><span class="month">Promoción</span></p>
+								<br>
+								<br>
+								<br>
+								<p>En tardes lluviosas, gratis un café americano, en la compra de comida completa.</p>
+							</div>
+						</article>
+					</div>
+					<div class="col-md-4">
+						<article class="article-entry">
+							<a href="blog.html" class="blog-img" style="background-image: url(images/blog-5.jpg);"></a>
+							<div class="desc">
+								<p class="meta"><span class="day">7</span><span class="month">May</span></p>
+								<p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
+								<h2><a href="blog.html">how too cook special recipe</a></h2>
+								<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+							</div>
+						</article>
+					</div>
+					<div class="col-md-4">
+						<article class="article-entry">
+							<a href="blog.html" class="blog-img" style="background-image: url(images/blog-6.jpg);"></a>
+							<div class="desc">
+								<p class="meta"><span class="day">7</span><span class="month">May</span></p>
+								<p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
+								<h2><a href="blog.html">how too cook special recipe</a></h2>
+								<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="colorlib-menu">
 			<div class="container">
 				<div class="row">
@@ -296,8 +382,39 @@
 @include('folder.menu')
 <section id="formulario">
     <div class="colorlib-reservation reservation-img" style="background-image: url(images/portada2.jpg);" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-@include('folder.reservar')
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
+					<h2> RESERVAR UNA MESA  </h2>
+					<p>Si un día sientes un vacio ... come es Hambre</p>
+					<p>¿Realiza tu reservación y nosotros te esperamos ?</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="row">
+						<div class="col-md-12">
+						  
+							@if (Session::has('message'))
+							<script>
+								alertify.alert("mensaje de confirmación","{{Session::get('message')}}", function(){
+								alertify.message('OK');
+							});
+							</script>
+						@endif
+				  		{!!Form::open(['route'=>'reserva_inicio.store', 'method'=>'POST','class'=>'colorlib-form'])!!}
+								@include('folder.reservar')
+						{!!Form::close()!!}
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+
 	</div>
 </div>
 </section>

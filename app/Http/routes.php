@@ -22,10 +22,6 @@ Route::resource('puesto','puesto');
 Route::resource('carta','cartacontroller');
 
 
-
-
-
-
 Route::get('iniciar_secion','login@login')->name('iniciar_secion');
 Route::POST('valida','login@valida')->name('valida');
 Route::get('admin','login@admin')->name('admin');
@@ -34,4 +30,9 @@ Route::get('cerrarsesion','login@cerrarsesion')->name('cerrarsesion');
 
 Route::resource('reservacion','mailcontroller');
 Route::resource('correo','contacto');
+Route::resource('reserva_inicio','iniciocontroller');
+
+ Route::get('errors',function(){
+    abort(404);
+ });
 

@@ -27,7 +27,7 @@
 														<span> <img src="{{asset('/images/icons/chicken-leg.png')}}" > </span>
 												</div>
 					   					<h1>Nuestro Menú</h1>
-					   					<p><span><a href="#">Inicio / </a></span> <span>Menú</span></p>
+					   					<p><span><a href="{!!URL::to('/')!!}">Inicio / </a></span> <span>Menú</span></p>
 					   					<div class="desc2"></div>
 				   					</div>
 				   				</div>

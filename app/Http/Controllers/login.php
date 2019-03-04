@@ -37,7 +37,8 @@ class login extends Controller
 		{
 		  Session::put('sesionname',$consulta[0]->name);
 		  Session::put('sesionid',$consulta[0]->id);
-		  Session::put('sesiontipo',$consulta[0]->tipo);
+			Session::put('sesiontipo',$consulta[0]->tipo);
+			
 		  return redirect()->route('admin');
 		}
 	}		
@@ -48,7 +49,8 @@ class login extends Controller
    { 
 	   $id = Session::get('sesionid');
 	   $name = Session::get('sesionname');
-	   $tipo = Session::get('sesiontipo');
+		 $tipo = Session::get('sesiontipo');
+		
 	  
       if(Session::get('sesionid')!="")
 	  {

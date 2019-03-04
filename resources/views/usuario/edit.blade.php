@@ -39,13 +39,42 @@
                 <label class="col-lg-4 col-form-label" >Contraseña. <span class="text-danger">*</span></label>
                 <div class="input-group">
                 <div class="input-group-addon"><i class="icon-eye"></i></div>
-                {!!Form::text('password',base64_decode($usuarios->password),['class'=>'form-control', 'placeholder'=>'Cambiar contraseña.'])!!}
+                {!!Form::text('password',null,['class'=>'form-control', 'placeholder'=>'Colocar contraseña del usuario.'])!!}
             </div>
             {!! $errors->first('password','<span class="text-danger">:message</span>')!!}
+            </div>
+
+            <div class="form-group row   {{ $errors->has('user')  ? 'has-error' : '' }}">
+                <label class="col-lg-4 col-form-label" >Nombre del usuario. <span class="text-danger">*</span></label>
+                <div class="input-group">
+                <div class="input-group-addon"><i class="icon-user"></i></div>
+                {!!Form::text('user',null,['class'=>'form-control', 'placeholder'=>'Colocar el nombre para el inicio de sesión.'])!!}
+               
+                
+            </div>
+            {!! $errors->first('name','<span class="text-danger">:message</span>')!!}
+            </div>  
+
+            <div class="form-group row   {{ $errors->has('tipo')  ? 'has-error' : '' }} ">
+                <div class="input-group-addon"><i class="ti-user"></i></div> <label class="col-lg-4 col-form-label" >Tipo de usuario. <span class="text-danger">*</span></label>
+                <div class="col-md-9">
+                    @if($usuarios->tipo =="admin")
+                    <input type = 'radio' name = 'tipo' value = 'admin' checked > Administrador
+                    <input type = 'radio' name = 'tipo' value = 'user'>  Usuario
+                    @else
+                    <input type = 'radio' name = 'tipo' value = 'admin'  > Administrador
+                    <input type = 'radio' name = 'tipo' value = 'user'checked>  Usuario
+                    @endif
+                </div>
+                <div class="input-group">
+          
+            </div>
+            {!! $errors->first('tipo','<span class="text-danger">:message</span>')!!}
             </div> 
+
             
             <div class="form-group">
-                <img src="img_usuario/{{$usuarios->archivo}}" alt="" style=" width: 200px; height: 100px;">
+                
                 <label class="col-lg-4 col-form-label" >Imagen. </label>
                 <div class="input-group">
                         <img  src="{{asset('img_usuario/'.$usuarios->archivo)}}"  

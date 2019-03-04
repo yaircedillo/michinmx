@@ -26,7 +26,7 @@ class puesto extends Controller
         {
 
         $puestos = puestos::withTrashed()
-        ->paginate(1);
+        ->get();
        
         return view('puestos.index')
         ->with('puestos',$puestos);

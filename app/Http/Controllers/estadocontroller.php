@@ -24,8 +24,10 @@ class estadocontroller extends Controller
         {
 
         $estados = estados::all()
-        ->take(1);
-        return view('estado.index',compact('estados'));
+        ->take(10);
+        return view('estado.index')
+        ->with('estados',$estados);
+       
     }
 }
     

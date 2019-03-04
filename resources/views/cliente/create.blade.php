@@ -59,6 +59,7 @@
             </div>
             {!! $errors->first('genero','<span class="text-danger">:message</span>')!!}
             </div> 
+        
 
             <div class="form-group row {{ $errors->has('calle')  ? 'has-error' : '' }} ">
                     <label class="col-lg-4 col-form-label" >Calle. <span class="text-danger">*</span></label>

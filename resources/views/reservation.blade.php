@@ -44,6 +44,42 @@
 			@include('folder.contenido')
 		</div>
 		<div class="colorlib-reservation reservation-page">
+				<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 text-center animate-box intro-heading">
+								<h2> RESERVAR UNA MESA  </h2>
+								<p>Si un día sientes un vacio ... come es Hambre</p>
+								<p>¿Realiza tu reservación y nosotros te esperamos ?</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="row">
+									<div class="col-md-12">
+									  
+										@if (Session::has('message'))
+										<script>
+											alertify.alert("mensaje de confirmación","{{Session::get('message')}}", function(){
+											alertify.message('OK');
+										});
+										</script>
+									@endif
+				
+				
+					 {!!Form::open(['route'=>'reservacion.store', 'method'=>'POST','class'=>'colorlib-form'])!!}
 					@include('folder.reservar')
-					</div>
+					{!!Form::close()!!}
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+
+
+                                
+                           
+		</div>
 @stop

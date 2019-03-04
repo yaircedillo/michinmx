@@ -9,13 +9,13 @@ use michinmx\Http\Requests;
 class MichinmxController extends Controller
 {
    public function index(){
-       return view ('index');
+    return view ('index');
     }
     public function inicio(){
-        return view ('principal.inicio');
-        }
+    return view ('principal.inicio');
+    }
   
-   public function about(){
+    public function about(){
     return view ('about');
     }
     public function blog(){

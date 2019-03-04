@@ -9,7 +9,7 @@ use Redirect;
 use michinmx\Http\Requests\reservarequest;
 use michinmx\Http\Requests;
 
-class mailcontroller extends Controller
+class iniciocontroller extends Controller
 {
     public function index(){
    
@@ -22,8 +22,6 @@ class mailcontroller extends Controller
            });
 
         Session::flash('message','Mensaje enviado Correctamente');
-        return Redirect::to('/reservaciones');
-        }      
+        return Redirect::to('/');
+        }  
 }
-        
-

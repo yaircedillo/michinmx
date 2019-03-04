@@ -139,7 +139,7 @@
                         <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn">
                             <ul>
                                 <li>
-                                    <div class="drop-title">Notifications</div>
+                                    <div class="drop-title">notificaciones</div>
                                 </li>
                                 <li>
                                     <div class="message-center">
@@ -174,7 +174,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all notifications</strong> <i class="fa fa-angle-right"></i> </a>
+                                    <a class="nav-link text-center" href="javascript:void(0);"> <strong>Revisa todas tus notificaciones</strong> <i class="fa fa-angle-right"></i> </a>
                                 </li>
                             </ul>
                         </div>
@@ -188,7 +188,7 @@
                         <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn" aria-labelledby="2">
                             <ul>
                                 <li>
-                                    <div class="drop-title">You have 4 new messages</div>
+                                    <div class="drop-title">Tu tienes 4 mensajes</div>
                                 </li>
                                 <li>
                                     <div class="message-center">
@@ -223,7 +223,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a class="nav-link text-center" href="javascript:void(0);"> <strong>See all e-Mails</strong> <i class="fa fa-angle-right"></i> </a>
+                                    <a class="nav-link text-center" href="javascript:void(0);"> <strong>Ver todos los  e-Mails</strong> <i class="fa fa-angle-right"></i> </a>
                                 </li>
                             </ul>
                         </div>
@@ -234,10 +234,8 @@
                         <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img  src="{{asset('sistema/images/users/5.jpg')}}" alt="user" class="profile-pic" /></a>
                         <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                             <ul class="dropdown-user">
-                                <li><a href="#"><i class="ti-user"></i> Profile</a></li>
-                                <li><a href="#"><i class="ti-wallet"></i> Balance</a></li>
-                                <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
-                                <li><a href="#"><i class="ti-settings"></i> Setting</a></li>
+                                <li><a href="#"><i class="ti-user"></i> Perfil</a></li>
+                                
                                 <li><a href="{{URL::action('login@cerrarsesion')}}"><i class="fa fa-power-off"></i> Cerrar Seción</a></li>
                             </ul>
                         </div>

@@ -45,7 +45,6 @@
 	{!!Html::style('/css/animate.css')!!}
 	{!!Html::script('/js/modernizr-2.6.2.min.js')!!}	
 	{!!Html::script('/css/jquery.fancybox.css')!!}	
-
 	<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -199,6 +198,7 @@
 				</div>
 				
 			</div>
+			
 		</footer>
 		<br>
 		
@@ -221,11 +221,19 @@
 	<!-- Date Picker -->
 	{!!Html::script('/js/bootstrap-datepicker.js')!!}
     <!-- Google Map -->
-	{!!Html::script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false')!!}
-	{!!Html::script('/js/google_map.js')!!}
+		{!!Html::script('/js/bootstrap-datepicker.js')!!}
+	
 	<!-- Main JS (Do not remove) -->
 	{!!Html::script('/js/main.js')!!}
 
 	{!!Html::script('/js/jquery.fancybox.js')!!}
+	
+
+
+
+	<script src="js/google_map.js"></script>
+
+
+
 	</body>
 </html>

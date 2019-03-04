@@ -30,9 +30,10 @@
 				@if (Session::has('error'))
   				
 			    <script>
-    		     alertify.confirm('Michinmx dice ', '{{Session::get('error')}}', function(){ alertify.success('success') }
-                , function(){ alertify.error('Cancel')});
-				
+    		    alertify.confirm('Michinmx dice ', '{{Session::get('error')}}', function(){ alertify.success('success') }
+               , function(){ alertify.error('Cancel')});
+					
+        				
 				</script>
 				@endif
 				

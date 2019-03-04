@@ -56,7 +56,7 @@
                                        @endforeach
                                        @endif
                                    </table>
-                                   {{$puestos->links()}}
+                                   
                                 </div>
                                </div>
                              </div>   
